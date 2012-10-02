@@ -1,0 +1,7 @@
+.test-horizontal {
+	@extend %horizontal_list;
+}
+
+.centered-horizontal {
+	@extend %centered_horizontal;
+}

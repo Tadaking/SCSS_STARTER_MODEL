@@ -1,0 +1,39 @@
+
+@charset "UTF-8";
+
+/* ==
+layout settings
+   ===*/
+
+ /* IF You use "display:box;" on your website, turn true */
+$box-layout: false;
+
+/* Define minimal grid  */
+$gridWidth: 16px;
+$gridHeight: 8px;
+
+
+/* webpage design layout settings */
+$pageWidth : 980px;
+$boxMargin: 8px;
+
+/* Wright down layout-setting setting for your website */
+$left_column_width: $gridWidth * 8;
+//$right_column_width
+
+/* ==
+define colors
+=== */
+$lighten_amount_strong: 16%;
+$lighten_amount: 8%;
+$darken_amount: 5%;
+
+/* ==
+design settings
+=== */
+/* tab UI */
+
+/* ==
+typography settings
+=== */
+@import 'typography';

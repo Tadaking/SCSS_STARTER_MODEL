@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* --
+default settings
+-- */
+$sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
+$serif: "Gergea", serif;
+
+$default_fontweight: 300;
+$default_fontsize: 100%;
+$default_lineheight: 20px;
+$default_fontcolor: #181818;
+$default_family: $sans-serif;
+
+
+/* --
+anchor settings
+-- */
+$link_color: #258FB8;
+$link_visited: lighten($link_color, $lighten_amount_strong);
+$link_hover: lighten($link_color, $lighten_amount);
+$link_active: darken($link_color, $darken_amount);;
+
+$link_decoration: true;
+
+
+@mixin link_decoration {
+  @if $link_decoration {
+    &:link {
+      text-decoration: underline;
+    }
+    &:hover{
+      text-decoration: none;
+      @content;
+    }
+  } @else {
+     &:link {
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
+      @content;
+    }
+  }
+}
+
+//empasis
+$alert_color: #f00;
+
+// for Antialias setting for Safari
+%bold {
+  @include font-weight(bold);
+}

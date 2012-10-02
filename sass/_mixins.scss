@@ -1,0 +1,9 @@
+@import "compass/";
+@import "compass/css3";
+
+@mixin font-weight($weight) {
+	font-weight: $weight;
+	@if $weight == bold {
+		-webkit-font-smoothing: antialiased;
+	}
+}

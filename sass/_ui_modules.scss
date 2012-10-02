@@ -1,0 +1,102 @@
+/* --
+Typography
+-- */
+.alert {
+  color: $alert_color ;
+  @extend %bold;
+}
+
+.addition { font-size: 0.8em; }
+
+/* layout pf object */ 
+%lfloating { float: left; }
+
+/* horizontal list */
+%has_area_link { display: block; }
+
+%horizontal_list {
+  @if $box-layout == true {
+    @include display-box;
+  } @else {
+    @extend %clearfix;
+  }
+
+  @extend %reset_margin_padding;
+
+  >li {
+    @if $box-layout == false {
+      @extend %lfloating;
+    }
+    @extend %reset_liststyle;
+  }
+
+  a {
+    @extend %has_area_link;
+  }
+}
+
+%centered_horizontal {
+  text-align: center;
+
+  ul, ol, menu {
+    display: inline-table;
+    border-width: 1px;
+
+    > li {
+      display: table-cell;
+    }
+
+    a {
+      @extend %has_area_link;
+    }
+  }
+}
+
+/* icon */
+i {
+  background: url('../images/ico_home.svg') no-repeat;
+  vertical-align: middle;
+}
+
+/* navigations */
+%action {
+  display: inline-table;
+  padding: 0.618em;
+  text-decoration: none;
+
+  i {
+    display: table-cell;
+    padding-right: 0.382em;
+  }
+}
+
+.ui-tab {
+  $icon-size: 1.1em;
+
+  ul, ol, menu {
+    @extend %horizontal_list;
+
+    a {
+      margin: 0 1px 0 0;
+      @extend %action;
+      background: #CCC;
+      line-height: $icon-size;
+      color: $default_fontcolor;
+      @include font-weight(bold);
+
+      &:hover {
+        background-color: lighten(#ccc, $lighten_amount);
+      }
+    }
+
+    i {
+      width: $icon-size;
+      height: $icon-size;
+      @include background-size($icon-size auto);
+    }
+  }
+
+  &.centered {
+    @extend %centered_horizontal;
+  }
+}

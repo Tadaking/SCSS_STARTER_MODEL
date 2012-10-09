@@ -12,91 +12,132 @@ Typography
 %lfloating { float: left; }
 
 /* horizontal list */
-%has_area_link { display: block; }
+%link_has_area { display: block; }
 
 %horizontal_list {
-  @if $box-layout == true {
-    @include display-box;
-  } @else {
+  line-height: normal;
+  @include is_display_box(null) {
     @extend %clearfix;
   }
+  @extend %reset_liststyle;
 
-  @extend %reset_margin_padding;
-
-  >li {
+  >li,
+  >a,
+  >button  {
     @if $box-layout == false {
       @extend %lfloating;
     }
-    @extend %reset_liststyle;
   }
 
   a {
-    @extend %has_area_link;
+    @extend %link_has_area;
   }
 }
 
-%centered_horizontal {
+%centered_horizontal_wrapper {
   text-align: center;
 
-  ul, ol, menu {
-    display: inline-table;
-    border-width: 1px;
+  ul, ol, menu,
+  .horizontal-list { //Use this class if you use tag to use except for ui,ol,menu
+    @include is_display_box(center) {
+      display: inline-table;
+    }
+
+    @extend %reset_liststyle;
 
     > li {
-      display: table-cell;
+      @if $box-layout == false {
+        display: table-cell;
+      }
     }
 
     a {
-      @extend %has_area_link;
+      display: block;
     }
   }
 }
 
 /* icon */
 i {
-  background: url('../images/ico_home.svg') no-repeat;
-  vertical-align: middle;
+  background: url(#{$icon_sprite_path}) no-repeat;
 }
 
 /* navigations */
 %action {
   display: inline-table;
+  vertical-align: top;
   padding: 0.618em;
   text-decoration: none;
 
-  i {
+  i,
+  .cmd-label {
     display: table-cell;
+  }
+
+  i {
+    &+.cmd-label {
+      padding-left: 0.382em;
+    }
+  }
+
+  &.is-ico-rside .cmd-label {
     padding-right: 0.382em;
   }
 }
 
+.ui-pagenation {
+  @extend %centered_horizontal_wrapper;
+  a {
+    @extend %action;
+    @include default_ui_pagenation_action;
+    &.current{
+      color: $default_fontcolor;
+    }
+  }
+}
+
 .ui-tab {
-  $icon-size: 1.1em;
+  font-size: 0;
+
+  &.centered {
+    @extend %centered_horizontal_wrapper;
+  }
 
   ul, ol, menu {
     @extend %horizontal_list;
-
-    a {
-      margin: 0 1px 0 0;
-      @extend %action;
-      background: #CCC;
-      line-height: $icon-size;
-      color: $default_fontcolor;
-      @include font-weight(bold);
-
-      &:hover {
-        background-color: lighten(#ccc, $lighten_amount);
-      }
-    }
-
-    i {
-      width: $icon-size;
-      height: $icon-size;
-      @include background-size($icon-size auto);
-    }
   }
 
-  &.centered {
-    @extend %centered_horizontal;
+  a {
+    margin: 0 1px 0 0;
+    @extend %action;
+    @include default_tab_design;
+    line-height: $icon_ratio_tab;
+    color: $default_fontcolor;
+    @include font-weight(bold);
+    line-height: $icon_ratio_tab;
+    font-size: 1rem;
+  }
+
+  i {
+    width: $icon_ratio_tab;
+    height: $icon_ratio_tab;
+    @include background-size(auto $icon_ratio_tab);
+  }
+}
+
+/* form */
+.btn {
+  @extend %action;
+  line-height: $icon_ratio_button;
+
+  &[type="submit"],
+  &[type="reset"] {
+    padding: 0.618em 1.309em;
+  }
+
+  i {
+    width: $icon_ratio_button;
+    height: $icon_ratio_button;
+    @include background-size(auto $icon_ratio_button) ;
   }
 }

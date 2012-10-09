@@ -4,23 +4,23 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
 */
-/* ==
+/*-----------------------------------
 layout settings
-   ===*/
+---------------------------------- */
 /* IF You use "display:box;" on your website, turn true */
 /* Define minimal grid  */
 /* webpage design layout settings */
 /* Wright down layout-setting setting for your website */
-/* ==
+/*-----------------------------------
 define colors
-=== */
-/* ==
+---------------------------------- */
+/*-----------------------------------
 design settings
-=== */
+---------------------------------- */
 /* tab UI */
-/* ==
+/*-----------------------------------
 typography settings
-=== */
+---------------------------------- */
 /* --
 default settings
 -- */
@@ -28,12 +28,22 @@ default settings
 anchor settings
 -- */
 /* line 51, ../sass/_typography.scss */
-h1, h2, h3, h4, h5, h6, b,
+.current, h1, h2, h3, h4, h5, h6, b,
 strong, dt, th, .alert {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
 
+/*-----------------------------------
+icon settings
+---------------------------------- */
+/* icon_ratio to font-size of each UI */
+/*-----------------------------------
+form settings
+---------------------------------- */
+/*-----------------------------------
+UI settings
+---------------------------------- */
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -105,26 +115,39 @@ html {
 }
 
 /* line 78, ../sass/_default.scss */
-nav ul, nav ol,
-menu, .ui-tab ul, .ui-tab ol, .ui-tab menu, .test-horizontal, body, h1, h2, h3, h4, h5, h6, form {
+body, h1, h2, h3, h4, h5, h6, form, button,
+input,
+select,
+textarea {
   margin: 0;
 }
 
 /* line 79, ../sass/_default.scss */
+legend, input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+}
+
+/* line 81, ../sass/_default.scss */
 nav ul, nav ol,
-menu, .ui-tab ul, .ui-tab ol, .ui-tab menu, .test-horizontal {
+menu, .ui-tab ul, .ui-tab ol, .ui-tab menu, .test-horizontal, .ui-pagenation ul, .ui-tab.centered ul, .centered-horizontal-wrapper ul, .ui-pagenation ol, .ui-tab.centered ol, .centered-horizontal-wrapper ol, .ui-pagenation menu, .ui-tab.centered menu, .centered-horizontal-wrapper menu,
+.ui-pagenation .horizontal-list,
+.ui-tab.centered .horizontal-list,
+.centered-horizontal-wrapper .horizontal-list {
+  margin: 0;
   padding: 0;
 }
 
 /* line 86, ../sass/_default.scss */
 body {
+  background: white   ;
   font: 1rem/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
 }
 
 /* =============================================================================
    Links
    ========================================================================== */
-/* line 96, ../sass/_default.scss */
+/* line 97, ../sass/_default.scss */
 a {
   color: #258fb8;
   /*
@@ -141,26 +164,26 @@ a:hover {
   text-decoration: none;
   color: #30a7d5;
 }
-/* line 107, ../sass/_default.scss */
+/* line 108, ../sass/_default.scss */
 a:hover, a:active {
   outline: 0;
 }
-/* line 109, ../sass/_default.scss */
+/* line 110, ../sass/_default.scss */
 a:visited {
   color: #52b6dc;
 }
-/* line 111, ../sass/_default.scss */
+/* line 112, ../sass/_default.scss */
 a:active {
-  color: #217ea3;
+  color: #175a74;
 }
-/* line 115, ../sass/_default.scss */
+/* line 116, ../sass/_default.scss */
 a:focus {
   /*
    * Addresses outline displayed oddly in Chrome
    */
   outline: thin dotted;
 }
-/* line 122, ../sass/_default.scss */
+/* line 123, ../sass/_default.scss */
 a.current {
   color: #333;
 }
@@ -168,22 +191,22 @@ a.current {
 /* =============================================================================
    Typography
    ========================================================================== */
-/* line 131, ../sass/_default.scss */
+/* line 132, ../sass/_default.scss */
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
-/* line 137, ../sass/_default.scss */
+/* line 138, ../sass/_default.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 146, ../sass/_default.scss */
+/* line 147, ../sass/_default.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 150, ../sass/_default.scss */
+/* line 151, ../sass/_default.scss */
 dfn {
   font-style: italic;
 }
@@ -191,7 +214,7 @@ dfn {
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-/* line 158, ../sass/_default.scss */
+/* line 159, ../sass/_default.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -200,7 +223,7 @@ mark {
 /*
  * Addresses margins set differently in IE6/7
  */
-/* line 168, ../sass/_default.scss */
+/* line 169, ../sass/_default.scss */
 p,
 pre {
   margin: 1em 0;
@@ -210,7 +233,7 @@ pre {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 180, ../sass/_default.scss */
+/* line 181, ../sass/_default.scss */
 pre,
 code,
 kbd,
@@ -223,7 +246,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-/* line 190, ../sass/_default.scss */
+/* line 191, ../sass/_default.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -235,20 +258,20 @@ pre {
  * 2. Addresses quote property not supported in S4
  */
 /* 1 */
-/* line 203, ../sass/_default.scss */
+/* line 204, ../sass/_default.scss */
 q {
   quotes: none;
 }
 
 /* 2 */
-/* line 210, ../sass/_default.scss */
+/* line 211, ../sass/_default.scss */
 q:before,
 q:after {
   content: '';
   content: none;
 }
 
-/* line 215, ../sass/_default.scss */
+/* line 216, ../sass/_default.scss */
 small {
   font-size: 75%;
 }
@@ -257,7 +280,7 @@ small {
  * Prevents sub and sup affecting line-height in all browsers
  * gist.github.com/413930
  */
-/* line 225, ../sass/_default.scss */
+/* line 226, ../sass/_default.scss */
 sub,
 sup {
   font-size: 75%;
@@ -266,17 +289,17 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 232, ../sass/_default.scss */
+/* line 233, ../sass/_default.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 236, ../sass/_default.scss */
+/* line 237, ../sass/_default.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 240, ../sass/_default.scss */
+/* line 241, ../sass/_default.scss */
 hr {
   clear: both;
   border: none;
@@ -285,26 +308,29 @@ hr {
 /* =============================================================================
    Lists
    ========================================================================== */
-/* line 254, ../sass/_default.scss */
+/* line 250, ../sass/_default.scss */
+nav ul, nav ol,
+menu, .ui-tab ul, .ui-tab ol, .ui-tab menu, .test-horizontal, .ui-pagenation ul, .ui-tab.centered ul, .centered-horizontal-wrapper ul, .ui-pagenation ol, .ui-tab.centered ol, .centered-horizontal-wrapper ol, .ui-pagenation menu, .ui-tab.centered menu, .centered-horizontal-wrapper menu,
+.ui-pagenation .horizontal-list,
+.ui-tab.centered .horizontal-list,
+.centered-horizontal-wrapper .horizontal-list {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 256, ../sass/_default.scss */
 dl, ol, ul {
   margin: 1em 0;
 }
 
-/* line 258, ../sass/_default.scss */
+/* line 260, ../sass/_default.scss */
 ol, ul {
   padding: 0 0 0 40px;
 }
 
-/* line 267, ../sass/_default.scss */
+/* line 269, ../sass/_default.scss */
 dd {
   margin: 0 0 0 40px;
-}
-
-/* line 269, ../sass/_default.scss */
-nav ul, nav ol,
-menu, .ui-tab ul > li, .ui-tab ol > li, .ui-tab menu > li, .test-horizontal > li {
-  list-style: none;
-  list-style-position: outside;
 }
 
 /* =============================================================================
@@ -315,7 +341,7 @@ menu, .ui-tab ul > li, .ui-tab ol > li, .ui-tab menu > li, .test-horizontal > li
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 290, ../sass/_default.scss */
+/* line 286, ../sass/_default.scss */
 img {
   border: 0;
   /* 1 */
@@ -327,7 +353,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9
  */
-/* line 300, ../sass/_default.scss */
+/* line 296, ../sass/_default.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -338,7 +364,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-/* line 312, ../sass/_default.scss */
+/* line 308, ../sass/_default.scss */
 figure {
   margin: 0;
 }
@@ -352,9 +378,9 @@ figure {
 /*
  * Define consistent border, margin, and padding
  */
-/* line 332, ../sass/_default.scss */
+/* line 328, ../sass/_default.scss */
 fieldset {
-  border: 1px solid #c0c0c0;
+  border: none;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -364,15 +390,20 @@ fieldset {
  * 2. Corrects text not wrapping in FF3 
  * 3. Corrects alignment displayed oddly in IE6/7
  */
-/* line 344, ../sass/_default.scss */
+/* line 345, ../sass/_default.scss */
 legend {
   border: 0;
   /* 1 */
-  padding: 0;
   white-space: normal;
   /* 2 */
   *margin-left: -7px;
   /* 3 */
+}
+
+/* line 355, ../sass/_default.scss */
+label:not(:first-child) input[type="checkbox"],
+label:not(:first-child) input[type="radio"] {
+  margin-left: 0.618em;
 }
 
 /*
@@ -380,14 +411,13 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-/* line 360, ../sass/_default.scss */
+/* line 370, ../sass/_default.scss */
 button,
 input,
 select,
 textarea {
   font-size: 100%;
   /* 1 */
-  margin: 0;
   /* 2 */
   vertical-align: baseline;
   /* 3 */
@@ -398,11 +428,20 @@ textarea {
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-/* line 372, ../sass/_default.scss */
+/* line 382, ../sass/_default.scss */
 button,
 input {
   line-height: normal;
   /* 1 */
+}
+
+/* line 389, ../sass/_default.scss */
+input[type="text"],
+input[type="password"],
+input[type='email'],
+input[type='url'] {
+  padding: 3px;
+  border: 2px #eeeeee solid inset;
 }
 
 /*
@@ -411,7 +450,7 @@ input {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 386, ../sass/_default.scss */
+/* line 404, ../sass/_default.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -427,7 +466,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements
  */
-/* line 397, ../sass/_default.scss */
+/* line 415, ../sass/_default.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -439,12 +478,12 @@ input[disabled] {
  * 3. Removes excess padding in IE7
       Known issue: excess padding remains in IE6
  */
-/* line 409, ../sass/_default.scss */
+/* line 427, ../sass/_default.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0;
+  margin-right: 0.3em;
   /* 2 */
   *height: 13px;
   /* 3 */
@@ -456,7 +495,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 421, ../sass/_default.scss */
+/* line 440, ../sass/_default.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -469,7 +508,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-/* line 433, ../sass/_default.scss */
+/* line 452, ../sass/_default.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -479,7 +518,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 443, ../sass/_default.scss */
+/* line 462, ../sass/_default.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -490,7 +529,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 453, ../sass/_default.scss */
+/* line 472, ../sass/_default.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -504,13 +543,13 @@ textarea {
 /*
  * Remove most spacing between table cells
  */
-/* line 467, ../sass/_default.scss */
+/* line 486, ../sass/_default.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 477, ../sass/_default.scss */
+/* line 496, ../sass/_default.scss */
 tbody th {
   text-align: left;
 }
@@ -518,12 +557,6 @@ tbody th {
 /* =============================================================================
 clearfix
  ========================================================================== */
-/* line 485, ../sass/_default.scss */
-.ui-tab ul, .ui-tab ol, .ui-tab menu, .test-horizontal {
-  overflow: hidden;
-  *zoom: 1;
-}
-
 /* --
 Typography
 -- */
@@ -538,70 +571,140 @@ Typography
 }
 
 /* layout pf object */
-/* line 12, ../sass/_ui_modules.scss */
-.ui-tab ul > li, .ui-tab ol > li, .ui-tab menu > li, .test-horizontal > li {
-  float: left;
-}
-
 /* horizontal list */
 /* line 15, ../sass/_ui_modules.scss */
-.ui-tab ul a, .ui-tab ol a, .ui-tab menu a, .test-horizontal a, .ui-tab.centered ul a, .centered-horizontal ul a, .ui-tab.centered ol a, .centered-horizontal ol a, .ui-tab.centered menu a, .centered-horizontal menu a {
+.ui-tab ul a, .ui-tab ol a, .ui-tab menu a, .test-horizontal a {
   display: block;
 }
 
-/* line 38, ../sass/_ui_modules.scss */
-.ui-tab.centered, .centered-horizontal {
+/* line 17, ../sass/_ui_modules.scss */
+.ui-tab ul, .ui-tab ol, .ui-tab menu, .test-horizontal {
+  line-height: normal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+
+/* line 37, ../sass/_ui_modules.scss */
+.ui-pagenation, .ui-tab.centered, .centered-horizontal-wrapper {
   text-align: center;
 }
 /* line 41, ../sass/_ui_modules.scss */
-.ui-tab.centered ul, .centered-horizontal ul, .ui-tab.centered ol, .centered-horizontal ol, .ui-tab.centered menu, .centered-horizontal menu {
-  display: inline-table;
-  border-width: 1px;
+.ui-pagenation ul, .ui-tab.centered ul, .centered-horizontal-wrapper ul, .ui-pagenation ol, .ui-tab.centered ol, .centered-horizontal-wrapper ol, .ui-pagenation menu, .ui-tab.centered menu, .centered-horizontal-wrapper menu,
+.ui-pagenation .horizontal-list,
+.ui-tab.centered .horizontal-list,
+.centered-horizontal-wrapper .horizontal-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
 }
-/* line 45, ../sass/_ui_modules.scss */
-.ui-tab.centered ul > li, .centered-horizontal ul > li, .ui-tab.centered ol > li, .centered-horizontal ol > li, .ui-tab.centered menu > li, .centered-horizontal menu > li {
-  display: table-cell;
+/* line 54, ../sass/_ui_modules.scss */
+.ui-pagenation ul a, .ui-tab.centered ul a, .centered-horizontal-wrapper ul a, .ui-pagenation ol a, .ui-tab.centered ol a, .centered-horizontal-wrapper ol a, .ui-pagenation menu a, .ui-tab.centered menu a, .centered-horizontal-wrapper menu a,
+.ui-pagenation .horizontal-list a,
+.ui-tab.centered .horizontal-list a,
+.centered-horizontal-wrapper .horizontal-list a {
+  display: block;
 }
 
 /* icon */
-/* line 56, ../sass/_ui_modules.scss */
+/* line 61, ../sass/_ui_modules.scss */
 i {
-  background: url("../images/ico_home.svg") no-repeat;
-  vertical-align: middle;
+  background: url(../images/sprite_icon.svg) no-repeat;
 }
 
 /* navigations */
-/* line 62, ../sass/_ui_modules.scss */
-.ui-tab ul a, .ui-tab ol a, .ui-tab menu a {
+/* line 66, ../sass/_ui_modules.scss */
+.ui-pagenation a, .ui-tab a, .btn {
   display: inline-table;
+  vertical-align: top;
   padding: 0.618em;
   text-decoration: none;
 }
-/* line 67, ../sass/_ui_modules.scss */
-.ui-tab ul a i, .ui-tab ol a i, .ui-tab menu a i {
+/* line 73, ../sass/_ui_modules.scss */
+.ui-pagenation a i, .ui-tab a i, .btn i,
+.ui-pagenation a .cmd-label,
+.ui-tab a .cmd-label,
+.btn .cmd-label {
   display: table-cell;
+}
+/* line 78, ../sass/_ui_modules.scss */
+.ui-pagenation a i + .cmd-label, .ui-tab a i + .cmd-label, .btn i + .cmd-label {
+  padding-left: 0.382em;
+}
+/* line 83, ../sass/_ui_modules.scss */
+.ui-pagenation a.is-ico-rside .cmd-label, .ui-tab a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label {
   padding-right: 0.382em;
 }
 
-/* line 79, ../sass/_ui_modules.scss */
-.ui-tab ul a, .ui-tab ol a, .ui-tab menu a {
+/* line 90, ../sass/_ui_modules.scss */
+.ui-pagenation a {
+  margin-right: 0.309em;
+  padding: 0.618em 0.927em;
+  border: solid 1px #CCC;
+}
+/* line 79, ../sass/_settings.scss */
+.ui-pagenation a.current {
+  background: #D8D8D8;
+}
+/* line 93, ../sass/_ui_modules.scss */
+.ui-pagenation a.current {
+  color: #181818;
+}
+
+/* line 99, ../sass/_ui_modules.scss */
+.ui-tab {
+  font-size: 0;
+}
+/* line 110, ../sass/_ui_modules.scss */
+.ui-tab a {
   margin: 0 1px 0 0;
   background: #CCC;
   line-height: 1.1em;
   color: #181818;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.1em;
+  font-size: 1rem;
 }
-/* line 87, ../sass/_ui_modules.scss */
-.ui-tab ul a:hover, .ui-tab ol a:hover, .ui-tab menu a:hover {
+/* line 87, ../sass/_settings.scss */
+.ui-tab a:hover {
   background-color: #e0e0e0;
 }
-/* line 92, ../sass/_ui_modules.scss */
-.ui-tab ul i, .ui-tab ol i, .ui-tab menu i {
+/* line 90, ../sass/_settings.scss */
+.ui-tab a.current {
+  background-color: #a3a3a3;
+}
+/* line 121, ../sass/_ui_modules.scss */
+.ui-tab i {
   width: 1.1em;
   height: 1.1em;
-  -webkit-background-size: 1.1em auto;
-  -moz-background-size: 1.1em auto;
-  -o-background-size: 1.1em auto;
-  background-size: 1.1em auto;
+  -webkit-background-size: auto 1.1em;
+  -moz-background-size: auto 1.1em;
+  -o-background-size: auto 1.1em;
+  background-size: auto 1.1em;
+}
+
+/* form */
+/* line 129, ../sass/_ui_modules.scss */
+.btn {
+  line-height: 1em;
+}
+/* line 134, ../sass/_ui_modules.scss */
+.btn[type="submit"], .btn[type="reset"] {
+  padding: 0.618em 1.309em;
+}
+/* line 138, ../sass/_ui_modules.scss */
+.btn i {
+  width: 1em;
+  height: 1em;
+  -webkit-background-size: auto 1em;
+  -moz-background-size: auto 1em;
+  -o-background-size: auto 1em;
+  background-size: auto 1em;
 }

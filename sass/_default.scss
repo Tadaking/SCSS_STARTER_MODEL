@@ -79,12 +79,13 @@ html {
 %reset_padding { padding: 0; }
 
 %reset_margin_padding {
-  @extend %reset_margin;
-  @extend %reset_padding;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   @extend %reset_margin;
+  @include body_background;
   font: 1rem/#{$default_lineheight} #{$default_family};
   //layout grid by 16px
   //@include column-grid-background(30, 16px, 16px, 16px, rgba(255,0,0,0.3), rgba(255,0,0,0.1), false);
@@ -246,7 +247,8 @@ hr {
 /* =============================================================================
    Lists
    ========================================================================== */
-%reset-liststyle {
+%reset_liststyle {
+  @extend %reset_margin_padding;
   list-style: none;
   list-style-image: none;
 }
@@ -266,14 +268,8 @@ dt { @extend %bold; }
 
 dd { margin: 0 0 0 40px; }
 
-%reset_liststyle {
-  list-style: none;
-  list-style-position: outside;
-}
-
 nav ul, nav ol,
 menu {
-  @extend %reset_margin_padding;
   @extend %reset_liststyle;
 }
 
@@ -330,7 +326,12 @@ form {
  */
 
 fieldset {
-    border: 1px solid #c0c0c0;
+    @if $fieldset_border {
+      border: 1px solid #c0c0c0;
+    } @else {
+      border: none;
+    }
+    
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
@@ -343,9 +344,18 @@ fieldset {
 
 legend {
     border: 0; /* 1 */
-    padding: 0;
+    @extend %reset_padding;
     white-space: normal; /* 2 */
     *margin-left: -7px; /* 3 */
+}
+
+label {
+  &:not(:first-child) {
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-left: 0.618em;
+    }
+  }
 }
 
 /*
@@ -359,7 +369,7 @@ input,
 select,
 textarea {
     font-size: 100%; /* 1 */
-    margin: 0; /* 2 */
+    @extend %reset_margin; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
 }
@@ -371,6 +381,14 @@ textarea {
 button,
 input {
     line-height: normal; /* 1 */
+}
+
+input[type="text"],
+input[type="password"],
+input[type='email'],
+input[type='url'] {
+  padding: $input_textarea_padding;
+  @include input_textarea_border;
 }
 
 /*
@@ -408,7 +426,8 @@ input[disabled] {
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
+    margin-right: 0.3em;
+    @extend %reset_padding; /* 2 */
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
 }

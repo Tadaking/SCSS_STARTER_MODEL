@@ -1,39 +1,93 @@
-
 @charset "UTF-8";
 
-/* ==
+/*-----------------------------------
 layout settings
-   ===*/
-
+---------------------------------- */
  /* IF You use "display:box;" on your website, turn true */
-$box-layout: false;
+$box-layout: true;
 
 /* Define minimal grid  */
 $gridWidth: 16px;
 $gridHeight: 8px;
 
-
 /* webpage design layout settings */
 $pageWidth : 980px;
 $boxMargin: 8px;
 
+$body_background_color: #FFF;
+$body_background_image_file: null; //PATH _TO_IMAGE or null
+$body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
+$body_background_offset: null; // xOffset, yOffset or nu;;
+
 /* Wright down layout-setting setting for your website */
-$left_column_width: $gridWidth * 8;
-//$right_column_width
+//$left_column_width: $gridWidth * 8;
+//$right_column_width: foo;
 
-/* ==
+
+
+
+
+
+
+
+
+/*-----------------------------------
 define colors
-=== */
-$lighten_amount_strong: 16%;
+---------------------------------- */
+$lighten_strong_amount: 16%;
 $lighten_amount: 8%;
-$darken_amount: 5%;
+$darken_amount: 16%;
 
-/* ==
+/*-----------------------------------
 design settings
-=== */
+---------------------------------- */
 /* tab UI */
 
-/* ==
+/*-----------------------------------
 typography settings
-=== */
+---------------------------------- */
 @import 'typography';
+
+/*-----------------------------------
+icon settings
+---------------------------------- */
+$icon_sprite_path: '../images/sprite_icon.svg';
+
+/* icon_ratio to font-size of each UI */
+$icon_ratio_tab: 1.1em;
+$icon_ratio_button: 1em;
+
+/*-----------------------------------
+form settings
+---------------------------------- */
+$fieldset_border: null; //true or null
+
+$input_textarea_padding: 3px;
+$input_textarea_bgcolor: 1px;
+
+@mixin input_textarea_border {
+	border: input_textarea_border(2px, #EEE, inset);
+}
+
+/*-----------------------------------
+UI settings
+---------------------------------- */
+@mixin default_ui_pagenation_action {
+	margin-right: 0.309em;
+	padding: 0.618em 0.927em;
+	border: solid 1px #CCC;
+	&.current {
+		background: #D8D8D8;
+	}
+}
+
+@mixin default_tab_design {
+	//write down here design CSS
+	background: #CCC;
+	&:hover {
+	  background-color: lighten(#CCC, $lighten_amount);
+	}
+	&.current {
+		background-color: darken(#CCC, $darken_amount);
+	}
+}

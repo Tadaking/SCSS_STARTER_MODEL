@@ -10,17 +10,6 @@
 </head>
 
 <body>
-
-  <section>
-    <h1>Head Text</h1>
-    <h1>h1 text level</h1>
-    <h2>h2 text level</h2>
-    <h3>h3 text level</h3>
-    <h4>h4 text level</h4>
-    <h5>h5 text level</h5>
-    <h6>h6 text level</h6>
-  </section>
-
   <section>
     <h1>link text </h1>
     <a href="http://soundscarab.com">Link Site</a>
@@ -30,7 +19,7 @@
 
   <section>
     <h1>list</h1>
-    <h2>noral list</h2>
+    <h2>normal list</h2>
     <ul>
       <li>a</li>
       <li>b</li>
@@ -61,42 +50,195 @@
       <li>3</li>
       <li>4</li>
     </ul>
-    <h3>on centerd horizontal list</h3>
-    <div class="centered-horizontal">
+    <h3>on centerd horizontal list (example ui-pagenation</h3>
+    <div class="ui-pagenation">
       <ul>
-        <li>1</li>
+        <li><a href="" class="current">1</a></li>
         <li><a href="">2</a></li>
-        <li>3</li>
-        <li>4</li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
       </ul>
+    </div>
+  </section>
+
+  <section>
+    <h1>Form Interface</h1>
+    <fieldset>
+      <label for="">INPUT LABEL</label>
+      <input type="text" value="" placeholder="text">
+
+      <label for="">INPUT LABEL</label>
+      <input type="password" value="" placeholder="password">
+
+      <label for="">INPUT LABEL</label>
+      <input type="email" value="" placeholder="email">
+
+      <label for="">INPUT LABEL</label>
+      <input type="url" value="" placeholder="url">
+    </fieldset>
+    
+    <fieldset>
+      <label for="">TEXTAREA</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <label for="">selectbox</label>
+      <select name="" id="">
+        <option value="">select menu</option>
+      </select>
+    </fieldset>
+    
+    <fieldset>
+      <label for=""><input type="checkbox" value="">checkbox1</label>
+      <label for=""><input type="checkbox" value="">checkbox1</label>
+      <label for=""><input type="checkbox" value="">checkbox1</label>
+    </fieldset>
+    
+    <fieldset>
+      <label for=""><input type="radio" value="">radio button</label>
+      <label for=""><input type="radio" value="">radio button</label>
+      <label for=""><input type="radio" value="">radio button</label>
+    </fieldset>
+    
+    <fieldset>
+      <h2>Normal(no class)</h2>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+      <button type="submit">Submit</button><br>
+
+      <h2>.btn</h2>
+      <input type="submit" value="Submit" class="btn">
+      <input type="reset" value="Clear" class="btn">
+      button tag
+      <button type="submit" class="btn">Submit</button>
+
+      <h2>button.btn + icon</h2>
+      <button type="submit"class="btn">
+        <i class="home"></i><span class="cmd-label">Submit</span>
+      </button>
+      <button type="reset" class="btn is-ico-rside">
+        <span class="cmd-label">Clear</span>
+        <i class="home"></i>
+      </button>
+    </fieldset>
+
+    <fieldset class="test-horizontal">
+      <h2>横並びクラス内</h2>
+      <button class="btn">Submit</button>
+      <button class="btn">
+        <i class="home"></i>
+        <span class="cmd-label">Submit</span>
+      </button>
+      <button class="btn is-ico-rside">
+        <span class="cmd-label">Submit</span>
+        <i class="home"></i>
+      </button>
+      <button class="btn"><i class="home"></i></button>
+    </fieldset>
+
+    <div class="centered-horizontal-wrapper">
+    <fieldset class="horizontal-list">
+      <h2>横並び真ん中寄せクラス内</h2>
+      <button class="btn">Submit</button>
+      <button class="btn">
+        <i class="home"></i>
+        <span class="cmd-label">Submit</span>
+      </button>
+      <button class="btn is-ico-rside">
+        <span class="cmd-label">Submit</span>
+        <i class="home"></i>
+      </button>
+      <button class="btn"><i class="home"></i></button>
+    </fieldset>
     </div>
   </section>
 
   <section>
     <h1>Navigations</h1>
     <h2>Tab</h2>
+    <h3>div.ui-tab > ul > li > a</h3>
     <div class="ui-tab">
+      <ul>
+        <li>
+          <a href="" class="current">
+            <i class="home"></i>
+            <span class="cmd-label">TAB_MENU</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" class="is-ico-rside">
+            <span class="cmd-label">TAB_MENU</span>
+            <i class="home"></i>
+          </a>
+        </li>
+        <li><a href="">TAB_MENU</a></li>
+        <li><a href="">TAB_MENU</a></li>
+      </ul>
+    </div>
+
+    <h3>div.ui-tab > a</h3>
+    <div class="ui-tab">
+      <a href="">
+        <i class="home"></i>
+        <span class="cmd-label">TAB_MENU</span>
+      </a>
+      <a href="">
+        <i class="home"></i>
+      </a>
+      <a href="" class="is-ico-rside current">
+        <span class="cmd-label">TAB_MENU</span>
+        <i class="home"></i>
+      </a>
+      <a href="">TAB_MENU</a>
+      <a href="">TAB_MENU</a></li>
+    </div>
+
+    <h2>Tab Centered</h2>
+    <h3>div.ui-tab.centered > ul > li > a</h3>
+    <div class="ui-tab centered">
       <ul>
         <li>
           <a href="">
             <i class="home"></i>
-            1
+            <span class="cmd-label">TAB_MENU</span>
           </a>
         </li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
+        <li>
+          <a href="" class="current">
+            <i class="home"></i>
+          </a>
+        </li>
+        <li>
+          <a href="" class="is-ico-rside">
+            <span class="cmd-label">TAB_MENU</span>
+            <i class="home"></i>
+          </a>
+        </li>
+        <li><a href="">TAB_MENU</a></li>
+        <li><a href="">TAB_MENU</a></li>
       </ul>
     </div>
-
-    <h2>Tab Centered</h2>
+    <h3>div.ui-tab.centered > a</h3>
     <div class="ui-tab centered">
-      <ul>
-        <li><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-      </ul>
+      <a href="">
+        <i class="home"></i>
+        <span class="cmd-label">TAB_MENU</span>
+      </a>
+      <a href="">
+        <i class="home"></i>
+      </a>
+      <a href="" class="is-ico-rside">
+        <span class="cmd-label">TAB_MENU</span>
+        <i class="home"></i>
+      </a>
+      <a href="">TAB_MENU</a>
+      <a href="" class="current">TAB_MENU</a>
     </div>
   </section>
 </body>

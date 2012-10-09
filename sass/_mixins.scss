@@ -1,9 +1,55 @@
 @import "compass/";
 @import "compass/css3";
 
+
+//To Apply Style to only IE8 @include for_ie8 {}
+@mixin for_ie8 {
+  .no-rgba {
+    @content;
+  }
+}
+
+//To Apply Style to only IE8 @include for_ie9 {}
+@mixin for_ie9 {
+  .no-csstransitions {
+    @content;
+  }
+}
+
+//if display:box == true
+@mixin is_display_box($box_pack_value) {
+  @if $box-layout {
+    @include display-box;
+    @if $box_pack_value {
+      @include box-pack($box_pack_value);
+    }
+  } @else {
+    @content;
+  }
+}
+
+//for iOS Font-Antialius
 @mixin font-weight($weight) {
-	font-weight: $weight;
-	@if $weight == bold {
-		-webkit-font-smoothing: antialiased;
-	}
+  font-weight: $weight;
+  @if $weight == bold {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@function body_background_image($image_file) {
+  @if $body_background_image_file {
+    @return url('#{$image_file}');
+  } @else {
+    @return null;
+  }
+}
+
+//body background
+@mixin body_background {
+  background: #{$body_background_color} #{body_background_image($body_background_image_file)} #{$body_background_repeat} #{$body_background_offset};
+}
+
+//basic input saetting
+@function input_textarea_border($amount, $color, $inset) {
+  @return #{$amount} #{$color} solid #{$inset};
 }

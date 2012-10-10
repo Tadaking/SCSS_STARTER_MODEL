@@ -42,7 +42,6 @@ Typography
     @include is_display_box(center) {
       display: inline-table;
     }
-
     @extend %reset_liststyle;
 
     > li {
@@ -85,43 +84,53 @@ i {
   }
 }
 
-.ui-pagenation {
-  @extend %centered_horizontal_wrapper;
-  a {
-    @extend %action;
-    @include default_ui_pagenation_action;
-    &.current{
-      color: $default_fontcolor;
+@if $ui_pagenation {
+  .ui-pagenation {
+    @extend %centered_horizontal_wrapper;
+    a {
+      @extend %action;
+      @include default_ui_pagenation_action;
+      &.current{
+        color: $default_fontcolor;
+      }
     }
   }
 }
 
-.ui-tab {
-  font-size: 0;
+@if $ui_tab {
+  .ui-tab {
+    @include default_ui_tab_settings;
+    font-size: 0;
 
-  &.centered {
-    @extend %centered_horizontal_wrapper;
+    &.centered {
+      @extend %centered_horizontal_wrapper;
+    }
+
+    ul, ol, menu {
+      @extend %horizontal_list;
+    }
+
+    a {
+      margin: 0 1px 0 0;
+      @extend %action;
+      @include default_tab_design;
+      line-height: $icon_ratio_tab;
+      color: $default_fontcolor;
+      @include font-weight(bold);
+      line-height: $icon_ratio_tab;
+      font-size: 1rem;
+    }
+
+    i {
+      width: $icon_ratio_tab;
+      height: $icon_ratio_tab;
+      @include background-size(auto $icon_ratio_tab);
+    }
   }
 
-  ul, ol, menu {
-    @extend %horizontal_list;
-  }
-
-  a {
-    margin: 0 1px 0 0;
-    @extend %action;
-    @include default_tab_design;
-    line-height: $icon_ratio_tab;
-    color: $default_fontcolor;
-    @include font-weight(bold);
-    line-height: $icon_ratio_tab;
-    font-size: 1rem;
-  }
-
-  i {
-    width: $icon_ratio_tab;
-    height: $icon_ratio_tab;
-    @include background-size(auto $icon_ratio_tab);
+  .ui-tab-content {
+    text-align: left;
+    @include default_ui_tab_content;
   }
 }
 

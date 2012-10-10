@@ -389,9 +389,6 @@ input[type='email'],
 input[type='url'] {
   padding: $input_textarea_padding;
   @include input_textarea_border;
-  @if $input_textarea_boxshadow {
-    @include input_box_shadow_setting;
-  }
 }
 
 /*

@@ -12,10 +12,14 @@ layout settings
 /* webpage design layout settings */
 /* Wright down layout-setting setting for your website */
 /*-----------------------------------
-Define Colors
+define colors
 ---------------------------------- */
 /*-----------------------------------
-Typography Settings
+design settings
+---------------------------------- */
+/* tab UI */
+/*-----------------------------------
+typography settings
 ---------------------------------- */
 /* --
 default settings
@@ -23,7 +27,7 @@ default settings
 /* --
 anchor settings
 -- */
-/* line 51, /Users/Tadaki/Dropbox/SCSS_STARTER_MODEL/sass/_typography.scss */
+/* line 51, ../sass/_typography.scss */
 .current, h1, h2, h3, h4, h5, h6, b,
 strong, dt, th, .alert {
   font-weight: bold;
@@ -31,17 +35,15 @@ strong, dt, th, .alert {
 }
 
 /*-----------------------------------
-Icon Settings
+icon settings
 ---------------------------------- */
 /* icon_ratio to font-size of each UI */
 /*-----------------------------------
-Form Design Settings
+form settings
 ---------------------------------- */
 /*-----------------------------------
-UI Design Settings
+UI settings
 ---------------------------------- */
-/* UI tab */
-/* UI pagenation */
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -153,11 +155,11 @@ a {
    * people.opera.com/patrickl/experiments/keyboard/test
    */
 }
-/* line 29, /Users/Tadaki/Dropbox/SCSS_STARTER_MODEL/sass/_typography.scss */
+/* line 29, ../sass/_typography.scss */
 a:link {
   text-decoration: underline;
 }
-/* line 32, /Users/Tadaki/Dropbox/SCSS_STARTER_MODEL/sass/_typography.scss */
+/* line 32, ../sass/_typography.scss */
 a:hover {
   text-decoration: none;
   color: #30a7d5;
@@ -448,7 +450,7 @@ input[type='url'] {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 407, ../sass/_default.scss */
+/* line 404, ../sass/_default.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -464,7 +466,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements
  */
-/* line 418, ../sass/_default.scss */
+/* line 415, ../sass/_default.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -476,7 +478,7 @@ input[disabled] {
  * 3. Removes excess padding in IE7
       Known issue: excess padding remains in IE6
  */
-/* line 430, ../sass/_default.scss */
+/* line 427, ../sass/_default.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -493,7 +495,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 443, ../sass/_default.scss */
+/* line 440, ../sass/_default.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -506,7 +508,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-/* line 455, ../sass/_default.scss */
+/* line 452, ../sass/_default.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -516,7 +518,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 465, ../sass/_default.scss */
+/* line 462, ../sass/_default.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -527,7 +529,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 475, ../sass/_default.scss */
+/* line 472, ../sass/_default.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -541,13 +543,13 @@ textarea {
 /*
  * Remove most spacing between table cells
  */
-/* line 489, ../sass/_default.scss */
+/* line 486, ../sass/_default.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 499, ../sass/_default.scss */
+/* line 496, ../sass/_default.scss */
 tbody th {
   text-align: left;
 }
@@ -602,7 +604,7 @@ Typography
   -ms-box-pack: center;
   box-pack: center;
 }
-/* line 53, ../sass/_ui_modules.scss */
+/* line 54, ../sass/_ui_modules.scss */
 .ui-pagenation ul a, .ui-tab.centered ul a, .centered-horizontal-wrapper ul a, .ui-pagenation ol a, .ui-tab.centered ol a, .centered-horizontal-wrapper ol a, .ui-pagenation menu a, .ui-tab.centered menu a, .centered-horizontal-wrapper menu a,
 .ui-pagenation .horizontal-list a,
 .ui-tab.centered .horizontal-list a,
@@ -611,31 +613,31 @@ Typography
 }
 
 /* icon */
-/* line 60, ../sass/_ui_modules.scss */
+/* line 61, ../sass/_ui_modules.scss */
 i {
   background: url(../images/sprite_icon.svg) no-repeat;
 }
 
 /* navigations */
-/* line 65, ../sass/_ui_modules.scss */
+/* line 66, ../sass/_ui_modules.scss */
 .ui-pagenation a, .ui-tab a, .btn {
   display: inline-table;
   vertical-align: top;
   padding: 0.618em;
   text-decoration: none;
 }
-/* line 72, ../sass/_ui_modules.scss */
+/* line 73, ../sass/_ui_modules.scss */
 .ui-pagenation a i, .ui-tab a i, .btn i,
 .ui-pagenation a .cmd-label,
 .ui-tab a .cmd-label,
 .btn .cmd-label {
   display: table-cell;
 }
-/* line 77, ../sass/_ui_modules.scss */
+/* line 78, ../sass/_ui_modules.scss */
 .ui-pagenation a i + .cmd-label, .ui-tab a i + .cmd-label, .btn i + .cmd-label {
   padding-left: 0.382em;
 }
-/* line 82, ../sass/_ui_modules.scss */
+/* line 83, ../sass/_ui_modules.scss */
 .ui-pagenation a.is-ico-rside .cmd-label, .ui-tab a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label {
   padding-right: 0.382em;
 }
@@ -646,7 +648,7 @@ i {
   padding: 0.618em 0.927em;
   border: solid 1px #CCC;
 }
-/* line 102, ../sass/_settings.scss */
+/* line 79, ../sass/_settings.scss */
 .ui-pagenation a.current {
   background: #D8D8D8;
 }
@@ -655,13 +657,11 @@ i {
   color: #181818;
 }
 
-/* line 101, ../sass/_ui_modules.scss */
+/* line 99, ../sass/_ui_modules.scss */
 .ui-tab {
-  width: 80%;
-  margin: 8px auto;
   font-size: 0;
 }
-/* line 113, ../sass/_ui_modules.scss */
+/* line 110, ../sass/_ui_modules.scss */
 .ui-tab a {
   margin: 0 1px 0 0;
   background: #CCC;
@@ -672,15 +672,15 @@ i {
   line-height: 1.1em;
   font-size: 1rem;
 }
-/* line 80, ../sass/_settings.scss */
+/* line 87, ../sass/_settings.scss */
 .ui-tab a:hover {
   background-color: #e0e0e0;
 }
-/* line 83, ../sass/_settings.scss */
+/* line 90, ../sass/_settings.scss */
 .ui-tab a.current {
   background-color: #a3a3a3;
 }
-/* line 124, ../sass/_ui_modules.scss */
+/* line 121, ../sass/_ui_modules.scss */
 .ui-tab i {
   width: 1.1em;
   height: 1.1em;
@@ -690,24 +690,16 @@ i {
   background-size: auto 1.1em;
 }
 
-/* line 131, ../sass/_ui_modules.scss */
-.ui-tab-content {
-  text-align: left;
-  background: #a3a3a3;
-  padding: 8px;
-  font-size: 1rem;
-}
-
 /* form */
-/* line 138, ../sass/_ui_modules.scss */
+/* line 129, ../sass/_ui_modules.scss */
 .btn {
   line-height: 1em;
 }
-/* line 143, ../sass/_ui_modules.scss */
+/* line 134, ../sass/_ui_modules.scss */
 .btn[type="submit"], .btn[type="reset"] {
   padding: 0.618em 1.309em;
 }
-/* line 147, ../sass/_ui_modules.scss */
+/* line 138, ../sass/_ui_modules.scss */
 .btn i {
   width: 1em;
   height: 1em;

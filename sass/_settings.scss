@@ -7,13 +7,12 @@ layout settings
 $box-layout: true;
 
 /* Define minimal grid  */
-$grid_width: 16px;
-$grid_height: 8px;
-$grid_margin: 8px;
+$gridWidth: 16px;
+$gridHeight: 8px;
 
 /* webpage design layout settings */
-$page_width : 980px;
-$box_margin: $grid_margin;
+$pageWidth : 980px;
+$boxMargin: 8px;
 
 $body_background_color: #FFF;
 $body_background_image_file: null; //PATH _TO_IMAGE or null
@@ -21,25 +20,36 @@ $body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
 $body_background_offset: null; // xOffset, yOffset or nu;;
 
 /* Wright down layout-setting setting for your website */
-//$left_column_width: $grid_width * 8;
+//$left_column_width: $gridWidth * 8;
 //$right_column_width: foo;
 
 
 
+
+
+
+
+
+
 /*-----------------------------------
-Define Colors
+define colors
 ---------------------------------- */
 $lighten_strong_amount: 16%;
 $lighten_amount: 8%;
 $darken_amount: 16%;
 
 /*-----------------------------------
-Typography Settings
+design settings
+---------------------------------- */
+/* tab UI */
+
+/*-----------------------------------
+typography settings
 ---------------------------------- */
 @import 'typography';
 
 /*-----------------------------------
-Icon Settings
+icon settings
 ---------------------------------- */
 $icon_sprite_path: '../images/sprite_icon.svg';
 
@@ -48,59 +58,36 @@ $icon_ratio_tab: 1.1em;
 $icon_ratio_button: 1em;
 
 /*-----------------------------------
-Form Design Settings
+form settings
 ---------------------------------- */
 $fieldset_border: null; //true or null
+
 $input_textarea_padding: 3px;
-$input_textarea_boxshadow: false; //If boxshadow is needed, turn true, And define into mixin of input_box_shadow_setting.
+$input_textarea_bgcolor: 1px;
 
 @mixin input_textarea_border {
-  border: input_textarea_border(2px, #EEE, inset);
-}
-
-@mixin input_box_shadow_setting {
-  //If boxshadow is needed, define in this area
-  //@include box-shadow(Position Xoffset Yoffset Blur Spred rgba(0,0,0,0));
+	border: input_textarea_border(2px, #EEE, inset);
 }
 
 /*-----------------------------------
-UI Design Settings
+UI settings
 ---------------------------------- */
-/* UI tab */
-$ui_tab: true; //If your website needs tab UI, true else null
-
-@mixin default_ui_tab_settings {
-  width: 80%;
-  margin: $grid_margin auto;
+@mixin default_ui_pagenation_action {
+	margin-right: 0.309em;
+	padding: 0.618em 0.927em;
+	border: solid 1px #CCC;
+	&.current {
+		background: #D8D8D8;
+	}
 }
 
 @mixin default_tab_design {
-  //write down here design CSS
-  background: #CCC;
-  &:hover {
-    background-color: lighten(#CCC, $lighten_amount);
-  }
-  &.current {
-    background-color: darken(#CCC, $darken_amount);
-  }
+	//write down here design CSS
+	background: #CCC;
+	&:hover {
+	  background-color: lighten(#CCC, $lighten_amount);
+	}
+	&.current {
+		background-color: darken(#CCC, $darken_amount);
+	}
 }
-
-@mixin default_ui_tab_content {
-  //write down here design CSS
-  background: darken(#CCC, $darken_amount);
-  padding: $grid_margin;
-  font-size: 1rem;
-}
-
-/* UI pagenation */
-$ui_pagenation: true; //If your website needs pagenation UI, true else null
-
-@mixin default_ui_pagenation_action {
-  margin-right: 0.309em;
-  padding: 0.618em 0.927em;
-  border: solid 1px #CCC;
-  &.current {
-    background: #D8D8D8;
-  }
-}
-

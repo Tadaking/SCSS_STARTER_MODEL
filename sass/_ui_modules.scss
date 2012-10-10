@@ -12,7 +12,7 @@ Typography
 %lfloating { float: left; }
 
 /* horizontal list */
-%link_has_area { display: block; }
+%link_has_area { display: inline-block; }
 
 %horizontal_list {
   line-height: normal;
@@ -24,7 +24,7 @@ Typography
   >li,
   >a,
   >button  {
-    @if $box-layout == false {
+    @if $box_layout == false {
       @extend %lfloating;
     }
   }
@@ -46,7 +46,7 @@ Typography
     @extend %reset_liststyle;
 
     > li {
-      @if $box-layout == false {
+      @if $box_layout == false {
         display: table-cell;
       }
     }
@@ -60,18 +60,21 @@ Typography
 /* icon */
 i {
   background: url(#{$icon_sprite_path}) no-repeat;
+  vertical-align: middle;
 }
 
 /* navigations */
 %action {
   display: inline-table;
-  vertical-align: top;
+  line-height: 1;
   padding: 0.618em;
   text-decoration: none;
+  vertical-align: middle;
 
   i,
   .cmd-label {
     display: table-cell;
+    vertical-align: bottom;
   }
 
   i {
@@ -83,6 +86,13 @@ i {
   &.is-ico-rside .cmd-label {
     padding-right: 0.382em;
   }
+
+  &:link,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
 }
 
 .ui-pagenation {
@@ -97,6 +107,7 @@ i {
 }
 
 .ui-tab {
+  @include default_ui_tab_design;
   font-size: 0;
 
   &.centered {
@@ -111,10 +122,6 @@ i {
     margin: 0 1px 0 0;
     @extend %action;
     @include default_tab_design;
-    line-height: $icon_ratio_tab;
-    color: $default_fontcolor;
-    @include font-weight(bold);
-    line-height: $icon_ratio_tab;
     font-size: 1rem;
   }
 
@@ -123,12 +130,16 @@ i {
     height: $icon_ratio_tab;
     @include background-size(auto $icon_ratio_tab);
   }
+
+  .ui-tab-content {
+    @include default_tab_content_design;
+  }
 }
 
 /* form */
 .btn {
   @extend %action;
-  line-height: $icon_ratio_button;
+  @include default_btn_design;
 
   &[type="submit"],
   &[type="reset"] {

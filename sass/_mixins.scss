@@ -18,7 +18,7 @@
 
 //if display:box == true
 @mixin is_display_box($box_pack_value) {
-  @if $box-layout {
+  @if $box_layout {
     @include display-box;
     @if $box_pack_value {
       @include box-pack($box_pack_value);

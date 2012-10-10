@@ -4,15 +4,16 @@
 layout settings
 ---------------------------------- */
  /* IF You use "display:box;" on your website, turn true */
-$box-layout: true;
+$box_layout: true;
 
 /* Define minimal grid  */
-$gridWidth: 16px;
-$gridHeight: 8px;
+$grid_width: 16px;
+$grid_height: 8px;
+$grid_margin: 8px;
 
 /* webpage design layout settings */
-$pageWidth : 980px;
-$boxMargin: 8px;
+$page_width : 980px;
+
 
 $body_background_color: #FFF;
 $body_background_image_file: null; //PATH _TO_IMAGE or null
@@ -20,13 +21,8 @@ $body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
 $body_background_offset: null; // xOffset, yOffset or nu;;
 
 /* Wright down layout-setting setting for your website */
-//$left_column_width: $gridWidth * 8;
+//$left_column_width: $grid_width * 8;
 //$right_column_width: foo;
-
-
-
-
-
 
 
 
@@ -54,7 +50,7 @@ icon settings
 $icon_sprite_path: '../images/sprite_icon.svg';
 
 /* icon_ratio to font-size of each UI */
-$icon_ratio_tab: 1.1em;
+$icon_ratio_tab: 1em;
 $icon_ratio_button: 1em;
 
 /*-----------------------------------
@@ -63,15 +59,21 @@ form settings
 $fieldset_border: null; //true or null
 
 $input_textarea_padding: 3px;
-$input_textarea_bgcolor: 1px;
 
 @mixin input_textarea_border {
 	border: input_textarea_border(2px, #EEE, inset);
 }
 
+@mixin default_btn_design {
+  background: #FF0;
+  border: solid 1px #666;
+  color: #333;
+}
+
 /*-----------------------------------
 UI settings
 ---------------------------------- */
+/* pagenation design */
 @mixin default_ui_pagenation_action {
 	margin-right: 0.309em;
 	padding: 0.618em 0.927em;
@@ -81,13 +83,28 @@ UI settings
 	}
 }
 
+/* ui-tab design */
+@mixin default_ui_tab_design {
+  width: 80%;
+  margin: $grid_margin auto;
+}
+
 @mixin default_tab_design {
 	//write down here design CSS
 	background: #CCC;
+  color: $default_fontcolor;
+  @include font-weight(bold);
+
 	&:hover {
 	  background-color: lighten(#CCC, $lighten_amount);
 	}
 	&.current {
 		background-color: darken(#CCC, $darken_amount);
 	}
+}
+
+@mixin default_tab_content_design {
+  padding: 8px;
+  background: darken(#CCC, $darken_amount);
+  font-size: $default_fontsize;
 }

@@ -49,10 +49,15 @@ $alert_color: #f00;
 
 // for Antialias setting for Safari
 %bold {
-  @include font-weight(bold);
+  @include font_weight(bold);
 }
 
 //for example ui-pagenation, ui-tab
 .current {
   @extend %bold;
+}
+
+%text_on_dark_background{
+  text-shadow:#000 0 0 0;
+  -moz-opacity: 0.99; /* for Firefox */
 }

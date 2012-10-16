@@ -93,7 +93,7 @@ UI settings
 	//write down here design CSS
 	background: #CCC;
   color: $default_fontcolor;
-  @include font-weight(bold);
+  @include font_weight(bold);
 
 	&:hover {
 	  background-color: lighten(#CCC, $lighten_amount);

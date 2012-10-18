@@ -23,7 +23,6 @@ $link_active: darken($link_color, $darken_amount);;
 
 $link_decoration: true;
 
-
 @mixin link_decoration {
   @if $link_decoration {
     &:link {
@@ -57,7 +56,15 @@ $alert_color: #f00;
   @extend %bold;
 }
 
+//to clear text color for Safari, Firefox
 %text_on_dark_background{
   text-shadow:#000 0 0 0;
   -moz-opacity: 0.99; /* for Firefox */
+}
+
+//for text-overflow
+%text-overflow {
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;
 }

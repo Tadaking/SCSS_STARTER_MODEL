@@ -27,7 +27,7 @@ default settings
 /* --
 anchor settings
 -- */
-/* line 51, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 .current, h1, h2, h3, h4, h5, h6, b,
 strong, dt, th, .alert {
   font-weight: bold;
@@ -157,11 +157,11 @@ a {
    * people.opera.com/patrickl/experiments/keyboard/test
    */
 }
-/* line 29, ../sass/_typography.scss */
+/* line 28, ../sass/_typography.scss */
 a:link {
   text-decoration: underline;
 }
-/* line 32, ../sass/_typography.scss */
+/* line 31, ../sass/_typography.scss */
 a:hover {
   text-decoration: none;
   color: #30a7d5;

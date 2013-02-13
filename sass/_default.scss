@@ -96,32 +96,34 @@ body {
    ========================================================================== */
 a {
   color: $link_color;
-  @include link_decoration() {
-    color: $link_hover
-  };
+  @include link_decoration {
+      color: $link_hover;
+  }
   /*
    * Improves readability when focused and also mouse hovered in all browsers
    * people.opera.com/patrickl/experiments/keyboard/test
    */
+  &:visited {
+    color: $link_visited;
+  }
 
-  &:hover,
-  &:active { outline: 0; }
-
-  &:visited { color: $link_visited; }
-
-  &:active {
+  &:active{
     color: $link_active;
   }
 
   &:focus {
+    color: $link_focus;
     /*
      * Addresses outline displayed oddly in Chrome
      */
     outline: thin dotted;
   }
 
+  &:hover,
+  &:active { outline: 0; }
+
   &.current {
-    color: #333;
+    color: $link_current;
   }
 }
 
@@ -129,7 +131,7 @@ a {
 /* =============================================================================
    Typography
    ========================================================================== */
-h1,h2,h3,h4,h5,h6 {
+#{headings()} {
   @extend %reset_margin;
   @extend %bold;
   letter-spacing: -1px;
@@ -189,9 +191,7 @@ samp {
  */
 
 pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+    @include force-wrap;
 }
 
 /*

@@ -27,7 +27,13 @@ default settings
 /* --
 anchor settings
 -- */
-/* line 50, ../sass/_typography.scss */
+/* --
+default settings
+-- */
+/* --
+anchor settings
+-- */
+/* line 46, ../sass/_typography.scss */
 .current, h1, h2, h3, h4, h5, h6, b,
 strong, dt, th, .alert {
   font-weight: bold;
@@ -39,10 +45,10 @@ icon settings
 ---------------------------------- */
 /* icon_ratio to font-size of each UI */
 /*-----------------------------------
-form settings
+form design settings
 ---------------------------------- */
 /*-----------------------------------
-UI settings
+UI design settings
 ---------------------------------- */
 /* pagenation design */
 /* ui-tab design */
@@ -152,63 +158,61 @@ body {
 /* line 97, ../sass/_default.scss */
 a {
   color: #258fb8;
+  text-decoration: underline;
   /*
    * Improves readability when focused and also mouse hovered in all browsers
    * people.opera.com/patrickl/experiments/keyboard/test
    */
 }
-/* line 28, ../sass/_typography.scss */
-a:link {
-  text-decoration: underline;
-}
-/* line 31, ../sass/_typography.scss */
+/* line 29, ../sass/_typography.scss */
 a:hover {
   text-decoration: none;
   color: #30a7d5;
 }
-/* line 108, ../sass/_default.scss */
-a:hover, a:active {
-  outline: 0;
+/* line 106, ../sass/_default.scss */
+a:visited {
+  color: #9fd6ec;
 }
 /* line 110, ../sass/_default.scss */
-a:visited {
-  color: #52b6dc;
-}
-/* line 112, ../sass/_default.scss */
 a:active {
-  color: #175a74;
+  color: #1e7596;
 }
-/* line 116, ../sass/_default.scss */
+/* line 114, ../sass/_default.scss */
 a:focus {
+  color: #30a7d5;
   /*
    * Addresses outline displayed oddly in Chrome
    */
   outline: thin dotted;
 }
 /* line 123, ../sass/_default.scss */
+a:hover, a:active {
+  outline: 0;
+}
+/* line 125, ../sass/_default.scss */
 a.current {
-  color: #333;
+  color: #333333;
 }
 
 /* =============================================================================
    Typography
    ========================================================================== */
-/* line 132, ../sass/_default.scss */
+/* line 134, ../sass/_default.scss */
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
-/* line 138, ../sass/_default.scss */
+/* line 140, ../sass/_default.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 147, ../sass/_default.scss */
+/* line 149, ../sass/_default.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 151, ../sass/_default.scss */
+/* line 153, ../sass/_default.scss */
 dfn {
   font-style: italic;
 }
@@ -216,7 +220,7 @@ dfn {
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-/* line 159, ../sass/_default.scss */
+/* line 161, ../sass/_default.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -225,7 +229,7 @@ mark {
 /*
  * Addresses margins set differently in IE6/7
  */
-/* line 169, ../sass/_default.scss */
+/* line 171, ../sass/_default.scss */
 p,
 pre {
   margin: 1em 0;
@@ -235,23 +239,28 @@ pre {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 181, ../sass/_default.scss */
+/* line 183, ../sass/_default.scss */
 pre,
 code,
 kbd,
 samp {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
+  _font-family: "courier new", monospace;
   font-size: 1em;
 }
 
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-/* line 191, ../sass/_default.scss */
+/* line 193, ../sass/_default.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
   word-wrap: break-word;
 }
 
@@ -656,9 +665,9 @@ i {
 .ui-pagenation a {
   margin-right: 0.309em;
   padding: 0.618em 0.927em;
-  border: solid 1px #CCC;
+  border: solid 1px #cccccc;
 }
-/* line 81, ../sass/_settings.scss */
+/* line 104, ../sass/_settings.scss */
 .ui-pagenation a.current {
   background: #D8D8D8;
 }
@@ -682,13 +691,13 @@ i {
   -webkit-font-smoothing: antialiased;
   font-size: 1rem;
 }
-/* line 98, ../sass/_settings.scss */
+/* line 121, ../sass/_settings.scss */
 .ui-tab a:hover {
   background-color: #e0e0e0;
 }
-/* line 101, ../sass/_settings.scss */
+/* line 124, ../sass/_settings.scss */
 .ui-tab a.current {
-  background-color: #a3a3a3;
+  background-color: #b8b8b8;
 }
 /* line 128, ../sass/_ui_modules.scss */
 .ui-tab i {
@@ -702,7 +711,7 @@ i {
 /* line 134, ../sass/_ui_modules.scss */
 .ui-tab .ui-tab-content {
   padding: 8px;
-  background: #a3a3a3;
+  background: #b8b8b8;
   font-size: 16px;
 }
 
@@ -710,7 +719,7 @@ i {
 /* line 140, ../sass/_ui_modules.scss */
 .btn {
   background: #FF0;
-  border: solid 1px #666;
+  border: solid 1px #666666;
   color: #333;
 }
 /* line 145, ../sass/_ui_modules.scss */

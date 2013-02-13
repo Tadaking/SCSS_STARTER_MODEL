@@ -25,17 +25,13 @@ $link_decoration: true;
 
 @mixin link_decoration {
   @if $link_decoration {
-    &:link {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
     &:hover{
       text-decoration: none;
       @content;
     }
   } @else {
-     &:link {
-      text-decoration: none;
-    }
+    text-decoration: none;
     &:hover{
       text-decoration: underline;
       @content;

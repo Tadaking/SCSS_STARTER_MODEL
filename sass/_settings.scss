@@ -30,9 +30,9 @@ $body_background_offset: null; // xOffset, yOffset or nu;;
 /*-----------------------------------
 define colors
 ---------------------------------- */
-$lighten_strong_amount: 16%;
+$lighten_strong_amount: 34%;
 $lighten_amount: 8%;
-$darken_amount: 16%;
+$darken_amount: 8%;
 
 /*-----------------------------------
 design settings
@@ -42,6 +42,30 @@ design settings
 /*-----------------------------------
 typography settings
 ---------------------------------- */
+/* --
+default settings
+-- */
+$sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
+$serif: "Gergea", serif;
+
+$default_fontweight: 300;
+$default_fontsize: 16px;
+$default_lineheight: 20px;
+$default_fontcolor: #181818;
+$default_family: $sans-serif;
+
+/* --
+anchor settings
+-- */
+$link_color: #258FB8;
+$link_visited: lighten($link_color, $lighten_strong_amount);
+$link_hover: lighten($link_color, $lighten_amount);
+$link_active: darken($link_color, $darken_amount);
+$link_focus: $link_hover;
+$link_current: #333;
+
+$link_decoration: true;
+
 @import 'typography';
 
 /*-----------------------------------
@@ -54,10 +78,9 @@ $icon_ratio_tab: 1em;
 $icon_ratio_button: 1em;
 
 /*-----------------------------------
-form settings
+form design settings
 ---------------------------------- */
-$fieldset_border: null; //true or null
-
+$fieldset_border: null; //true or null 
 $input_textarea_padding: 3px;
 
 @mixin input_textarea_border {
@@ -71,7 +94,7 @@ $input_textarea_padding: 3px;
 }
 
 /*-----------------------------------
-UI settings
+UI design settings
 ---------------------------------- */
 /* pagenation design */
 @mixin default_ui_pagenation_action {

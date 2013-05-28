@@ -11,7 +11,7 @@ $default_fontsize: 16px;
 $default_lineheight: 20px;
 $default_fontcolor: #181818;
 $default_family: $sans-serif;
-
+$bold_fontweight: bold;
 
 /* --
 anchor settings
@@ -19,37 +19,19 @@ anchor settings
 $link_color: #258FB8;
 $link_visited: lighten($link_color, $lighten_strong_amount);
 $link_hover: lighten($link_color, $lighten_amount);
-$link_active: darken($link_color, $darken_amount);;
+$link_active: darken($link_color, $darken_amount);
+$link_focus: $link_hover;
+$link_current: #333;
 
 $link_decoration: true;
 
-@mixin link_decoration {
-  @if $link_decoration {
-    text-decoration: underline;
-    &:hover{
-      text-decoration: none;
-      @content;
-    }
-  } @else {
-    text-decoration: none;
-    &:hover{
-      text-decoration: underline;
-      @content;
-    }
-  }
-}
-
 //empasis
+$emphasis: $emphasys_key_color;
 $alert_color: #f00;
 
 // for Antialias setting for Safari
 %bold {
   @include font_weight(bold);
-}
-
-//for example ui-pagenation, ui-tab
-.current {
-  @extend %bold;
 }
 
 //to clear text color for Safari, Firefox

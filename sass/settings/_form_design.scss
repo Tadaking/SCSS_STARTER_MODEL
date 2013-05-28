@@ -1,0 +1,29 @@
+$fieldset_border: null; //true or null 
+
+//form UI design
+$input_textarea_padding: 3px;
+
+@mixin input_textarea_border {
+  //input[type="text"]やtextareaの入寮系のデザインを記述
+}
+
+@mixin error_view {
+  label {
+    color: $red;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type='email'],
+  input[type='url'],
+  textarea {
+    background: $yellow;
+    border-color: $red;
+  }
+  
+  @content;
+}
+
+@mixin error_text {
+  @extend %alert;
+}

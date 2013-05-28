@@ -44,21 +44,12 @@
       <li>menu</li>
     </menu>
     <h3>on horizontal list</h3>
-    <ul class="test-horizontal">
+    <ul class="horizontal">
       <li>1</li>
       <li><a href="">2</a></li>
       <li>3</li>
       <li>4</li>
     </ul>
-    <h3>on centerd horizontal list (example ui-pagenation</h3>
-    <div class="ui-pagenation">
-      <ul>
-        <li><a href="" class="current">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-      </ul>
-    </div>
   </section>
 
   <section>
@@ -66,6 +57,12 @@
     <fieldset>
       <label for="">INPUT LABEL</label>
       <input type="text" value="" placeholder="text">
+
+      <span class="error">
+        <label for="">INPUT LABEL</label>
+        <input type="text" value="" placeholder="text">
+        <span class="error-txt">Error Has Occured.</span>
+      </span>
 
       <label for="">INPUT LABEL</label>
       <input type="password" value="" placeholder="password">
@@ -78,6 +75,11 @@
     </fieldset>
     
     <fieldset>
+      <label for="">TEXTAREA</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </fieldset>
+    
+    <fieldset class="error">
       <label for="">TEXTAREA</label>
       <textarea name="" id="" cols="30" rows="10"></textarea>
     </fieldset>
@@ -105,13 +107,31 @@
       <h2>Normal(no class)</h2>
       <input type="submit" value="Submit">
       <input type="reset" value="Clear">
-      <button type="submit">Submit</button><br>
+      <input type="submit" value="Submit" disabled>
+      <button type="submit">Button type="submit"</button>
+      <button type="submit" disabled>Button type="submit"</button>
+      <button type="button">Button type="button"</button>
+      <br>
 
       <h2>.btn</h2>
       <input type="submit" value="Submit" class="btn">
       <input type="reset" value="Clear" class="btn">
-      button tag
-      <button type="submit" class="btn">Submit</button>
+      <input type="submit" value="Submit" class="btn" disabled>
+      <button type="submit" class="btn">button[type="submit'].btn</button>
+      <button type="button" class="btn">button[type="button'].btn</button>
+      <button type="submit" class="btn" disabled>button[type="submit'].btn</button>
+
+      <a href="#" class="btn">a.button</a>
+      <a href="#" class="btn cancel">a.cancel</a>
+
+      <h2>.switch</h2>
+      <button type="button" class="switch">button[type="button'].switch</button>
+      <button type="button" class="switch active">button[type="button'].switch.active</button>
+      <button type="button" class="switch" disabled>button[type="button'].switch:disabled</button>
+
+      <a href="#" class="switch">a.switch</a>
+      <a href="#" class="switch active">a.switch.active</a>
+      <a href="#" class="switch disabled">a.switch.disabled</a>
 
       <h2>button.btn + icon</h2>
       <button type="submit"class="btn">
@@ -121,9 +141,18 @@
         <span class="cmd-label">Clear</span>
         <i class="home"></i>
       </button>
+
+      <h2>button.switch + icon</h2>
+      <button type="submit"class="switch">
+        <i class="home"></i><span class="cmd-label">Submit</span>
+      </button>
+      <button type="reset" class="switch is-ico-rside">
+        <span class="cmd-label">Clear</span>
+        <i class="home"></i>
+      </button>
     </fieldset>
 
-    <fieldset class="test-horizontal">
+    <fieldset class="horizontal">
       <h2>横並びクラス内</h2>
       <button class="btn">Menu Text g</button>
       <button class="btn">
@@ -139,7 +168,7 @@
 
     <hr>
 
-    <fieldset class="test-horizontal">
+    <fieldset class="horizontal">
       <h2>横並びクラス内 - a Tag</h2>
       <a href="" class="btn">Menu Text</a>
       <a href="" class="btn">
@@ -153,7 +182,7 @@
       <a href="" class="btn"><i class="home"></i></a>
     </fieldset>
 
-    <div class="centered-horizontal-wrapper">
+    <div class="centered-horizontal">
     <fieldset class="horizontal-list">
       <h2>横並び真ん中寄せクラス内</h2>
       <button class="btn">MENUTEXT</button>
@@ -170,11 +199,66 @@
     </div>
   </section>
 
+  <table>
+    <thead>
+      <tr>
+        <th>thead heading</th>
+        <th>thead heading</th>
+        <th>thead heading</th>
+        <th>thead heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>tbody heading</th>
+        <td>tbody cell</td>
+        <td>tbody cell</td>
+        <td class="number">tbody cell</td>
+      </tr>
+      <tr>
+        <th>tbody heading</th>
+        <td>tbody cell</td>
+        <td>tbody cell</td>
+        <td class="number">tbody cell</td>
+      </tr>
+      <tr>
+        <th>tbody heading</th>
+        <td>tbody cell</td>
+        <td>tbody cell</td>
+        <td class="number">tbody cell</td>
+      </tr>
+      <tr>
+        <th>tbody heading</th>
+        <td>tbody cell</td>
+        <td>tbody cell</td>
+        <td class="number">tbody cell</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>tfoot cell</td>
+        <td>tfoot cell</td>
+        <td>tfoot cell</td>
+        <td>tfoot cell</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h3>on centerd horizontal list (example ui-pagenation</h3>
+  <div class="pagenation">
+    <ul>
+      <li><a href="" class="current">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+    </ul>
+  </div>
+
   <section>
     <h1>Navigations</h1>
     <h2>Tab</h2>
     <h3>div.ui-tab > ul > li > a</h3>
-    <div class="ui-tab">
+    <div class="tab">
       <ul>
         <li>
           <a href="" class="current">
@@ -203,7 +287,7 @@
     </div>
 
     <h3>div.ui-tab > a</h3>
-    <div class="ui-tab">
+    <div class="tab">
       <a href="">
         <i class="home"></i>
         <span class="cmd-label">TAB_MENU</span>
@@ -225,7 +309,7 @@
 
     <h2>Tab Centered</h2>
     <h3>div.ui-tab.centered > ul > li > a</h3>
-    <div class="ui-tab centered">
+    <div class="tab centered">
       <ul>
         <li>
           <a href="">
@@ -253,7 +337,7 @@
     </div>
 
     <h3>div.ui-tab.centered > a</h3>
-    <div class="ui-tab centered">
+    <div class="tab centered">
       <a href="">
         <i class="home"></i>
         <span class="cmd-label">TAB_MENU</span>

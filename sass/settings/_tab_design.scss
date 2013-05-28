@@ -1,0 +1,31 @@
+// ui-tab design
+$each_tab_margin: 1px;
+@mixin tab_layout {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@mixin default_tab_design {
+  //write down here design CSS
+  background: $lightGray;
+  color: $default_fontcolor;
+  @include font_weight(bold);
+
+  &:hover {
+    background-color: $site_key_color;
+    color: $white;
+  }
+  &.current {
+    background-color: lighten($lightGray, 2*$lighten_amount);
+    &:hover {
+      color: inherit;
+    }
+    cursor: default;
+  }
+}
+
+@mixin default_tab_content_design {
+  padding: 8px;
+  background: lighten($lightGray, 2*$lighten_amount);
+  font-size: $default_fontsize;
+}

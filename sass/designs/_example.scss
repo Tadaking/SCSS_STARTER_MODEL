@@ -1,0 +1,56 @@
+// ui-modulesで設定されたplaceholderを@extendすることで、
+// 必要なUIに自由にClass名を付加することができます。
+
+//typography
+.alert {
+  @extend %alert;
+  /* added settings */
+}
+
+.current {
+  @extend %current;
+  /* added settings */
+}
+
+//horizontal menu
+.horizontal {
+  @extend %horizontal_list;
+  /* added settings */
+}
+
+.centered-horizontal {
+  @extend %centered_horizontal;
+  /* added settings */
+}
+
+.pagenation {
+  @extend %ui-pagenation;
+  /* added settings */
+}
+
+.tab {
+  @extend %ui-tab;
+  /* added settings */
+}
+
+//form
+.error {
+  @extend %validation_error;
+}
+.error-txt {
+  @extend %error_txt;
+}
+
+//button
+.btn {
+  @extend %button;
+
+  &.cancel {
+    @extend %cancel;
+  }
+}
+
+//switch
+.switch {
+  @extend %switch;
+}

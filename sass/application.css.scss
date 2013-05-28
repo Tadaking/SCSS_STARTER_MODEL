@@ -8,8 +8,7 @@
 */
 
 @import 'mixins';
-@import 'settings';
+@import 'settings/base';
 @import 'default';
 @import 'ui_modules';
-
-@import 'example';
+@import 'designs/example';

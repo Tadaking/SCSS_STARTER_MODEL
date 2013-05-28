@@ -1,0 +1,54 @@
+//button design
+$normal: $site_key_color;
+$normal-btn-text: $white;
+
+$switch: lighten($lightGray, $lighten_amount);
+$switch-btn-text: darken($dark-gray, $darken-amount);
+
+$reset: lighten($site_key_color, 1.6*$lighten_amount);
+$reset-btn-text: $counter_white;
+
+$cancel: none;
+
+@mixin btn_designs {
+  @each $btnType in $normal, $reset, cancel {
+    @if $btnType == $reset {
+      &[type="reset"] {
+        //リセットボタンの状態を記述
+        @include btn_design($btnType, $reset-btn-text, true, true){
+          border: solid 1px darken($btnType, 0.5*$darken_amount);
+        }
+      }
+    } @else if $btnType == cancel {
+      &%cancel {
+        //キャンセルボタン（リンク）の状態を記述
+        @extend %reset_padding;
+        background: none;
+        border: none;
+        text-decoration: underline;
+        &:hover {
+          color: inherit;
+          @extend %no-text-decoration;
+        }
+      }
+    } @else {
+      //標準ボタンのデザイン記述
+      @include btn_design($btnType, $normal-btn-text, true, true){
+        border: solid 1px darken($btnType, 0.5*$darken_amount);
+      }
+    }
+  }
+}
+
+@mixin switch_design {
+  @include btn_design($switch, $switch-btn-text, true, true){
+    border: solid 1px darken($switch, 0.5*$darken_amount);
+  }
+
+  &.active {
+    // @extend input[type="submit"];
+    @include btn_design($site_key_color, $normal-btn-text, false, false){
+      border: solid 1px darken($site_key_color, 0.5*$darken_amount);
+    }
+  }
+}

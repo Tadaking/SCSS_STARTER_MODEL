@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/*-----------------------------------
+layout settings
+---------------------------------- */
+ /* IF You use "display:box;" on your website, turn true */
+$box_layout: true;
+$default_fontsize: 16px;
+
+/* Define minimal grid  */
+$grid_width: $default_fontsize;
+$grid_height: 1.5 * $default_fontsize;
+$grid_margin: 8px;
+
+/* webpage design layout settings */
+$page_width : 980px;
+$right_column: null;
+
+/* action area padding */
+$padding_tb: .618em;
+$padding_lr: 1.615em;
+
+$disabledOpacity: 0.5;
+
+/*-----------------------------------
+define background
+---------------------------------- */
+$body_background_color: #FFF;
+$body_background_image_file: null; //PATH _TO_IMAGE or null
+$body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
+$body_background_offset: null; // xOffset, yOffset or nu;;
+
+/*-----------------------------------
+define colors
+---------------------------------- */
+$site_key_color: #3ba4b0;
+$emphasys_key_color: #3b6ab0;
+$site_accent_color: #3bb082;
+
+$black: #000;
+$white: #FFF;
+$counter_white: #f0f0f0;
+
+$dark-gray: #5e5e5e;
+$gray: #8d8d8d;
+$lightGray: #a5a5a5;
+
+/* add color to use at following */
+$yellow: #FFFFF0;
+$red: #d15749;
+
+$lighten_amount: 10%;
+$darken_amount: 10%;
+
+$lighten_strong_amount: 2 * $lighten_amount;
+
+/*-----------------------------------
+typography settings
+---------------------------------- */
+@import 'typography';
+
+/*-----------------------------------
+icon settings
+---------------------------------- */
+$icon_sprite_path: '../images/sprite_icon.svg';
+
+/* icon_ratio to font-size of each UI */
+$icon_ratio_tab: 1em;
+$icon_ratio_button: 1em;
+
+/*-----------------------------------
+table design settings
+---------------------------------- */
+@import 'table_design';
+
+/*-----------------------------------
+form design settings
+---------------------------------- */
+@import 'form_design';
+@import 'button_design';
+
+/*-----------------------------------
+UI design settings
+---------------------------------- */
+@import 'tab_design';
+@import 'pagenation_design';

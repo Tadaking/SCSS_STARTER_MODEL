@@ -1,40 +1,53 @@
 /* --
 Typography
 -- */
-.alert {
+%alert {
   color: $alert_color ;
   @extend %bold;
 }
 
-.addition { font-size: 0.8em; }
+//for example ui-pagenation, ui-tab
+%current {
+  @extend %bold;
+}
+
+.note { font-size: 0.8em; }
 
 /* layout pf object */ 
 %lfloating { float: left; }
 
+%box-sizing {
+  @include box-sizing(border-box);
+}
+
 /* horizontal list */
 %link_has_area { display: inline-block; }
 
+%no-text-decoration { text-decoration: none; }
+
+//横並びリスト
 %horizontal_list {
+  @include horizontal_obj(">li, >a, >button");
   line-height: normal;
-  @include is_display_box(null) {
-    @extend %clearfix;
-  }
+  @extend %reset_liststyle;
+}
+
+//横並び定義
+%horizontal_definition {
+  @include horizontal_obj("dt, dd");
+  @extend %reset_margin;
+}
+
+//単純な横並びリスト
+%horizontal_text_menu {
   @extend %reset_liststyle;
 
-  >li,
-  >a,
-  >button  {
-    @if $box_layout == false {
-      @extend %lfloating;
-    }
-  }
-
-  a {
-    @extend %link_has_area;
+  >li, >a, >dd { 
+    padding: 0 $padding_lr;
   }
 }
 
-%centered_horizontal_wrapper {
+%centered_horizontal {
   text-align: center;
 
   ul, ol, menu,
@@ -67,7 +80,7 @@ i {
 %action {
   display: inline-table;
   line-height: 1;
-  padding: 0.618em;
+  padding: $padding_tb;
   text-decoration: none;
   vertical-align: middle;
 
@@ -92,11 +105,15 @@ i {
     color: inherit;
     text-decoration: none;
   }
-
+  
+  &:disabled, 
+  &.disabled {
+    opacity: $disabledOpacity;
+  }
 }
 
-.ui-pagenation {
-  @extend %centered_horizontal_wrapper;
+%ui-pagenation {
+  @extend %centered_horizontal;
   a {
     @extend %action;
     @include default_ui_pagenation_action;
@@ -106,12 +123,12 @@ i {
   }
 }
 
-.ui-tab {
-  @include default_ui_tab_design;
+%ui-tab {
   font-size: 0;
+  @include tab_layout;
 
   &.centered {
-    @extend %centered_horizontal_wrapper;
+    @extend %centered_horizontal;
   }
 
   ul, ol, menu {
@@ -119,7 +136,7 @@ i {
   }
 
   a {
-    margin: 0 1px 0 0;
+    margin: 0 $each_tab_margin 0 0;
     @extend %action;
     @include default_tab_design;
     font-size: 1rem;
@@ -137,18 +154,41 @@ i {
 }
 
 /* form */
-.btn {
-  @extend %action;
-  @include default_btn_design;
+%validation_error {
+  @include error_view {
+    %error_txt {
+      @include error_text;
+    }
+  }
+}
 
-  &[type="submit"],
-  &[type="reset"] {
-    padding: 0.618em 1.309em;
+%button_switch_icon {
+  width: $icon_ratio_button;
+  height: $icon_ratio_button;
+  @include background-size(auto $icon_ratio_button) ;
+}
+
+%button {
+  @extend %action;
+  @extend %box-sizing;
+  @include btn_designs;
+  padding: .618em 1.309em;
+
+  &[type=reset] {
+    padding: 0.618em;
   }
 
   i {
-    width: $icon_ratio_button;
-    height: $icon_ratio_button;
-    @include background-size(auto $icon_ratio_button) ;
+    @extend %button_switch_icon;
+  }
+}
+
+%switch {
+  @extend %action;
+  @extend %box-sizing;
+  @include switch_design;
+
+  i {
+    @extend %button_switch_icon;
   }
 }

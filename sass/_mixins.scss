@@ -4,16 +4,32 @@
 
 //To Apply Style to only IE8 @include for_ie8 {}
 @mixin for_ie8 {
-  .no-rgba {
+  .ie8 {
     @content;
   }
 }
 
 //To Apply Style to only IE8 @include for_ie9 {}
 @mixin for_ie9 {
-  .no-csstransitions {
+  .ie9 {
     @content;
   }
+}
+
+//To Apply Style to only IE8 @include for_ie9 {}
+@mixin for_lt-ie10 {
+  .lt-ie10 {
+    @content;
+  }
+}
+
+// Convert px to em
+@function pxtoem($target, $context){
+        @return ($target/$context)+0em;
+}
+// Convert em to px
+@function emtopx($target, $context){
+        @return ($target*$context)+0px;
 }
 
 //if display:box == true
@@ -31,25 +47,171 @@
 //for iOS Font-Antialius
 @mixin font_weight($weight) {
   font-weight: $weight;
-  @if $weight == bold {
+  @if $weight == $bold_fontweight {
     -webkit-font-smoothing: antialiased;
   }
 }
 
-@function body_background_image($image_file) {
-  @if $body_background_image_file {
-    @return url('#{$image_file}');
+//anchor
+@mixin link_decoration {
+  @if $link_decoration {
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+      @content;
+    }
   } @else {
-    @return null;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      @content;
+    }
   }
 }
 
 //body background
+// @function body_background_image($image_file) {
+//   @if $body_background_image_file {
+//     @return url('#{$image_file}');
+//   } @else {
+//     @return null;
+//   }
+// }
+
 @mixin body_background {
   background: #{$body_background_color} #{body_background_image($body_background_image_file)} #{$body_background_repeat} #{$body_background_offset};
 }
 
-//basic input setting
-@function input_textarea_border($amount, $color, $inset) {
-  @return #{$amount} #{$color} solid #{$inset};
+//table design
+//override compass outer-table-borders mixin
+@mixin outer-table-borders($width: 2px, $color: black, $verticalLine: false) {
+  border: $width solid $color;
+  @if $verticalLine == false {
+    border-right-width: 0;
+    border-left-width: 0;
+  }
+  thead {
+    th { border-bottom: $width solid $color; }
+  }
+  tfoot {
+    th, td { border-top: $width solid $color; }
+  }
+  th {
+    &:first-child {
+      border-right: $width solid $color;
+    }
+  }
+}
+
+//override compass inner-table-borders mixin
+@mixin inner-table-borders($width: 2px, $color: black, $verticalLine: false) {
+  th, td {
+    border: {
+      @if $verticalLine {
+        right: $width solid $color;
+      } @else {
+        right-width: 0px;
+      }     
+      bottom: $width solid $color;
+      left-width: 0px;
+      top-width: 0px;
+    };
+    &:last-child,
+    &.last {
+      @if $verticalLine {
+        border-right-width: 0px;
+      }
+    }
+  }
+  // IE8 ignores rules that are included on the same line as :last-child
+  // see http://www.richardscarrott.co.uk/posts/view/ie8-last-child-bug for details
+  tbody, tfoot {
+    tr:last-child {
+      th, td {
+        border-bottom-width: 0px; } }
+    tr.last {
+      th, td {
+        border-bottom-width: 0px
+      }
+    }
+  }
+}
+
+@mixin stripedTable {
+  tr {
+    @if $striped {
+      &:nth-child(even) {
+        th{
+          background: $thEven;
+        }
+        td {
+          background: $trEven;
+        }
+      }
+    }
+  }
+  @content;
+}
+
+
+//横並びクラス作成元関数
+@mixin horizontal_obj($childTags) {
+  @include is_display_box(null) {
+    @if $box_layout == false {
+      @extend %legacy-clearfix;
+    }
+  }
+  
+  #{$childTags} {
+    @if $box_layout == false {
+      float: left;
+    }
+    @extend %reset_margin;
+    @content;
+  }
+}
+
+//btndesign
+@mixin btn_design($btn_type, $btn-text, $hover: true, $active: true, $border: true) {
+  background: $btn_type;
+  color: $btn-text;
+  @content;
+
+  &:visited,
+  &:link {
+    color: $btn-text;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: darken($btn_type, 2*$darken_amount);
+    &:hover {
+      background: $btn_type;
+      // color: inherit;
+      color: darken($btn_type, 2*$darken_amount);
+    }
+  }
+
+  @if $hover {
+    &:hover {
+      background: lighten($btn_type, $lighten_amount);
+      color: lighten($btn_text, $lighten_amount);
+
+      &:disabled,
+      &.disabled {
+        // background: $switch;
+      }
+    }
+  }
+
+  @if $active {
+    &:active {
+      //add :active settings
+
+      &:disabled,
+      &.disabled {
+        // background: $switch;
+      }
+    }
+  }
 }

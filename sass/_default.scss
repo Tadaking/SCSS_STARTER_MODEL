@@ -69,6 +69,7 @@ audio:not([controls]) {
 // }
 
 html {
+  @include body_background;
   font-size: $default_fontsize; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -85,7 +86,6 @@ html {
 
 body {
   @extend %reset_margin;
-  @include body_background;
   font: 1rem/#{$default_lineheight} #{$default_family};
   //layout grid by 16px
   //@include column-grid-background(30, 16px, 16px, 16px, rgba(255,0,0,0.3), rgba(255,0,0,0.1), false);
@@ -386,9 +386,14 @@ input {
 input[type="text"],
 input[type="password"],
 input[type='email'],
-input[type='url'] {
+input[type='url'],
+textarea {
   padding: $input_textarea_padding;
   @include input_textarea_border;
+}
+
+input, textarea, button {
+  @extend %box-sizing;
 }
 
 /*
@@ -412,7 +417,8 @@ input[type="submit"] {
  */
 
 button[disabled],
-input[disabled] {
+input[disabled],
+.disabled {
     cursor: default;
 }
 
@@ -425,7 +431,6 @@ input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-    box-sizing: border-box; /* 1 */
     margin-right: 0.3em;
     @extend %reset_padding; /* 2 */
     *height: 13px; /* 3 */

@@ -1,0 +1,18 @@
+$striped: true;
+
+//table design settings
+$cellpadding_v: $padding_tb;
+$cellpadding_h: $padding_lr;
+
+$theadColor: #f3eefa; //#ccdef5;
+$tbodyTh: lighten($theadColor, 8%);
+$td: $white;
+
+$trEven: darken($td, 2%);
+$thEven: darken($tbodyTh, 2%);
+
+%defalt_table {
+	
+}
+
+//@include inner-table-borders($width: 2px, $color: black, $verticalLine: false)

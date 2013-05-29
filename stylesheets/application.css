@@ -763,29 +763,25 @@ i {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 121, ../sass/_ui_modules.scss */
-.pagenation a i, .tab a i, .btn i, .switch i,
-.pagenation a .cmd-label,
-.tab a .cmd-label,
-.btn .cmd-label,
-.switch .cmd-label {
+/* line 120, ../sass/_ui_modules.scss */
+.pagenation a i, .tab a i, .btn i, .switch i, .pagenation a .cmd-label, .tab a .cmd-label, .btn .cmd-label, .switch .cmd-label {
   display: table-cell;
   vertical-align: bottom;
 }
-/* line 127, ../sass/_ui_modules.scss */
+/* line 126, ../sass/_ui_modules.scss */
 .pagenation a i + .cmd-label, .tab a i + .cmd-label, .btn i + .cmd-label, .switch i + .cmd-label {
   padding-left: 0.382em;
 }
-/* line 132, ../sass/_ui_modules.scss */
+/* line 131, ../sass/_ui_modules.scss */
 .pagenation a.is-ico-rside .cmd-label, .tab a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label, .is-ico-rside.switch .cmd-label {
   padding-right: 0.382em;
 }
-/* line 137, ../sass/_ui_modules.scss */
+/* line 136, ../sass/_ui_modules.scss */
 .pagenation a:link, .tab a:link, .btn:link, .switch:link, .pagenation a:visited, .tab a:visited, .btn:visited, .switch:visited {
   color: inherit;
   text-decoration: none;
 }
-/* line 143, ../sass/_ui_modules.scss */
+/* line 142, ../sass/_ui_modules.scss */
 .pagenation a:disabled, .tab a:disabled, .btn:disabled, .switch:disabled, .pagenation a.disabled, .tab a.disabled, .disabled.btn, .disabled.switch {
   opacity: 0.5;
 }

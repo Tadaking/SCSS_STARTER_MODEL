@@ -117,19 +117,18 @@ i {
   text-decoration: none;
   vertical-align: middle;
 
-  i,
-  .cmd-label {
+  #{$icon-tagName}, .#{$action-label-className} {
     display: table-cell;
     vertical-align: bottom;
   }
 
-  i {
-    &+.cmd-label {
+  #{$icon-tagName} {
+    &+.#{$action-label-className} {
       padding-left: 0.382em;
     }
   }
 
-  &.is-ico-rside .cmd-label {
+  &.#{$icon-positionized-className} .#{$action-label-className} {
     padding-right: 0.382em;
   }
 
@@ -144,6 +143,7 @@ i {
     opacity: $disabledOpacity;
   }
 }
+
 
 %ui-pagenation {
   @extend %centered_horizontal;
@@ -175,7 +175,7 @@ i {
     font-size: 1rem;
   }
 
-  i {
+  #{$icon-tagName} {
     width: $icon_ratio_tab;
     height: $icon_ratio_tab;
     @include background-size(auto $icon_ratio_tab);
@@ -211,7 +211,7 @@ i {
     padding: 0.618em;
   }
 
-  i {
+  #{$icon-tagName} {
     @extend %button_switch_icon;
   }
 }
@@ -221,7 +221,7 @@ i {
   @extend %box-sizing;
   @include switch_design;
 
-  i {
+  #{$icon-tagName} {
     @extend %button_switch_icon;
   }
 }

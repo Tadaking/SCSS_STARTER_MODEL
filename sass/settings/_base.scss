@@ -87,5 +87,10 @@ form design settings
 /*-----------------------------------
 UI design settings
 ---------------------------------- */
+// アクションボタンのアイコンタグと⌘ラベルのclass名設定
+$icon-tagName: i;
+$action-label-className: cmd-label;
+$icon-positionized-className: is-ico-rside;
+
 @import 'tab_design';
 @import 'pagenation_design';

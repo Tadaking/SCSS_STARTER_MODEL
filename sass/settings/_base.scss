@@ -3,18 +3,23 @@
 /*-----------------------------------
 layout settings
 ---------------------------------- */
- /* IF You use "display:box;" on your website, turn true */
-$box_layout: true;
+//webpage design layout settings
 $default_fontsize: 16px;
+$grid_width: 2 * $default_fontsize;
+$grid_height: 3 * $default_fontsize;
+$grid_margin: $default_fontsize;
+
+$page_width: 30 * $grid_width;
+@debug $page_width;
+
+$column_num: 5;
+
+ /* IF You use "display:box;" on your website, turn true */
+$box_layout: false;
 
 /* Define minimal grid  */
-$grid_width: $default_fontsize;
-$grid_height: 1.5 * $default_fontsize;
-$grid_margin: 8px;
-
-/* webpage design layout settings */
-$page_width : 980px;
-$right_column: null;
+@mixin column_grid_width($n) {
+}
 
 /* action area padding */
 $padding_tb: .618em;

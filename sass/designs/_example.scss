@@ -1,6 +1,63 @@
 // ui-modulesで設定されたplaceholderを@extendすることで、
 // 必要なUIに自由にClass名を付加することができます。
 
+
+//boxlayout
+.site-body {
+  @include is_display_box(false);
+  @extend %clearfix;
+  width: $page_width;
+  margin: 0 auto;
+  background: $yellow;
+}
+
+.main {
+  @include column-grid(3, true);
+  height: 200px;
+  // margin-right: $grid_margin;
+  background: $lightGray;
+}
+
+.aside {
+  @include column-grid(2);
+  height: 200px;
+  background: $lightGray;
+}
+
+.left {
+  @include column-grid(1, true);
+  height: 150px;
+  background: $gray;
+}
+
+.middle {
+  @include column-grid(3);
+  height: 150px;
+  background: $gray;
+}
+
+.right {
+  @include column-grid(1);
+  height: 150px;
+  background: $gray;
+}
+
+.navigation {
+  @include column-grid(1, true);
+  height: 150px;
+  background: $gray;
+}
+
+.content {
+  @include column-grid(4);
+  height: 150px;
+  background: $gray;
+}
+
+.all {
+  @extend %separatedNum-5;
+}
+
 //typography
 .alert {
   @extend %alert;
@@ -16,6 +73,14 @@
 .horizontal {
   @extend %horizontal_list;
   /* added settings */
+}
+
+.horizontal-layout {
+  @include variable-horizontal(li);
+}
+
+.horizontal-layout2 {
+  @include variable-horizontal(div);
 }
 
 .centered-horizontal {
@@ -50,7 +115,13 @@
   }
 }
 
+//table
+.data-table {
+  @extend %default_table;
+}
+
 //switch
 .switch {
   @extend %switch;
 }
+

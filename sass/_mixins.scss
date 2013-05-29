@@ -32,8 +32,16 @@
         @return ($target*$context)+0px;
 }
 
+// Convert px to %
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+@function cp($target, $container) {
+  @return calc-percent($target, $container);
+}
+
 //if display:box == true
-@mixin is_display_box($box_pack_value) {
+@mixin is_display_box($box_pack_value: false) {
   @if $box_layout {
     @include display-box;
     @if $box_pack_value {
@@ -41,6 +49,34 @@
     }
   } @else {
     @content;
+  }
+}
+
+@mixin define_column_grid($outer_dom_size) {
+  @for $i from 1 through $column_num {
+    %separatedNum-#{$i} {
+      @extend %box-sizing;
+
+      @if $box_layout == false {
+        @extend %lfloating;
+      }
+
+      $base_grid: ($outer_dom_size - $grid_margin * ($column_num - 1))/ $column_num;
+      width: cp($base_grid * $i + $grid_margin * ($i - 1), $outer_dom_size);
+      
+      @if $i == $column_num {
+        // margin-right: $grid_margin;
+      } @else {
+        margin-left: $grid_margin;
+      }
+    }
+  }
+}
+
+@mixin column-grid($num, $first: false) {
+  @extend %separatedNum-#{$num};
+  @if $first {
+    @extend %first-grid;
   }
 }
 
@@ -69,15 +105,6 @@
   }
 }
 
-//body background
-// @function body_background_image($image_file) {
-//   @if $body_background_image_file {
-//     @return url('#{$image_file}');
-//   } @else {
-//     @return null;
-//   }
-// }
-
 @mixin body_background {
   background: #{$body_background_color} #{body_background_image($body_background_image_file)} #{$body_background_repeat} #{$body_background_offset};
 }
@@ -91,7 +118,10 @@
     border-left-width: 0;
   }
   thead {
-    th { border-bottom: $width solid $color; }
+    th {
+      background: $theadColor;
+      border-bottom: $width solid $color;
+    }
   }
   tfoot {
     th, td { border-top: $width solid $color; }

@@ -13,11 +13,32 @@ Typography
 
 .note { font-size: 0.8em; }
 
-/* layout pf object */ 
+/* layout pf object */
+@include define_column_grid($page_width);
+
+%first-grid {
+  margin-left: 0;
+}
+
 %lfloating { float: left; }
+
+%clearfix {
+  @include clearfix;
+}
+
+%legacy-clearfix {
+  @include legacy-pie-clearfix;
+}
 
 %box-sizing {
   @include box-sizing(border-box);
+}
+
+/* reset list style */
+%reset_liststyle {
+  @extend %reset_margin_padding;
+  list-style: none;
+  list-style-image: none;
 }
 
 /* horizontal list */
@@ -38,15 +59,27 @@ Typography
   @extend %reset_margin;
 }
 
-//単純な横並びリスト
-%horizontal_text_menu {
-  @extend %reset_liststyle;
+//可変横並び /* mixin の方をつかう */
+@mixin variable-horizontal($childObj) {
+  @extend %variable-horizontal;
 
-  >li, >a, >dd { 
-    padding: 0 $padding_lr;
+  #{$childObj} {
+    @extend %variable-horizontal-obj;
   }
+
+  @content;
 }
 
+%variable-horizontal {
+  @extend %reset_liststyle;
+  display: table;
+}
+
+%variable-horizontal-obj {
+  display: table-cell;
+}
+
+//横並び真ん中寄せ
 %centered_horizontal {
   text-align: center;
 

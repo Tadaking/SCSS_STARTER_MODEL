@@ -247,12 +247,6 @@ hr {
 /* =============================================================================
    Lists
    ========================================================================== */
-%reset_liststyle {
-  @extend %reset_margin_padding;
-  list-style: none;
-  list-style-image: none;
-}
-
 dl, ol, ul {
   margin: 1em 0;
 }
@@ -493,14 +487,18 @@ table {
     border-spacing: 0;
 }
 
-th {
-  @extend %bold;
-}
+// th {
+//   @extend %bold;
+// }
 
 tbody {
   th {
     text-align: left;
   }
+}
+
+td, th {
+  padding: $cellpadding_v $cellpadding_h;
 }
 
 /* =============================================================================

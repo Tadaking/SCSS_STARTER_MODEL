@@ -9,7 +9,6 @@ layout settings
 ---------------------------------- */
 /* IF You use "display:box;" on your website, turn true */
 /* Define minimal grid  */
-/* webpage design layout settings */
 /* action area padding */
 /*-----------------------------------
 define background
@@ -29,7 +28,7 @@ anchor settings
 -- */
 /* line 33, ../sass/settings/_typography.scss */
 h1, h2, h3, h4, h5, h6, b,
-strong, dt, th, .error .error-txt, .alert, .current {
+strong, dt, .error .error-txt, .alert, .current {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
@@ -41,6 +40,49 @@ icon settings
 /*-----------------------------------
 table design settings
 ---------------------------------- */
+/* line 14, ../sass/settings/_table_design.scss */
+.data-table {
+  border: 2px solid #8d8d8d;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+/* line 121, ../sass/_mixins.scss */
+.data-table thead th {
+  background: #caeaed;
+  border-bottom: 2px solid #8d8d8d;
+}
+/* line 127, ../sass/_mixins.scss */
+.data-table tfoot th, .data-table tfoot td {
+  border-top: 2px solid #8d8d8d;
+}
+/* line 130, ../sass/_mixins.scss */
+.data-table th:first-child {
+  border-right: 2px solid #8d8d8d;
+}
+/* line 138, ../sass/_mixins.scss */
+.data-table th, .data-table td {
+  border-right-width: 0px;
+  border-bottom: 1px solid #8d8d8d;
+  border-left-width: 0px;
+  border-top-width: 0px;
+}
+/* line 160, ../sass/_mixins.scss */
+.data-table tbody tr:last-child th, .data-table tbody tr:last-child td, .data-table tfoot tr:last-child th, .data-table tfoot tr:last-child td {
+  border-bottom-width: 0px;
+}
+/* line 163, ../sass/_mixins.scss */
+.data-table tbody tr.last th, .data-table tbody tr.last td, .data-table tfoot tr.last th, .data-table tfoot tr.last td {
+  border-bottom-width: 0px;
+}
+/* line 174, ../sass/_mixins.scss */
+.data-table tr:nth-child(even) th {
+  background: #f2f2f2;
+}
+/* line 177, ../sass/_mixins.scss */
+.data-table tr:nth-child(even) td {
+  background: #f2f2f2;
+}
+
 /*-----------------------------------
 form design settings
 ---------------------------------- */
@@ -134,7 +176,7 @@ input[type="radio"], .btn.cancel {
 
 /* line 82, ../sass/_default.scss */
 nav ul, nav ol,
-menu, .tab ul, .tab ol, .horizontal, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
+menu, .tab ul, .tab ol, .horizontal, .horizontal-layout, .horizontal-layout2, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
 .pagenation .horizontal-list,
 .centered.tab .horizontal-list,
 .centered-horizontal .horizontal-list {
@@ -159,7 +201,7 @@ a {
    * people.opera.com/patrickl/experiments/keyboard/test
    */
 }
-/* line 59, ../sass/_mixins.scss */
+/* line 95, ../sass/_mixins.scss */
 a:hover {
   text-decoration: none;
   color: #39abd7;
@@ -315,26 +357,16 @@ hr {
    Lists
    ========================================================================== */
 /* line 250, ../sass/_default.scss */
-nav ul, nav ol,
-menu, .tab ul, .tab ol, .horizontal, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
-.pagenation .horizontal-list,
-.centered.tab .horizontal-list,
-.centered-horizontal .horizontal-list {
-  list-style: none;
-  list-style-image: none;
-}
-
-/* line 256, ../sass/_default.scss */
 dl, ol, ul {
   margin: 1em 0;
 }
 
-/* line 260, ../sass/_default.scss */
+/* line 254, ../sass/_default.scss */
 ol, ul {
   padding: 0 0 0 40px;
 }
 
-/* line 269, ../sass/_default.scss */
+/* line 263, ../sass/_default.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -347,7 +379,7 @@ dd {
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 286, ../sass/_default.scss */
+/* line 280, ../sass/_default.scss */
 img {
   border: 0;
   /* 1 */
@@ -359,7 +391,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9
  */
-/* line 296, ../sass/_default.scss */
+/* line 290, ../sass/_default.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -370,7 +402,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-/* line 308, ../sass/_default.scss */
+/* line 302, ../sass/_default.scss */
 figure {
   margin: 0;
 }
@@ -384,7 +416,7 @@ figure {
 /*
  * Define consistent border, margin, and padding
  */
-/* line 328, ../sass/_default.scss */
+/* line 322, ../sass/_default.scss */
 fieldset {
   border: none;
   margin: 0 2px;
@@ -396,7 +428,7 @@ fieldset {
  * 2. Corrects text not wrapping in FF3 
  * 3. Corrects alignment displayed oddly in IE6/7
  */
-/* line 345, ../sass/_default.scss */
+/* line 339, ../sass/_default.scss */
 legend {
   border: 0;
   /* 1 */
@@ -406,7 +438,7 @@ legend {
   /* 3 */
 }
 
-/* line 355, ../sass/_default.scss */
+/* line 349, ../sass/_default.scss */
 label:not(:first-child) input[type="checkbox"],
 label:not(:first-child) input[type="radio"] {
   margin-left: 0.618em;
@@ -417,7 +449,7 @@ label:not(:first-child) input[type="radio"] {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-/* line 370, ../sass/_default.scss */
+/* line 364, ../sass/_default.scss */
 button,
 input,
 select,
@@ -434,14 +466,14 @@ textarea {
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-/* line 382, ../sass/_default.scss */
+/* line 376, ../sass/_default.scss */
 button,
 input {
   line-height: normal;
   /* 1 */
 }
 
-/* line 390, ../sass/_default.scss */
+/* line 384, ../sass/_default.scss */
 input[type="text"],
 input[type="password"],
 input[type='email'],
@@ -456,7 +488,7 @@ textarea {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 409, ../sass/_default.scss */
+/* line 403, ../sass/_default.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -472,7 +504,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements
  */
-/* line 421, ../sass/_default.scss */
+/* line 415, ../sass/_default.scss */
 button[disabled],
 input[disabled],
 .disabled {
@@ -485,7 +517,7 @@ input[disabled],
  * 3. Removes excess padding in IE7
       Known issue: excess padding remains in IE6
  */
-/* line 433, ../sass/_default.scss */
+/* line 427, ../sass/_default.scss */
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 0.3em;
@@ -500,7 +532,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 445, ../sass/_default.scss */
+/* line 439, ../sass/_default.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -513,7 +545,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-/* line 457, ../sass/_default.scss */
+/* line 451, ../sass/_default.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -523,7 +555,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 467, ../sass/_default.scss */
+/* line 461, ../sass/_default.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -534,7 +566,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 477, ../sass/_default.scss */
+/* line 471, ../sass/_default.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -548,20 +580,31 @@ textarea {
 /*
  * Remove most spacing between table cells
  */
-/* line 491, ../sass/_default.scss */
+/* line 485, ../sass/_default.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 501, ../sass/_default.scss */
+/* line 495, ../sass/_default.scss */
 tbody th {
   text-align: left;
+}
+
+/* line 500, ../sass/_default.scss */
+td, th {
+  padding: 0.618em 1.615em;
 }
 
 /* =============================================================================
 clearfix
  ========================================================================== */
+/* line 507, ../sass/_default.scss */
+.site-body {
+  overflow: hidden;
+  *zoom: 1;
+}
+
 /* --
 Typography
 -- */
@@ -576,47 +619,127 @@ Typography
 }
 
 /* layout pf object */
+/* line 57, ../sass/_mixins.scss */
+.left, .right, .navigation {
+  width: 18.66667%;
+  margin-left: 16px;
+}
+
+/* line 57, ../sass/_mixins.scss */
+.aside {
+  width: 39.0%;
+  margin-left: 16px;
+}
+
+/* line 57, ../sass/_mixins.scss */
+.main, .middle {
+  width: 59.33333%;
+  margin-left: 16px;
+}
+
+/* line 57, ../sass/_mixins.scss */
+.content {
+  width: 79.66667%;
+  margin-left: 16px;
+}
+
+/* line 57, ../sass/_mixins.scss */
+.all {
+  width: 100%;
+}
+
 /* line 19, ../sass/_ui_modules.scss */
-input, textarea, button, .btn, .switch {
+.main, .left, .navigation {
+  margin-left: 0;
+}
+
+/* line 23, ../sass/_ui_modules.scss */
+.left, .right, .navigation, .aside, .main, .middle, .content, .all {
+  float: left;
+}
+
+/* line 25, ../sass/_ui_modules.scss */
+.site-body {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 29, ../sass/_ui_modules.scss */
+.tab ul, .tab ol, .tab menu, .horizontal {
+  *zoom: 1;
+}
+/* line 22, ../../../.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.tab ul:after, .tab ol:after, .tab menu:after, .horizontal:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 33, ../sass/_ui_modules.scss */
+input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .content, .all, .btn, .switch {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* reset list style */
+/* line 38, ../sass/_ui_modules.scss */
+nav ul, nav ol,
+menu, .tab ul, .tab ol, .horizontal, .horizontal-layout, .horizontal-layout2, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
+.pagenation .horizontal-list,
+.centered.tab .horizontal-list,
+.centered-horizontal .horizontal-list {
+  list-style: none;
+  list-style-image: none;
+}
+
 /* horizontal list */
-/* line 26, ../sass/_ui_modules.scss */
+/* line 47, ../sass/_ui_modules.scss */
 .btn.cancel:hover {
   text-decoration: none;
 }
 
-/* line 29, ../sass/_ui_modules.scss */
+/* line 50, ../sass/_ui_modules.scss */
 .tab ul, .tab ol, .tab menu, .horizontal {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
   line-height: normal;
 }
+/* line 195, ../sass/_mixins.scss */
+.tab ul > li, .tab ol > li, .tab menu > li, .horizontal > li, .tab ul > a, .tab ol > a, .tab menu > a, .horizontal > a, .tab ul > button, .tab ol > button, .tab menu > button, .horizontal > button {
+  float: left;
+}
 
-/* line 50, ../sass/_ui_modules.scss */
+/* line 73, ../sass/_ui_modules.scss */
+.horizontal-layout, .horizontal-layout2 {
+  display: table;
+}
+
+/* line 78, ../sass/_ui_modules.scss */
+.horizontal-layout li, .horizontal-layout2 div {
+  display: table-cell;
+}
+
+/* line 83, ../sass/_ui_modules.scss */
 .pagenation, .centered.tab, .centered-horizontal {
   text-align: center;
 }
-/* line 54, ../sass/_ui_modules.scss */
+/* line 87, ../sass/_ui_modules.scss */
 .pagenation ul, .centered.tab ul, .centered-horizontal ul, .pagenation ol, .centered.tab ol, .centered-horizontal ol, .pagenation menu, .centered.tab menu, .centered-horizontal menu,
 .pagenation .horizontal-list,
 .centered.tab .horizontal-list,
 .centered-horizontal .horizontal-list {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: box;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-box-pack: center;
-  box-pack: center;
+  display: inline-table;
 }
-/* line 67, ../sass/_ui_modules.scss */
+/* line 94, ../sass/_ui_modules.scss */
+.pagenation ul > li, .centered.tab ul > li, .centered-horizontal ul > li, .pagenation ol > li, .centered.tab ol > li, .centered-horizontal ol > li, .pagenation menu > li, .centered.tab menu > li, .centered-horizontal menu > li,
+.pagenation .horizontal-list > li,
+.centered.tab .horizontal-list > li,
+.centered-horizontal .horizontal-list > li {
+  display: table-cell;
+}
+/* line 100, ../sass/_ui_modules.scss */
 .pagenation ul a, .centered.tab ul a, .centered-horizontal ul a, .pagenation ol a, .centered.tab ol a, .centered-horizontal ol a, .pagenation menu a, .centered.tab menu a, .centered-horizontal menu a,
 .pagenation .horizontal-list a,
 .centered.tab .horizontal-list a,
@@ -625,14 +748,14 @@ input, textarea, button, .btn, .switch {
 }
 
 /* icon */
-/* line 74, ../sass/_ui_modules.scss */
+/* line 107, ../sass/_ui_modules.scss */
 i {
   background: url(../images/sprite_icon.svg) no-repeat;
   vertical-align: middle;
 }
 
 /* navigations */
-/* line 80, ../sass/_ui_modules.scss */
+/* line 113, ../sass/_ui_modules.scss */
 .pagenation a, .tab a, .btn, .switch {
   display: inline-table;
   line-height: 1;
@@ -640,7 +763,7 @@ i {
   text-decoration: none;
   vertical-align: middle;
 }
-/* line 88, ../sass/_ui_modules.scss */
+/* line 121, ../sass/_ui_modules.scss */
 .pagenation a i, .tab a i, .btn i, .switch i,
 .pagenation a .cmd-label,
 .tab a .cmd-label,
@@ -649,25 +772,25 @@ i {
   display: table-cell;
   vertical-align: bottom;
 }
-/* line 94, ../sass/_ui_modules.scss */
+/* line 127, ../sass/_ui_modules.scss */
 .pagenation a i + .cmd-label, .tab a i + .cmd-label, .btn i + .cmd-label, .switch i + .cmd-label {
   padding-left: 0.382em;
 }
-/* line 99, ../sass/_ui_modules.scss */
+/* line 132, ../sass/_ui_modules.scss */
 .pagenation a.is-ico-rside .cmd-label, .tab a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label, .is-ico-rside.switch .cmd-label {
   padding-right: 0.382em;
 }
-/* line 104, ../sass/_ui_modules.scss */
+/* line 137, ../sass/_ui_modules.scss */
 .pagenation a:link, .tab a:link, .btn:link, .switch:link, .pagenation a:visited, .tab a:visited, .btn:visited, .switch:visited {
   color: inherit;
   text-decoration: none;
 }
-/* line 110, ../sass/_ui_modules.scss */
+/* line 143, ../sass/_ui_modules.scss */
 .pagenation a:disabled, .tab a:disabled, .btn:disabled, .switch:disabled, .pagenation a.disabled, .tab a.disabled, .disabled.btn, .disabled.switch {
   opacity: 0.5;
 }
 
-/* line 117, ../sass/_ui_modules.scss */
+/* line 150, ../sass/_ui_modules.scss */
 .pagenation a {
   margin-right: 0.309em;
   padding: 0.618em 0.927em;
@@ -682,18 +805,18 @@ i {
   background: #3ba4b0;
   color: white;
 }
-/* line 120, ../sass/_ui_modules.scss */
+/* line 153, ../sass/_ui_modules.scss */
 .pagenation a.current {
   color: #181818;
 }
 
-/* line 126, ../sass/_ui_modules.scss */
+/* line 159, ../sass/_ui_modules.scss */
 .tab {
   font-size: 0;
   width: 80%;
   margin: 0 auto;
 }
-/* line 138, ../sass/_ui_modules.scss */
+/* line 171, ../sass/_ui_modules.scss */
 .tab a {
   margin: 0 1px 0 0;
   background: #a5a5a5;
@@ -716,7 +839,7 @@ i {
 .tab a.current:hover {
   color: inherit;
 }
-/* line 145, ../sass/_ui_modules.scss */
+/* line 178, ../sass/_ui_modules.scss */
 .tab i {
   width: 1em;
   height: 1em;
@@ -725,7 +848,7 @@ i {
   -o-background-size: auto 1em;
   background-size: auto 1em;
 }
-/* line 151, ../sass/_ui_modules.scss */
+/* line 184, ../sass/_ui_modules.scss */
 .tab .ui-tab-content {
   padding: 8px;
   background: #d8d8d8;
@@ -747,7 +870,7 @@ i {
   border-color: #d15749;
 }
 
-/* line 165, ../sass/_ui_modules.scss */
+/* line 198, ../sass/_ui_modules.scss */
 .btn i, .switch i {
   width: 1em;
   height: 1em;
@@ -757,27 +880,27 @@ i {
   background-size: auto 1em;
 }
 
-/* line 171, ../sass/_ui_modules.scss */
+/* line 204, ../sass/_ui_modules.scss */
 .btn {
   background: #3ba4b0;
   color: white;
   border: solid 1px #35929d;
   padding: .618em 1.309em;
 }
-/* line 181, ../sass/_mixins.scss */
+/* line 211, ../sass/_mixins.scss */
 .btn:visited, .btn:link {
   color: white;
 }
-/* line 186, ../sass/_mixins.scss */
+/* line 216, ../sass/_mixins.scss */
 .btn:disabled, .disabled.btn {
   color: #215d64;
 }
-/* line 188, ../sass/_mixins.scss */
+/* line 218, ../sass/_mixins.scss */
 .btn:disabled:hover, .disabled.btn:hover {
   background: #3ba4b0;
   color: #215d64;
 }
-/* line 196, ../sass/_mixins.scss */
+/* line 226, ../sass/_mixins.scss */
 .btn:hover {
   background: #57bbc7;
   color: white;
@@ -788,20 +911,20 @@ i {
   color: #f0f0f0;
   border: solid 1px #5bbdc8;
 }
-/* line 181, ../sass/_mixins.scss */
+/* line 211, ../sass/_mixins.scss */
 [type="reset"].btn:visited, [type="reset"].btn:link {
   color: #f0f0f0;
 }
-/* line 186, ../sass/_mixins.scss */
+/* line 216, ../sass/_mixins.scss */
 [type="reset"].btn:disabled, [type="reset"].disabled.btn {
   color: #3696a1;
 }
-/* line 188, ../sass/_mixins.scss */
+/* line 218, ../sass/_mixins.scss */
 [type="reset"].btn:disabled:hover, [type="reset"].disabled.btn:hover {
   background: #6ec5ce;
   color: #3696a1;
 }
-/* line 196, ../sass/_mixins.scss */
+/* line 226, ../sass/_mixins.scss */
 [type="reset"].btn:hover {
   background: #94d4db;
   color: white;
@@ -816,31 +939,31 @@ i {
 .btn.cancel:hover {
   color: inherit;
 }
-/* line 177, ../sass/_ui_modules.scss */
+/* line 210, ../sass/_ui_modules.scss */
 [type=reset].btn {
   padding: 0.618em;
 }
 
-/* line 186, ../sass/_ui_modules.scss */
+/* line 219, ../sass/_ui_modules.scss */
 .switch {
   background: #bfbfbf;
   color: #454545;
   border: solid 1px #b2b2b2;
 }
-/* line 181, ../sass/_mixins.scss */
+/* line 211, ../sass/_mixins.scss */
 .switch:visited, .switch:link {
   color: #454545;
 }
-/* line 186, ../sass/_mixins.scss */
+/* line 216, ../sass/_mixins.scss */
 .switch:disabled, .disabled.switch {
   color: #8b8b8b;
 }
-/* line 188, ../sass/_mixins.scss */
+/* line 218, ../sass/_mixins.scss */
 .switch:disabled:hover, .disabled.switch:hover {
   background: #bfbfbf;
   color: #8b8b8b;
 }
-/* line 196, ../sass/_mixins.scss */
+/* line 226, ../sass/_mixins.scss */
 .switch:hover {
   background: #d8d8d8;
   color: #5e5e5e;
@@ -851,46 +974,95 @@ i {
   color: white;
   border: solid 1px #35929d;
 }
-/* line 181, ../sass/_mixins.scss */
+/* line 211, ../sass/_mixins.scss */
 .active.switch:visited, .active.switch:link {
   color: white;
 }
-/* line 186, ../sass/_mixins.scss */
+/* line 216, ../sass/_mixins.scss */
 .active.switch:disabled, .active.disabled.switch {
   color: #215d64;
 }
-/* line 188, ../sass/_mixins.scss */
+/* line 218, ../sass/_mixins.scss */
 .active.switch:disabled:hover, .active.disabled.switch:hover {
   background: #3ba4b0;
   color: #215d64;
 }
 
-/* line 5, ../sass/designs/_example.scss */
+/* line 6, ../sass/designs/_example.scss */
+.site-body {
+  width: 960px;
+  margin: 0 auto;
+  background: ivory;
+}
+
+/* line 14, ../sass/designs/_example.scss */
+.main {
+  height: 200px;
+  background: #a5a5a5;
+}
+
+/* line 21, ../sass/designs/_example.scss */
+.aside {
+  height: 200px;
+  background: #a5a5a5;
+}
+
+/* line 27, ../sass/designs/_example.scss */
+.left {
+  height: 150px;
+  background: #8d8d8d;
+}
+
+/* line 33, ../sass/designs/_example.scss */
+.middle {
+  height: 150px;
+  background: #8d8d8d;
+}
+
+/* line 39, ../sass/designs/_example.scss */
+.right {
+  height: 150px;
+  background: #8d8d8d;
+}
+
+/* line 45, ../sass/designs/_example.scss */
+.navigation {
+  height: 150px;
+  background: #8d8d8d;
+}
+
+/* line 51, ../sass/designs/_example.scss */
+.content {
+  height: 150px;
+  background: #8d8d8d;
+}
+
+/* line 62, ../sass/designs/_example.scss */
 .alert {
   /* added settings */
 }
 
-/* line 10, ../sass/designs/_example.scss */
+/* line 67, ../sass/designs/_example.scss */
 .current {
   /* added settings */
 }
 
-/* line 16, ../sass/designs/_example.scss */
+/* line 73, ../sass/designs/_example.scss */
 .horizontal {
   /* added settings */
 }
 
-/* line 21, ../sass/designs/_example.scss */
+/* line 86, ../sass/designs/_example.scss */
 .centered-horizontal {
   /* added settings */
 }
 
-/* line 26, ../sass/designs/_example.scss */
+/* line 91, ../sass/designs/_example.scss */
 .pagenation {
   /* added settings */
 }
 
-/* line 31, ../sass/designs/_example.scss */
+/* line 96, ../sass/designs/_example.scss */
 .tab {
   /* added settings */
 }

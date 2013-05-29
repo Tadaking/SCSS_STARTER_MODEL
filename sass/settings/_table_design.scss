@@ -4,15 +4,15 @@ $striped: true;
 $cellpadding_v: $padding_tb;
 $cellpadding_h: $padding_lr;
 
-$theadColor: #f3eefa; //#ccdef5;
-$tbodyTh: lighten($theadColor, 8%);
+$theadColor: lighten($site_key_color, 4*$lighten_amount);
 $td: $white;
 
-$trEven: darken($td, 2%);
-$thEven: darken($tbodyTh, 2%);
+$tbodyTh: darken($td, 5%);
+$trEven: darken($td, 5%);
+$thEven: darken($td, 5%);
 
-%defalt_table {
-	
+%default_table {
+  @include outer-table-borders(2px, $gray, $verticalLine: false);
+  @include inner-table-borders(1px, $gray, $verticalLine: false);
+  @include stripedTable;
 }
-
-//@include inner-table-borders($width: 2px, $color: black, $verticalLine: false)

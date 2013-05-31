@@ -10,22 +10,21 @@ $grid_height: 3 * $default_fontsize;
 $grid_margin: $default_fontsize;
 
 $page_width: 30 * $grid_width;
-@debug $page_width;
+// @debug $page_width;
 
 $column_num: 5;
 
  /* IF You use "display:box;" on your website, turn true */
 $box_layout: false;
 
-/* Define minimal grid  */
-@mixin column_grid_width($n) {
-}
-
 /* action area padding */
 $padding_tb: .618em;
 $padding_lr: 1.615em;
 
 $disabledOpacity: 0.5;
+
+//zindex management
+@import 'zindex';
 
 /*-----------------------------------
 define background
@@ -54,7 +53,7 @@ $lightGray: #a5a5a5;
 $yellow: #FFFFF0;
 $red: #d15749;
 
-$lighten_amount: 10%;
+$lighten_amount: 13%;
 $darken_amount: 10%;
 
 $lighten_strong_amount: 2 * $lighten_amount;
@@ -67,6 +66,7 @@ typography settings
 /*-----------------------------------
 icon settings
 ---------------------------------- */
+$icon-tagName: i;
 $icon_sprite_path: '../images/sprite_icon.svg';
 
 /* icon_ratio to font-size of each UI */
@@ -88,7 +88,6 @@ form design settings
 UI design settings
 ---------------------------------- */
 // アクションボタンのアイコンタグと⌘ラベルのclass名設定
-$icon-tagName: i;
 $action-label-className: cmd-label;
 $icon-positionized-className: is-ico-rside;
 

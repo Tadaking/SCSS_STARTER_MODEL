@@ -1,0 +1,6 @@
+.error {
+  @extend %validation_error;
+}
+.error-txt {
+  @extend %error_txt;
+}

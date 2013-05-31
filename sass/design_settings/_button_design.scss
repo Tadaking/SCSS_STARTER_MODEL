@@ -1,0 +1,59 @@
+//button design
+$btn_gradient: true;
+
+$btn-bordsr-width: 1px;
+$btn-border-kind: solid;
+
+/* normal */
+$normal: $site_key_color;
+$normal_hover: lighten($normal, $lighten_amount);
+$normal_active: darken($normal, $darken_amount);
+
+$normal_grad: lighten($normal, $lighten_amount), $normal;
+$normal_grad_hover: lighten($normal_hover, $lighten_amount), $normal;
+$normal_grad_active: $normal_active, $normal;
+
+$normal_btn_text: $white;
+$normal_btn_border: darken($normal, $darken_amount);
+
+/* reset btn */
+$reset: $lightGray;
+$reset_hover: lighten($reset, $lighten_amount);
+$reset_active: darken($reset, $darken_amount);
+
+$reset_grad: lighten($reset, 1.5*$lighten_amount), $reset;
+$reset_grad_hover: lighten($reset, 2*$lighten_amount), $reset;
+$reset_grad_active: $reset_active, $reset;
+
+$reset_btn_text: $dark-gray;
+$reset_btn_border: darken($reset, $darken_amount);
+
+/* cancel btn */
+$cancel_btn_text: $gray;
+
+//switch btn design
+$switch_gradient: true;
+$switch_border-width: 1px;
+$switch_border-kind: solid;
+
+/*normal */
+$switch_normal: $lightGray;
+$switch_normal_hover: $normal;
+$switch_normal_active: $normal_active;
+
+$switch_grad: lighten($switch_normal, $lighten_amount), $switch_normal;
+$switch_grad_hover: $normal_grad;
+$switch_grad_active: $normal_grad_active;
+
+$switch_btn_text: $black;
+$switch_btn_hover_text: $normal_btn_text;
+
+$switch_btn_border: darken($switch_normal, $darken_amount);
+
+/* on */
+$switch_on_hover: $red;
+$switch_on_grad_hover: lighten($red, $lighten_amount), $red;
+$switch_hover_border: darken($red, $darken_amount);
+
+$switch_on_active: darken($red, $darken_amount);
+$switch_on_grad_active: $switch_on_active, $red;

@@ -1,0 +1,49 @@
+//pagenation
+%ui-pagenation {
+  @extend %centered_horizontal;
+  a {
+    @extend %action;
+    @include default_ui_pagenation_action;
+    &.current{
+      color: $default_fontcolor;
+    }
+  }
+}
+
+//tab
+%ui-tab {
+  font-size: 0;
+  @include tab_layout;
+
+  &.centered {
+    @extend %centered_horizontal;
+  }
+
+  ul, ol, menu {
+    @extend %horizontal_list;
+  }
+
+  a {
+    position: relative;
+    margin: 0 $each_tab_margin 0 0;
+    @extend %action;
+    @include default_tab_design;
+    font-size: 1rem;
+  }
+
+  #{$icon-tagName} {
+    width: $icon_ratio_tab;
+    height: $icon_ratio_tab;
+    @include background-size(auto $icon_ratio_tab);
+  }
+}
+
+%ui-tab-content {
+  position: relative;
+  @include default_tab_content_design;
+}
+
+//dropdown
+%ui-dropdown {
+  @extend %reset_liststyle;
+}

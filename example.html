@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<html>
-<title>SCSS STARTUP LIBRARY</title>
+<!doctype html>
+<html lang="ja">
 <head>
+  <meta charset="UTF-8">
+  <title>SCSS STARTUP LIBRARY</title>
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script>window.html5 || document.write('<script src="javascripts/html5shiv.js?pre3.5"></scr' + 'ipt>');</script>
@@ -66,15 +67,22 @@
       <li>3</li>
       <li>4</li>
     </ul>
-    <h3>valiable horizontal layout(display:table)</h3>
-    <ul class="horizontal-layout">
+    <h3>valiable horizontal layout(display:table) $v-position:middle, $h-position:left</h3>
+    <ul class="horizontal-layout-top">
       <li>1</li>
       <li><a href="">2</a></li>
       <li>3</li>
       <li>4</li>
     </ul>
-    <h3>valiable horizontal layout(display:table)</h3>
-    <div class="horizontal-layout2">
+    <h3>valiable horizontal layout(display:table) $v-position:middle, $h-position:center</h3>
+    <div class="horizontal-layout-middle">
+      <div>1</div>
+      <div><a href="">2</a></div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+    <h3>valiable horizontal layout(display:table) $v-position:bottom, $h-position:right</h3>
+    <div class="horizontal-layout-bottom">
       <div>1</div>
       <div><a href="">2</a></div>
       <div>3</div>
@@ -156,11 +164,11 @@
 
       <h2>.switch</h2>
       <button type="button" class="switch">button[type="button'].switch</button>
-      <button type="button" class="switch active">button[type="button'].switch.active</button>
+      <button type="button" class="switch on">button[type="button'].switch.on</button>
       <button type="button" class="switch" disabled>button[type="button'].switch:disabled</button>
 
       <a href="#" class="switch">a.switch</a>
-      <a href="#" class="switch active">a.switch.active</a>
+      <a href="#" class="switch on">a.switch.on</a>
       <a href="#" class="switch disabled">a.switch.disabled</a>
 
       <h2>button.btn + icon</h2>
@@ -200,16 +208,16 @@
 
     <fieldset class="horizontal">
       <h2>横並びクラス内 - a Tag</h2>
-      <a href="" class="btn">Menu Text</a>
-      <a href="" class="btn">
+      <a href="#" class="btn">Menu Text</a>
+      <a href="#" class="btn">
         <i class="home"></i>
         <span class="cmd-label">Menu Text</span>
       </a>
-      <a href="" class="btn is-ico-rside">
+      <a href="#" class="btn is-ico-rside">
         <span class="cmd-label">Menu Text</span>
         <i class="home"></i>
       </a>
-      <a href="" class="btn"><i class="home"></i></a>
+      <a href="#" class="btn"><i class="home"></i></a>
     </fieldset>
 
     <div class="centered-horizontal">
@@ -243,25 +251,25 @@
         <th>tbody heading</th>
         <td>tbody cell</td>
         <td>tbody cell</td>
-        <td class="number">tbody cell</td>
+        <td class="number">123,456</td>
       </tr>
       <tr>
         <th>tbody heading</th>
         <td>tbody cell</td>
         <td>tbody cell</td>
-        <td class="number">tbody cell</td>
+        <td class="number">123,456</td>
       </tr>
       <tr>
         <th>tbody heading</th>
         <td>tbody cell</td>
         <td>tbody cell</td>
-        <td class="number">tbody cell</td>
+        <td class="number">123,456</td>
       </tr>
       <tr>
         <th>tbody heading</th>
         <td>tbody cell</td>
         <td>tbody cell</td>
-        <td class="number">tbody cell</td>
+        <td class="number">123,456</td>
       </tr>
     </tbody>
     <tfoot>
@@ -269,7 +277,7 @@
         <th>tfoot cell</th>
         <td>tfoot cell</td>
         <td>tfoot cell</td>
-        <td>tfoot cell</td>
+        <td class="number">tfoot cell</td>
       </tr>
     </tfoot>
   </table>
@@ -311,7 +319,7 @@
         <li><a href="">TAB_MENU</a></li>
       </ul>
 
-      <div class="ui-tab-content">
+      <div class="tab-content">
         タブコンテントです。
       </div>
     </div>
@@ -332,7 +340,7 @@
       <a href="">TAB_MENU</a>
       <a href="">TAB_MENU</a>
 
-      <div class="ui-tab-content">
+      <div class="tab-content">
         タブコンテントです。
       </div>
     </div>
@@ -360,8 +368,7 @@
         </li>
         <li><a href="">TAB_MENU</a></li>
         <li><a href="">TAB_MENU</a></li>
-      </ul>
-      <div class="ui-tab-content">
+      </ul><div class="tab-content">
         タブコンテントです。
       </div>
     </div>
@@ -381,10 +388,18 @@
       </a>
       <a href="">TAB_MENU</a>
       <a href="" class="current">TAB_MENU</a>
-      <div class="ui-tab-content">
+      <div class="tab-content">
         タブコンテントです。
       </div>
     </div>
+
+    <h2>Dropdown</h2>
+    <ul class="dropdown">
+      <li><a href="">menu1</a></li>
+      <li><a href="">menu1</a></li>
+      <li><a href="">menu1</a></li>
+      <li><a href="">menu1</a></li>
+    </ul>
   </section>
 </body>
 

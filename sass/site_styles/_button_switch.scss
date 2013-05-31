@@ -1,0 +1,13 @@
+//button
+.btn {
+  @extend %button;
+
+  // &.cancel {
+  //   @extend %cancel;
+  // }
+}
+
+//switch
+.switch {
+  @extend %switch;
+}

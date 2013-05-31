@@ -1,0 +1,11 @@
+@include define_column_grid($page_width);
+
+%first-grid { margin-left: 0; }
+
+%lfloating { float: left; }
+
+%clearfix { @include clearfix; }
+
+%legacy-clearfix { @include legacy-pie-clearfix; }
+
+%box-sizing { @include box-sizing(border-box); }

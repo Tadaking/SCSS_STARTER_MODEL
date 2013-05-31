@@ -1,0 +1,11 @@
+%alert {
+  color: $alert_color ;
+  @extend %bold;
+}
+
+//for example ui-pagenation, ui-tab
+%current {
+  @extend %bold;
+}
+
+.note { font-size: 0.8em; }

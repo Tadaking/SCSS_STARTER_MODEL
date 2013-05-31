@@ -1,0 +1,10 @@
+//z-index management
+//左からz-indexの値が大きい順に記述
+//z-index settings
+@mixin z-index($targets) {
+  @if $targets == tab {
+    z-index: 20;
+  } @else if $targets == tab-content {
+    z-index: 10;
+  }
+}

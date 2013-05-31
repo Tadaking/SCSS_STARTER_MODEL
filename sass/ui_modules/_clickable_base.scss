@@ -1,0 +1,34 @@
+//base setting
+%action {
+  display: inline-table;
+  line-height: 1;
+  padding: $padding_tb;
+  text-decoration: none;
+  vertical-align: middle;
+
+  #{$icon-tagName}, .#{$action-label-className} {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+
+  #{$icon-tagName} {
+    &+.#{$action-label-className} {
+      padding-left: 0.382em;
+    }
+  }
+
+  &.#{$icon-positionized-className} .#{$action-label-className} {
+    padding-right: 0.382em;
+  }
+
+  // &:link,
+  // &:hover,
+  // &:visited {
+  //   // color: inherit;
+  // }
+  
+  &:disabled, 
+  &.disabled {
+    opacity: $disabledOpacity;
+  }
+}

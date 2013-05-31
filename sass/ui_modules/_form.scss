@@ -1,0 +1,7 @@
+%validation_error {
+  @include error_view {
+    %error_txt {
+      @include error_text;
+    }
+  }
+}

@@ -5,6 +5,8 @@ $input_textarea_padding: 3px;
 
 @mixin input_textarea_border {
   //input[type="text"]やtextareaの入寮系のデザインを記述
+  border-width: 1px;
+  @include border-radius(3px);
 }
 
 @mixin error_view {

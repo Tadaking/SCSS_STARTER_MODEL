@@ -1,0 +1,20 @@
+/* reset list style */
+%reset_liststyle {
+  @extend %reset_margin_padding;
+  list-style: none;
+  list-style-image: none;
+}
+
+%link_has_area {
+  display: inline-block;
+  // text-decoration: none;
+}
+
+%no-text-decoration { text-decoration: none; }
+
+%erase_background {
+  background: none;
+  border: none;
+  @include box-shadow(none);
+  @include text-shadow(none);
+}

@@ -1,0 +1,7 @@
+.data-table {
+  @extend %default_table;
+}
+
+.number {
+  @extend %number;
+}

@@ -1,0 +1,166 @@
+%button_switch_icon {
+  width: $icon_ratio_button;
+  height: $icon_ratio_button;
+  @include background-size(auto $icon_ratio_button) ;
+}
+
+%button {
+  @extend %action;
+  @extend %box-sizing;
+  
+  padding: .618em 1.309em;
+  color: $normal_btn_text;
+
+  @if $btn_gradient {
+    @include background(linear-gradient($normal_grad));
+    &:hover {
+      @include background(linear-gradient($normal_grad_hover));
+    }
+  } @else {
+    @include background($normal);
+    &:hover {
+      @include background($normal_hover);
+    }
+  }
+  @include border($btn-bordsr-width, solid, $normal_btn_border);
+
+  &:hover, &:link, &:visited { color: $normal_btn_text; }
+  
+  &:active,
+  .active {
+    @if $btn_gradient {
+      @include background(linear-gradient($normal_grad_active));
+    } @else {
+      @include background($normal_active);
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    &:hover {
+      @if $btn_gradient {
+        @include background(linear-gradient($normal_grad));
+      } @else {
+        @include background($normal);
+      }
+    }
+  }
+
+  &[type=reset] {
+    padding: 0.618em;
+
+    @if $btn_gradient {
+      @include background(linear-gradient($reset_grad));
+      &:hover {
+        @include background(linear-gradient($reset_grad_hover));
+      }
+    } @else {
+      @include background($reset);
+      &:hover {
+        @include background($reset_hover);
+      }
+    }
+
+    @include border($btn-bordsr-width, solid, $reset_btn_border);
+    color: $dark-gray;
+
+    &:hover {
+      color: $dark-gray;
+    }
+
+    &:active,
+    .active {
+      @if $btn_gradient {
+        @include background(linear-gradient($reset_grad_active));
+      } @else {
+        @include background($reset_active);
+      }
+    }
+  }  
+
+  &.cancel {
+    display: inline;
+    @extend %erase_background;
+    padding: 0 0;
+    color: $cancel_btn_text;
+
+    &:hover {
+      text-decoration: underline;
+      background: none;
+      border: none;
+      @include box-shadow(none);
+      @include text-shadow(none);
+    }
+  }
+
+  #{$icon-tagName} {
+    @extend %button_switch_icon;
+  }
+}
+
+%switch {
+  @extend %action;
+  @extend %box-sizing;
+  #{$icon-tagName} {
+    @extend %button_switch_icon;
+  }
+  color: $switch_btn_text;
+  &:link, &:visited { color: $switch_btn_text; }
+
+  @if $switch_gradient {
+    @include background(linear-gradient($switch_grad));
+    &:hover, &.on {
+      @include background(linear-gradient($switch_grad_hover));
+    }
+  } @else {
+    @include background($switch_normal);
+    &:hover, &.on {
+      @include background($switch_normal_hover);
+    }
+  }
+
+  &:hover, &.on {
+    color: $switch_btn_hover_text;
+  }
+
+  &:disabled, &.disabled {
+    &:hover {
+      @if $switch_gradient {
+        @include background(linear-gradient($switch_grad));
+      } @else {
+        @include background($switch_normal);
+      }
+      color: $switch_btn_text;
+    }
+  }
+
+  &:active,
+  .active {
+    @if $btn_gradient {
+      @include background(linear-gradient($switch_grad_active));
+    } @else {
+      @include background($switch_normal_active);
+    }
+  }
+
+  &.on {
+    &:hover {
+      @if $switch_gradient {
+        @include background(linear-gradient($switch_on_grad_hover));
+      } @else {
+        @include background($switch_on_hover);
+      }
+      @include border($btn-bordsr-width, solid, $switch_hover_border);
+    }
+    &:active,
+    .active {
+      @if $btn_gradient {
+        @include background(linear-gradient($switch_on_grad_active));
+      } @else {
+        @include background($switch_on_active);
+      }
+    }
+  }
+
+  @include border($switch_border-width, solid, $switch_btn_border);
+}

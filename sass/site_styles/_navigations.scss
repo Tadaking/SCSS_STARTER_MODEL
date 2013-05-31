@@ -1,0 +1,17 @@
+.pagenation {
+  @extend %ui-pagenation;
+  /* added settings */
+}
+
+.tab {
+  @extend %ui-tab;
+  /* added settings */
+}
+
+.tab-content {
+	@extend %ui-tab-content;
+}
+
+.dropdown {
+	@extend %ui-dropdown;
+}

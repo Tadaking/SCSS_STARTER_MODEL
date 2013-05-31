@@ -1,0 +1,61 @@
+//横並びリスト
+%horizontal_list {
+  @include horizontal_obj(">li, >a, >button");
+  line-height: normal;
+  @extend %reset_liststyle;
+}
+
+//横並び定義
+%horizontal_definition {
+  @include horizontal_obj("dt, dd");
+  @extend %reset_margin;
+}
+
+//可変横並び
+//**mixin の方をつかう
+@mixin variable-horizontal($childObj, $v-position: middle, $h-position: center) {
+  @extend %variable-horizontal;
+
+  #{$childObj} {
+    @extend %variable-horizontal-obj;
+    vertical-align: $v-position;
+    text-align: $h-position;
+
+    @content;
+  }
+}
+
+%variable-horizontal {
+  @extend %reset_liststyle;
+  display: table;
+}
+
+%variable-horizontal-obj {
+  display: table-cell;
+}
+
+//横並び真ん中寄せ
+%centered_horizontal {
+  text-align: center;
+
+  ul, ol, menu,
+  .horizontal-list { //Use this class if you use tag to use except for ui,ol,menu
+    @include is_display_box(center) {
+      display: inline-table;
+      vertical-align: bottom;
+    }
+
+    @extend %reset_liststyle;
+
+    > li {
+      @if $box_layout == false {
+        display: table-cell;
+        vertical-align: bottom;
+      }
+    }
+
+    a {
+      display: block;
+    }
+  }
+}

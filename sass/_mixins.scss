@@ -40,6 +40,12 @@
   @return calc-percent($target, $container);
 }
 
+@mixin gradient-top-lighten($color:#666, $lighten:10%) {
+  background-color: $color;
+  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+
+
 //if display:box == true
 @mixin is_display_box($box_pack_value: false) {
   @if $box_layout {
@@ -202,46 +208,6 @@
 }
 
 //btndesign
-@mixin btn_design($btn_type, $btn-text, $hover: true, $active: true, $border: true) {
-  background: $btn_type;
-  color: $btn-text;
-  @content;
-
-  &:visited,
-  &:link {
-    color: $btn-text;
-  }
-
-  &:disabled,
-  &.disabled {
-    color: darken($btn_type, 2*$darken_amount);
-    &:hover {
-      background: $btn_type;
-      // color: inherit;
-      color: darken($btn_type, 2*$darken_amount);
-    }
-  }
-
-  @if $hover {
-    &:hover {
-      background: lighten($btn_type, $lighten_amount);
-      color: lighten($btn_text, $lighten_amount);
-
-      &:disabled,
-      &.disabled {
-        // background: $switch;
-      }
-    }
-  }
-
-  @if $active {
-    &:active {
-      //add :active settings
-
-      &:disabled,
-      &.disabled {
-        // background: $switch;
-      }
-    }
-  }
+@mixin border($width: 2px, $design: solid, $btncolor: inherit) {
+  border: $width $design darken($btncolor, $darken_amount);
 }

@@ -1,0 +1,31 @@
+// ui-modulesで設定されたplaceholderを@extendすることで、
+// 必要なUIに自由にClass名を付加することができます。
+
+
+//boxlayout
+@import 'layout';
+
+//typography
+.alert {
+  @extend %alert;
+  /* added settings */
+}
+
+.current {
+  @extend %current;
+  /* added settings */
+}
+
+/* ui parts navigation */
+@import 'navigations';
+
+//form
+@import 'form';
+
+//button & Switch
+@import 'button_switch';
+
+//table
+@import 'table';
+
+

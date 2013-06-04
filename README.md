@@ -14,7 +14,7 @@ design_settings
 ->サイトデザインに利用する色や大きさの値、状態・イベントに応じた値を設定
 
 site_styles
-->サイトのスタイルを記述
+->サイトのスタイルをui_modulesからextendして記述。
 
 ui_modules
 ->site_stylesで利用するextend元のスタイルが記述されている。

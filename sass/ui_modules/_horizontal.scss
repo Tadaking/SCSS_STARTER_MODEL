@@ -34,6 +34,38 @@
   display: table-cell;
 }
 
+@mixin justified-horizontal($childObj) {
+  @extend %justified-horizontal;
+
+  #{$childObj} {
+    @extend %justified-horizontal-child;
+    @content;
+  }
+}
+
+%justified-horizontal {
+  text-align: justify;
+  font-size: 0;
+
+  &:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    border-top: 10px dashed #922d8d;
+  }
+}
+
+%justified-horizontal-child {
+  display: inline-block;
+
+  &.placeholder {
+    // width: 100%;
+    @extend %reset_margin_padding;
+    height: 0;
+    border-top: 10px solid #922d8d;
+  }
+}
+
 //横並び真ん中寄せ
 %centered_horizontal {
   text-align: center;

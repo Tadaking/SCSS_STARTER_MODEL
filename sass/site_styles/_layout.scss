@@ -59,6 +59,18 @@
   /* added settings */
 }
 
+// justified-horizontal
+.justified-horizontal {
+  @include justified-horizontal(div){
+    width: 18%;
+    height: 80px;
+    margin-bottom: 2.5%;
+    background: $lightGray;
+    font-size: 1rem;
+  };
+}
+
+//variable-horizontal
 .horizontal-layout-top {
   @include variable-horizontal(li, top, left){
     width: 160px;

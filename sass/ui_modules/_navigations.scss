@@ -43,7 +43,17 @@
   @include default_tab_content_design;
 }
 
-//dropdown
-%ui-dropdown {
+//table_list
+%table_list {
   @extend %reset_liststyle;
+
+  a {
+    @extend %action;
+
+    #{$icon-tagName} {
+      width: $icon_ratio_tab;
+      height: $icon_ratio_tab;
+      @include background-size(auto $icon_ratio_tab);
+    }
+  }
 }

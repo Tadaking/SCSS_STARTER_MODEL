@@ -183,7 +183,7 @@ nav ul, nav ol,
 menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-middle, .horizontal-layout-bottom, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
 .pagenation .horizontal-list,
 .centered.tab .horizontal-list,
-.centered-horizontal .horizontal-list, .dropdown {
+.centered-horizontal .horizontal-list, .table_list, .justified-horizontal div.placeholder {
   margin: 0;
   padding: 0;
 }
@@ -621,7 +621,7 @@ nav ul, nav ol,
 menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-middle, .horizontal-layout-bottom, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
 .pagenation .horizontal-list,
 .centered.tab .horizontal-list,
-.centered-horizontal .horizontal-list, .dropdown {
+.centered-horizontal .horizontal-list, .table_list {
   list-style: none;
   list-style-image: none;
 }
@@ -731,11 +731,34 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   display: table-cell;
 }
 
-/* line 38, ../sass/ui_modules/_horizontal.scss */
+/* line 46, ../sass/ui_modules/_horizontal.scss */
+.justified-horizontal {
+  text-align: justify;
+  font-size: 0;
+}
+/* line 50, ../sass/ui_modules/_horizontal.scss */
+.justified-horizontal:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  border-top: 10px dashed #922d8d;
+}
+
+/* line 58, ../sass/ui_modules/_horizontal.scss */
+.justified-horizontal div {
+  display: inline-block;
+}
+/* line 61, ../sass/ui_modules/_horizontal.scss */
+.justified-horizontal div.placeholder {
+  height: 0;
+  border-top: 10px solid #922d8d;
+}
+
+/* line 70, ../sass/ui_modules/_horizontal.scss */
 .pagenation, .centered.tab, .centered-horizontal {
   text-align: center;
 }
-/* line 42, ../sass/ui_modules/_horizontal.scss */
+/* line 74, ../sass/ui_modules/_horizontal.scss */
 .pagenation ul, .centered.tab ul, .centered-horizontal ul, .pagenation ol, .centered.tab ol, .centered-horizontal ol, .pagenation menu, .centered.tab menu, .centered-horizontal menu,
 .pagenation .horizontal-list,
 .centered.tab .horizontal-list,
@@ -743,7 +766,7 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   display: inline-table;
   vertical-align: bottom;
 }
-/* line 50, ../sass/ui_modules/_horizontal.scss */
+/* line 82, ../sass/ui_modules/_horizontal.scss */
 .pagenation ul > li, .centered.tab ul > li, .centered-horizontal ul > li, .pagenation ol > li, .centered.tab ol > li, .centered-horizontal ol > li, .pagenation menu > li, .centered.tab menu > li, .centered-horizontal menu > li,
 .pagenation .horizontal-list > li,
 .centered.tab .horizontal-list > li,
@@ -751,7 +774,7 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   display: table-cell;
   vertical-align: bottom;
 }
-/* line 57, ../sass/ui_modules/_horizontal.scss */
+/* line 89, ../sass/ui_modules/_horizontal.scss */
 .pagenation ul a, .centered.tab ul a, .centered-horizontal ul a, .pagenation ol a, .centered.tab ol a, .centered-horizontal ol a, .pagenation menu a, .centered.tab menu a, .centered-horizontal menu a,
 .pagenation .horizontal-list a,
 .centered.tab .horizontal-list a,
@@ -767,7 +790,7 @@ i {
 
 /* example button, tab, pagenation, link has icon */
 /* line 2, ../sass/ui_modules/_clickable_base.scss */
-.pagenation a, .tab a, .btn, .switch {
+.pagenation a, .tab a, .table_list a, .btn, .switch {
   display: inline-table;
   line-height: 1;
   padding: 0.618em;
@@ -775,20 +798,20 @@ i {
   vertical-align: middle;
 }
 /* line 9, ../sass/ui_modules/_clickable_base.scss */
-.pagenation a i, .tab a i, .btn i, .switch i, .pagenation a .cmd-label, .tab a .cmd-label, .btn .cmd-label, .switch .cmd-label {
+.pagenation a i, .tab a i, .table_list a i, .btn i, .switch i, .pagenation a .cmd-label, .tab a .cmd-label, .table_list a .cmd-label, .btn .cmd-label, .switch .cmd-label {
   display: table-cell;
   vertical-align: bottom;
 }
 /* line 15, ../sass/ui_modules/_clickable_base.scss */
-.pagenation a i + .cmd-label, .tab a i + .cmd-label, .btn i + .cmd-label, .switch i + .cmd-label {
+.pagenation a i + .cmd-label, .tab a i + .cmd-label, .table_list a i + .cmd-label, .btn i + .cmd-label, .switch i + .cmd-label {
   padding-left: 0.382em;
 }
 /* line 20, ../sass/ui_modules/_clickable_base.scss */
-.pagenation a.is-ico-rside .cmd-label, .tab a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label, .is-ico-rside.switch .cmd-label {
+.pagenation a.is-ico-rside .cmd-label, .tab a.is-ico-rside .cmd-label, .table_list a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label, .is-ico-rside.switch .cmd-label {
   padding-right: 0.382em;
 }
 /* line 31, ../sass/ui_modules/_clickable_base.scss */
-.pagenation a:disabled, .tab a:disabled, .btn:disabled, .switch:disabled, .pagenation a.disabled, .tab a.disabled, .disabled.btn, .disabled.switch {
+.pagenation a:disabled, .tab a:disabled, .table_list a:disabled, .btn:disabled, .switch:disabled, .pagenation a.disabled, .tab a.disabled, .table_list a.disabled, .disabled.btn, .disabled.switch {
   opacity: 0.5;
 }
 
@@ -875,6 +898,16 @@ i {
   border: solid 1px #8d8d8d;
   font-size: 16px;
   z-index: 10;
+}
+
+/* line 53, ../sass/ui_modules/_navigations.scss */
+.table_list a i {
+  width: 1em;
+  height: 1em;
+  -webkit-background-size: auto 1em;
+  -moz-background-size: auto 1em;
+  -o-background-size: auto 1em;
+  background-size: auto 1em;
 }
 
 /* form */
@@ -1115,6 +1148,15 @@ i {
   /* added settings */
 }
 
+/* line 40, ../sass/ui_modules/_horizontal.scss */
+.justified-horizontal div {
+  width: 18%;
+  height: 80px;
+  margin-bottom: 2.5%;
+  background: #a5a5a5;
+  font-size: 1rem;
+}
+
 /* line 19, ../sass/ui_modules/_horizontal.scss */
 .horizontal-layout-top li {
   vertical-align: top;
@@ -1148,7 +1190,7 @@ i {
   border-right: solid 1px white;
 }
 
-/* line 92, ../sass/site_styles/_layout.scss */
+/* line 104, ../sass/site_styles/_layout.scss */
 .centered-horizontal {
   /* added settings */
 }
@@ -1172,4 +1214,41 @@ i {
 /* line 6, ../sass/site_styles/_navigations.scss */
 .tab {
   /* added settings */
+}
+
+/* line 15, ../sass/site_styles/_navigations.scss */
+.table_list {
+  width: 300px;
+  background: #f0f0f0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+/* line 22, ../sass/site_styles/_navigations.scss */
+.table_list li {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+/* line 26, ../sass/site_styles/_navigations.scss */
+.table_list li:first-child {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+/* line 30, ../sass/site_styles/_navigations.scss */
+.table_list li:last-child {
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }

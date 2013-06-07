@@ -44,11 +44,28 @@
 }
 
 //table_list
+@mixin table_list($childObj, $grad:false) {
+  @extend %table_list;
+
+  #{$childObj} {
+    @content;
+
+    &:hover {
+      @if $grad {
+        @include background(linear-gradient(lighten($site_key_color, $lighten_amount), $site_key_color));
+      }@else {
+        background: $site_key_color;
+      }
+    }
+  }
+}
+
 %table_list {
   @extend %reset_liststyle;
-
+  
   a {
     @extend %action;
+    display: block;
 
     #{$icon-tagName} {
       width: $icon_ratio_tab;

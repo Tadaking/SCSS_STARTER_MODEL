@@ -5,3 +5,56 @@
     }
   }
 }
+
+//横並びフォーム
+@mixin horizontal_form {
+  legend, .legend {
+    @extend %bold;
+    @extend %inputarea;
+  }
+}
+
+%fieldset {
+  @extend fieldset;
+  display: table;
+
+  label {
+    @extend %inputarea;
+    @extend %bold;
+  }
+}
+
+fieldset {
+  @extend %fieldset;
+}
+
+%inputarea {
+  display: table-cell;
+
+  label {
+    display: inline-block;
+    width: auto;
+    font-weight: normal;
+  }
+}
+
+//縦並びフォーム
+@mixin vertical_form($filedsetClassName, $inputareaClassName) {
+  legend, .legend {
+    @extend %bold;
+  }
+
+  legend, .legend, label, #{$filedsetClassName}, #{$inputareaClassName} {
+    display: block;
+  }
+
+  legend, .legend, label {
+    width: auto;
+  }
+
+  #{$inputareaClassName} {
+    label {
+      display: inline-block;
+    }
+  }
+}

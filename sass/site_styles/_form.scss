@@ -1,6 +1,37 @@
+$fieldset: '.field';
+$inputarea: '.inputarea';
+
 .error {
   @extend %validation_error;
 }
-.error-txt {
+.err-msg {
   @extend %error_txt;
+}
+
+.horizontal-layout {
+  @include horizontal_form;
+
+  label, .legend {
+    width: 10em;
+  }
+
+  #{$fieldset} {
+    @extend %fieldset;
+  }
+
+  #{$inputarea} {
+    @extend %inputarea;
+  }
+}
+
+.vertical-layout {
+  @include vertical_form($fieldset, $inputarea);
+
+  #{$fieldset} {
+    @extend %fieldset;
+  }
+
+  #{$inputarea} {
+    @extend %inputarea;
+  }
 }

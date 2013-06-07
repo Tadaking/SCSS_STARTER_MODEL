@@ -12,16 +12,16 @@
   @extend %ui-tab-content;
 }
 
-.table_list {
+.table-list {
   @extend %table_list;
-  width: 300px;
   background: #f0f0f0;
   @include border-radius(5px);
   @include box-shadow(0 0 3px 1px rgba(0,0,0,0.2));
 
-  li {
+  @include table_list('li', true) {
     border-bottom: solid 1px rgba(0,0,0,0.2);
-    @include box-shadow(inset 0 1px 0 0 rgba(255,255,255,0.8));
+    @extend %bold;
+    @include box-shadow(inset 0 1px 0 0 rgba(255,255,255,0.4));
 
     &:first-child {
       @include border-radius(5px 5px 0 0);
@@ -29,6 +29,12 @@
 
     &:last-child {
       @include border-radius(0 0 5px 5px);
+    }
+
+    &:hover {
+      a {
+        color: $white;
+      }
     }
   } 
 }

@@ -1,127 +1,15 @@
+@charset "UTF-8";
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
 */
-/*-----------------------------------
-layout settings
----------------------------------- */
-/* IF You use "display:box;" on your website, turn true */
-/* action area padding */
-/*-----------------------------------
-define background
----------------------------------- */
-/*-----------------------------------
-colors
----------------------------------- */
-/* add color to use at following */
-/*-----------------------------------
-typography settings
----------------------------------- */
-/* --
-default settings
--- */
-/* --
-anchor settings
--- */
-/* line 30, ../sass/settings/_typography.scss */
-h1 {
-  font-size: 3.2rem;
-  line-height: 2.25;
-}
-
-/* line 34, ../sass/settings/_typography.scss */
-h2 {
-  font-size: 2.4rem;
-  line-height: 2;
-}
-
-/* line 38, ../sass/settings/_typography.scss */
-h3 {
-  font-size: 2rem;
-  line-height: 2.4;
-}
-
-/* line 42, ../sass/settings/_typography.scss */
-h4 {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
-/* line 46, ../sass/settings/_typography.scss */
-h5 {
-  font-size: 1.3rem;
-  line-height: 1.85;
-}
-
-/* line 50, ../sass/settings/_typography.scss */
-h6 {
-  font-size: 1.1rem;
-  line-height: 2.19;
-}
-
-/*-----------------------------------
-icon settings
----------------------------------- */
-/* icon_ratio to font-size of each UI */
-/*-----------------------------------
-table design settings
----------------------------------- */
-/* line 14, ../sass/settings/_table_design.scss */
-table {
-  border: 2px solid #8d8d8d;
-  border-right-width: 0;
-  border-left-width: 0;
-}
-/* line 110, ../sass/_mixins.scss */
-table thead th {
-  background: #f8fcfd;
-  border-bottom: 2px solid #8d8d8d;
-}
-/* line 116, ../sass/_mixins.scss */
-table tfoot th, table tfoot td {
-  border-top: 2px solid #8d8d8d;
-}
-/* line 119, ../sass/_mixins.scss */
-table th:first-child {
-  border-right: 2px solid #8d8d8d;
-}
-/* line 127, ../sass/_mixins.scss */
-table th, table td {
-  border-right-width: 0px;
-  border-bottom: 1px solid #8d8d8d;
-  border-left-width: 0px;
-  border-top-width: 0px;
-}
-/* line 149, ../sass/_mixins.scss */
-table tbody tr:last-child th, table tbody tr:last-child td, table tfoot tr:last-child th, table tfoot tr:last-child td {
-  border-bottom-width: 0px;
-}
-/* line 152, ../sass/_mixins.scss */
-table tbody tr.last th, table tbody tr.last td, table tfoot tr.last th, table tfoot tr.last td {
-  border-bottom-width: 0px;
-}
-/* line 163, ../sass/_mixins.scss */
-table tr:nth-child(even) th {
-  background: #f2f2f2;
-}
-/* line 166, ../sass/_mixins.scss */
-table tr:nth-child(even) td {
-  background: #f2f2f2;
-}
-
-/*-----------------------------------
-form design settings
----------------------------------- */
 /* normal */
 /* reset btn */
 /* cancel btn */
 /*normal */
 /* on */
-/*-----------------------------------
-UI design settings
----------------------------------- */
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -664,34 +552,71 @@ input.cancel[type="button"], input.cancel[type="submit"], button.cancel, .cancel
   text-shadow: none;
 }
 
-/* line 1, ../sass/modules/_typo.scss */
+/* typography settings */
+/* line 3, ../sass/modules/_typo.scss */
+h1 {
+  font-size: 3.2rem;
+  line-height: 2.25;
+}
+
+/* line 7, ../sass/modules/_typo.scss */
+h2 {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+/* line 11, ../sass/modules/_typo.scss */
+h3 {
+  font-size: 2rem;
+  line-height: 2.4;
+}
+
+/* line 15, ../sass/modules/_typo.scss */
+h4 {
+  font-size: 1.6rem;
+  line-height: 3;
+}
+
+/* line 19, ../sass/modules/_typo.scss */
+h5 {
+  font-size: 1.3rem;
+  line-height: 1.85;
+}
+
+/* line 23, ../sass/modules/_typo.scss */
+h6 {
+  font-size: 1.1rem;
+  line-height: 2.19;
+}
+
+/* line 27, ../sass/modules/_typo.scss */
 .alert-warning {
   color: yellow;
 }
 
-/* line 6, ../sass/modules/_typo.scss */
+/* line 32, ../sass/modules/_typo.scss */
 .error label, .error .err-msg, .alert-error {
   color: #d15749;
 }
 
-/* line 11, ../sass/modules/_typo.scss */
+/* line 37, ../sass/modules/_typo.scss */
 .alert-success {
   color: #3bb082;
 }
 
-/* line 16, ../sass/modules/_typo.scss */
+/* line 42, ../sass/modules/_typo.scss */
 .alert-info {
   color: #3ba4b0;
 }
 
-/* line 26, ../sass/modules/_typo.scss */
+/* line 52, ../sass/modules/_typo.scss */
 .note {
   font-size: 0.8em;
 }
 
-/* line 29, ../sass/modules/_typo.scss */
+/* line 55, ../sass/modules/_typo.scss */
 h1, h2, h3, h4, h5, h6, b,
-strong, dt, .alert-warning, .error label, .error .err-msg, .alert-error, .alert-success, .alert-info, .current, fieldset label, .horizontal-layout .field label, .vertical-layout .field label, .table-list li, .horizontal-layout legend, .horizontal-layout .legend, .vertical-layout legend, .vertical-layout .legend {
+strong, dt, .alert-warning, .error label, .error .err-msg, .alert-error, .alert-success, .alert-info, .current, fieldset label, .horizontal-layout .field label, .vertical-layout .field label, .horizontal-layout legend, .horizontal-layout .legend, .vertical-layout legend, .vertical-layout .legend, .table-list li {
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
 }
@@ -762,6 +687,7 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   box-sizing: border-box;
 }
 
+/* 横並びリスト */
 /* line 2, ../sass/modules/_horizontal.scss */
 .tab ul, .tab ol, .tab menu, .horizontal {
   line-height: normal;
@@ -838,7 +764,6 @@ i {
   vertical-align: middle;
 }
 
-/* example button, tab, pagenation, link has icon */
 /* line 2, ../sass/modules/_clickable_base.scss */
 .pagenation a, .tab a, .table-list a, input[type="button"], input[type="submit"], button, .btn, input[type="reset"], .switch {
   display: inline-table;
@@ -865,6 +790,7 @@ i {
   opacity: 0.5;
 }
 
+/* pagenation */
 /* line 4, ../sass/modules/_navigations.scss */
 .pagenation a {
   margin-right: 0.309em;
@@ -885,6 +811,7 @@ i {
   color: #181818;
 }
 
+/* tab */
 /* line 14, ../sass/modules/_navigations.scss */
 .tab {
   font-size: 0;
@@ -950,6 +877,7 @@ i {
   z-index: 10;
 }
 
+/* table_list */
 /* line 66, ../sass/modules/_navigations.scss */
 .table-list a {
   display: block;
@@ -964,7 +892,6 @@ i {
   background-size: auto 1em;
 }
 
-/* form */
 /* line 21, ../sass/settings/_form_design.scss */
 .error input[type="text"],
 .error input[type="password"],
@@ -995,13 +922,55 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   font-weight: normal;
 }
 
-/* table */
-/* line 1, ../sass/modules/_table.scss */
+/* table settings */
+/* line 3, ../sass/modules/_table.scss */
 .number {
   text-align: right;
 }
 
-/* button & switch */
+/* line 7, ../sass/modules/_table.scss */
+table {
+  border: 2px solid #8d8d8d;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+/* line 110, ../sass/_mixins.scss */
+table thead th {
+  background: #f8fcfd;
+  border-bottom: 2px solid #8d8d8d;
+}
+/* line 116, ../sass/_mixins.scss */
+table tfoot th, table tfoot td {
+  border-top: 2px solid #8d8d8d;
+}
+/* line 119, ../sass/_mixins.scss */
+table th:first-child {
+  border-right: 2px solid #8d8d8d;
+}
+/* line 127, ../sass/_mixins.scss */
+table th, table td {
+  border-right-width: 0px;
+  border-bottom: 1px solid #8d8d8d;
+  border-left-width: 0px;
+  border-top-width: 0px;
+}
+/* line 149, ../sass/_mixins.scss */
+table tbody tr:last-child th, table tbody tr:last-child td, table tfoot tr:last-child th, table tfoot tr:last-child td {
+  border-bottom-width: 0px;
+}
+/* line 152, ../sass/_mixins.scss */
+table tbody tr.last th, table tbody tr.last td, table tfoot tr.last th, table tfoot tr.last td {
+  border-bottom-width: 0px;
+}
+/* line 163, ../sass/_mixins.scss */
+table tr:nth-child(even) th {
+  background: #f2f2f2;
+}
+/* line 166, ../sass/_mixins.scss */
+table tr:nth-child(even) td {
+  background: #f2f2f2;
+}
+
 /* line 1, ../sass/modules/_button_switch.scss */
 input[type="button"] i, input[type="submit"] i, button i, .btn i, .switch i {
   width: 1em;
@@ -1168,6 +1137,13 @@ button[type="reset"] .active {
   background: linear-gradient(#b83d2f, #d15749);
 }
 
+/* ---------- typography ---------- */
+/* line 19, ../sass/site_styles/_typography.scss */
+.current {
+  /* added settings */
+}
+
+/* ---------- boxlayout ---------- */
 /* line 1, ../sass/site_styles/_layout.scss */
 .site-body {
   width: 960;
@@ -1269,12 +1245,28 @@ button[type="reset"] .active {
   /* added settings */
 }
 
-/* line 24, ../sass/site_styles/_example.scss */
-.current {
-  /* added settings */
+/* ---------- form ---------- */
+/* line 14, ../sass/site_styles/_form.scss */
+.horizontal-layout label, .horizontal-layout .legend {
+  width: 10em;
 }
 
-/* ui parts navigation */
+/* line 47, ../sass/modules/_form.scss */
+.vertical-layout legend, .vertical-layout .legend, .vertical-layout label, .vertical-layout .field, .vertical-layout .inputarea {
+  display: block;
+}
+/* line 51, ../sass/modules/_form.scss */
+.vertical-layout legend, .vertical-layout .legend, .vertical-layout label {
+  width: auto;
+}
+/* line 56, ../sass/modules/_form.scss */
+.vertical-layout .inputarea label {
+  display: inline-block;
+}
+
+/* ---------- button & Switch ---------- */
+/* ---------- table ---------- */
+/* ---------- ui parts navigation ---------- */
 /* line 1, ../sass/site_styles/_navigations.scss */
 .pagenation {
   /* added settings */
@@ -1331,22 +1323,4 @@ button[type="reset"] .active {
   background: -moz-linear-gradient(#63c0cb, #3ba4b0);
   background: -o-linear-gradient(#63c0cb, #3ba4b0);
   background: linear-gradient(#63c0cb, #3ba4b0);
-}
-
-/* line 14, ../sass/site_styles/_form.scss */
-.horizontal-layout label, .horizontal-layout .legend {
-  width: 10em;
-}
-
-/* line 47, ../sass/modules/_form.scss */
-.vertical-layout legend, .vertical-layout .legend, .vertical-layout label, .vertical-layout .field, .vertical-layout .inputarea {
-  display: block;
-}
-/* line 51, ../sass/modules/_form.scss */
-.vertical-layout legend, .vertical-layout .legend, .vertical-layout label {
-  width: auto;
-}
-/* line 56, ../sass/modules/_form.scss */
-.vertical-layout .inputarea label {
-  display: inline-block;
 }

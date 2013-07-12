@@ -1,4 +1,4 @@
-//pagenation
+/* pagenation */
 %ui-pagenation {
   @extend %centered_horizontal;
   a {
@@ -10,7 +10,7 @@
   }
 }
 
-//tab
+/* tab */
 %ui-tab {
   font-size: 0;
   @include tab_layout;
@@ -43,7 +43,7 @@
   @include default_tab_content_design;
 }
 
-//table_list
+/* table_list */
 @mixin table_list($childObj, $grad:false) {
   @extend %table_list;
 

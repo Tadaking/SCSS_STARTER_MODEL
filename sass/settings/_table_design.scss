@@ -11,8 +11,12 @@ $tbodyTh: darken($td, 5%);
 $trEven: darken($td, 5%);
 $thEven: darken($td, 5%);
 
-%default_table {
-  @include outer-table-borders(2px, $gray, $verticalLine: false);
-  @include inner-table-borders(1px, $gray, $verticalLine: false);
-  @include stripedTable;
-}
+//border-settings
+$outer-bw: 2px;
+$outer-bc: $gray;
+$outer-verticalLine: false;
+
+$inner-bw: 1px;
+$inner-bc: $gray;
+$inner-verticalLine: false;
+

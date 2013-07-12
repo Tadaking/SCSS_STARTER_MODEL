@@ -1,15 +1,13 @@
 @charset "UTF-8";
 
-/* --
-default settings
--- */
+// font-family
 $sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
 $serif: Georgia, Times, "Times New Roman", serif;
 
 $default_family: $sans-serif;
-/* --
-anchor settings
--- */
+
+
+// anchor settings
 $link_color: #258FB8;
 $link_visited: lighten($link_color, $lighten_strong_amount);
 $link_hover: lighten($link_color, $lighten_amount);
@@ -26,27 +24,21 @@ $alert_error: $red;
 $alert_success: $site_accent_color;
 $alert_info: $site_key_color;
 
+//heading fontsize & line-height:nth-grid-height
+$h1-fs: 32;
+$h1-lh: 3;
 
-%h1 {
-	@include heading-fs-lh(32, 3); //@mixin heading-fs-lh($fontsize, $grid_height_num)
-}
+$h2-fs: 24;
+$h2-lh: 2;
 
-%h2 {
-	@include heading-fs-lh(24, 2);
-}
+$h3-fs: 20;
+$h3-lh: 2;
 
-%h3 {
-	@include heading-fs-lh(20, 2);
-}
+$h4-fs: $base_fs;
+$h4-lh: 2;
 
-%h4 {
-	@include heading-fs-lh($base_fs, 1);
-}
+$h5-fs: 13;
+$h5-lh: 1;
 
-%h5 {
-	@include heading-fs-lh(13, 1);
-}
-
-%h6 {
-	@include heading-fs-lh(11, 1);
-}
+$h6-fs: 11;
+$h6-lh: 1;

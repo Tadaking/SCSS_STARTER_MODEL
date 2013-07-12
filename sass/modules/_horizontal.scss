@@ -1,4 +1,4 @@
-//横並びリスト
+/* 横並びリスト */
 %horizontal_list {
   @include horizontal_obj(">li, >a, >button");
   line-height: normal;

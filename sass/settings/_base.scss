@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/*-----------------------------------
-layout settings
----------------------------------- */
 //webpage design layout settings
 $base_fs: 16;
 $base_fw: 300;
@@ -13,67 +10,46 @@ $default_fw_bold: bold;
 
 $grid_width: 1 * $base_fs;
 $grid_height: $default_lh * $base_fs;
-// @debug $grid_height;
 $grid_margin: $base_fs;
 
 $page_width: 60 * $grid_width;
-// @debug $page_width;
 
 $column_num: 5;
 
- /* IF You use "display:box;" on your website, turn true */
+ // IF You use "display:box;" on your website, turn true
 $box_layout: false;
 
-/* action area padding */
+// action area padding
 $padding_tb: .618em;
 $padding_lr: 1.615em;
 
 $disabledOpacity: 0.5;
 
-//zindex management
+// zindex management
 @import 'zindex';
 
-/*-----------------------------------
-define background
----------------------------------- */
+// body background
 $body_background_image_file: null; //PATH _TO_IMAGE or null
 $body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
 $body_background_offset: null; // xOffset, yOffset or nu;;
 
-/*-----------------------------------
-colors
----------------------------------- */
-@import 'color';
 
-/*-----------------------------------
-typography settings
----------------------------------- */
+@import 'color';
 @import 'typography';
 
-/*-----------------------------------
-icon settings
----------------------------------- */
+// icon settings
 $icon-tagName: i;
 $icon_sprite_path: '../images/sprite_icon.svg';
 
-/* icon_ratio to font-size of each UI */
+//icon_ratio to font-size of each UI
 $icon_ratio_tab: 1em;
 $icon_ratio_button: 1em;
 
-/*-----------------------------------
-table design settings
----------------------------------- */
-@import 'table_design';
 
-/*-----------------------------------
-form design settings
----------------------------------- */
+@import 'table_design';
 @import 'form_design';
 @import 'button_design';
 
-/*-----------------------------------
-UI design settings
----------------------------------- */
 // アクションボタンのアイコンタグと⌘ラベルのclass名設定
 $action-label-className: cmd-label;
 $icon-positionized-className: is-ico-rside;

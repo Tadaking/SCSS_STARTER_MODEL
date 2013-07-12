@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.alert-warning {
+	@extend %alert-warning;
+}
+
+.alert-error {
+	@extend %alert-error;
+}
+
+.alert-success {
+	@extend %alert-success;
+}
+
+.alert-info {
+	@extend %alert-info;
+}
+
+.current {
+  @extend %current;
+  /* added settings */
+}

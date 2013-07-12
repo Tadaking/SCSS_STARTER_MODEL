@@ -5,10 +5,20 @@
 //boxlayout
 @import 'layout';
 
-//typography
-.alert {
-  @extend %alert;
-  /* added settings */
+.alert-warning {
+	@extend %alert-warning;
+}
+
+.alert-error {
+	@extend %alert-error;
+}
+
+.alert-success {
+	@extend %alert-success;
+}
+
+.alert-info {
+	@extend %alert-info;
 }
 
 .current {

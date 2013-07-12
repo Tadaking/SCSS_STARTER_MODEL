@@ -11,7 +11,7 @@ $input_textarea_padding: 3px;
 
 @mixin error_view {
   label {
-    @extend %alert;
+    @extend %alert-error;
   }
 
   input[type="text"],
@@ -27,6 +27,6 @@ $input_textarea_padding: 3px;
 }
 
 @mixin error_text {
-  @extend %alert;
+  @extend %alert-error;
   font-weight: normal;
 }

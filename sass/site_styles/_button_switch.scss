@@ -1,4 +1,23 @@
 //button
+input[type="button"] {
+  @extend %button;
+}
+
+input[type="submit"] {
+  @extend %button;
+}
+
+input[type="reset"]{
+  @extend %button_reset;
+}
+
+button {
+  @extend %button;
+  &[type="reset"]{
+    @extend %button_reset;
+  }
+}
+
 .btn {
   @extend %button;
 

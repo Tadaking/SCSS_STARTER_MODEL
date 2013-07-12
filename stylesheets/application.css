@@ -13,7 +13,7 @@ layout settings
 define background
 ---------------------------------- */
 /*-----------------------------------
-define colors
+colors
 ---------------------------------- */
 /* add color to use at following */
 /*-----------------------------------
@@ -25,11 +25,40 @@ default settings
 /* --
 anchor settings
 -- */
-/* line 33, ../sass/settings/_typography.scss */
-h1, h2, h3, h4, h5, h6, b,
-strong, dt, .error label, .error .err-msg, .alert, .current, fieldset label, .horizontal-layout .field label, .vertical-layout .field label, .table-list li, .horizontal-layout legend, .horizontal-layout .legend, .vertical-layout legend, .vertical-layout .legend {
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
+/* line 30, ../sass/settings/_typography.scss */
+h1 {
+  font-size: 3.2rem;
+  line-height: 2.25;
+}
+
+/* line 34, ../sass/settings/_typography.scss */
+h2 {
+  font-size: 2.4rem;
+  line-height: 2;
+}
+
+/* line 38, ../sass/settings/_typography.scss */
+h3 {
+  font-size: 2rem;
+  line-height: 2.4;
+}
+
+/* line 42, ../sass/settings/_typography.scss */
+h4 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* line 46, ../sass/settings/_typography.scss */
+h5 {
+  font-size: 1.3rem;
+  line-height: 1.85;
+}
+
+/* line 50, ../sass/settings/_typography.scss */
+h6 {
+  font-size: 1.1rem;
+  line-height: 2.19;
 }
 
 /*-----------------------------------
@@ -40,45 +69,45 @@ icon settings
 table design settings
 ---------------------------------- */
 /* line 14, ../sass/settings/_table_design.scss */
-.data-table {
+table {
   border: 2px solid #8d8d8d;
   border-right-width: 0;
   border-left-width: 0;
 }
 /* line 110, ../sass/_mixins.scss */
-.data-table thead th {
+table thead th {
   background: #f8fcfd;
   border-bottom: 2px solid #8d8d8d;
 }
 /* line 116, ../sass/_mixins.scss */
-.data-table tfoot th, .data-table tfoot td {
+table tfoot th, table tfoot td {
   border-top: 2px solid #8d8d8d;
 }
 /* line 119, ../sass/_mixins.scss */
-.data-table th:first-child {
+table th:first-child {
   border-right: 2px solid #8d8d8d;
 }
 /* line 127, ../sass/_mixins.scss */
-.data-table th, .data-table td {
+table th, table td {
   border-right-width: 0px;
   border-bottom: 1px solid #8d8d8d;
   border-left-width: 0px;
   border-top-width: 0px;
 }
 /* line 149, ../sass/_mixins.scss */
-.data-table tbody tr:last-child th, .data-table tbody tr:last-child td, .data-table tfoot tr:last-child th, .data-table tfoot tr:last-child td {
+table tbody tr:last-child th, table tbody tr:last-child td, table tfoot tr:last-child th, table tfoot tr:last-child td {
   border-bottom-width: 0px;
 }
 /* line 152, ../sass/_mixins.scss */
-.data-table tbody tr.last th, .data-table tbody tr.last td, .data-table tfoot tr.last th, .data-table tfoot tr.last td {
+table tbody tr.last th, table tbody tr.last td, table tfoot tr.last th, table tfoot tr.last td {
   border-bottom-width: 0px;
 }
 /* line 163, ../sass/_mixins.scss */
-.data-table tr:nth-child(even) th {
+table tr:nth-child(even) th {
   background: #f2f2f2;
 }
 /* line 166, ../sass/_mixins.scss */
-.data-table tr:nth-child(even) td {
+table tr:nth-child(even) td {
   background: #f2f2f2;
 }
 
@@ -155,8 +184,7 @@ audio:not([controls]) {
 /* line 71, ../sass/_normalize.scss */
 html {
   background: white body_background_image()  ;
-  font-size: 16px;
-  /* 1 */
+  font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   /* 2 */
   -ms-text-size-adjust: 100%;
@@ -164,7 +192,7 @@ html {
   font-weight: 300;
 }
 
-/* line 79, ../sass/_normalize.scss */
+/* line 80, ../sass/_normalize.scss */
 body, h1, h2, h3, h4, h5, h6, form, button,
 input,
 select,
@@ -172,13 +200,13 @@ textarea, .tab ul > li, .tab ol > li, .tab menu > li, .horizontal > li, .tab ul 
   margin: 0;
 }
 
-/* line 80, ../sass/_normalize.scss */
+/* line 81, ../sass/_normalize.scss */
 legend, input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
 }
 
-/* line 82, ../sass/_normalize.scss */
+/* line 83, ../sass/_normalize.scss */
 nav ul, nav ol,
 menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-middle, .horizontal-layout-bottom, .pagenation ul, .centered-horizontal ul, .pagenation ol, .centered-horizontal ol,
 .pagenation .horizontal-list,
@@ -188,15 +216,15 @@ menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-
   padding: 0;
 }
 
-/* line 87, ../sass/_normalize.scss */
+/* line 88, ../sass/_normalize.scss */
 body {
-  font: 1rem/20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
+  font: 1.6rem/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
 }
 
 /* =============================================================================
    Links
    ========================================================================== */
-/* line 97, ../sass/_normalize.scss */
+/* line 98, ../sass/_normalize.scss */
 a {
   color: #258fb8;
   text-decoration: underline;
@@ -210,15 +238,15 @@ a:hover {
   text-decoration: none;
   color: #46b0da;
 }
-/* line 106, ../sass/_normalize.scss */
+/* line 107, ../sass/_normalize.scss */
 a:visited {
   color: #7dc8e5;
 }
-/* line 110, ../sass/_normalize.scss */
+/* line 111, ../sass/_normalize.scss */
 a:active {
   color: #1c6e8e;
 }
-/* line 114, ../sass/_normalize.scss */
+/* line 115, ../sass/_normalize.scss */
 a:focus {
   color: #46b0da;
   /*
@@ -226,11 +254,11 @@ a:focus {
    */
   outline: thin dotted;
 }
-/* line 123, ../sass/_normalize.scss */
+/* line 124, ../sass/_normalize.scss */
 a:hover, a:active {
   outline: 0;
 }
-/* line 125, ../sass/_normalize.scss */
+/* line 126, ../sass/_normalize.scss */
 a.current {
   color: #333333;
 }
@@ -238,22 +266,22 @@ a.current {
 /* =============================================================================
    Typography
    ========================================================================== */
-/* line 134, ../sass/_normalize.scss */
+/* line 135, ../sass/_normalize.scss */
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1px;
 }
 
-/* line 140, ../sass/_normalize.scss */
+/* line 145, ../sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 149, ../sass/_normalize.scss */
+/* line 154, ../sass/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 153, ../sass/_normalize.scss */
+/* line 158, ../sass/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -261,7 +289,7 @@ dfn {
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-/* line 161, ../sass/_normalize.scss */
+/* line 166, ../sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -270,7 +298,7 @@ mark {
 /*
  * Addresses margins set differently in IE6/7
  */
-/* line 171, ../sass/_normalize.scss */
+/* line 176, ../sass/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
@@ -280,7 +308,7 @@ pre {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 183, ../sass/_normalize.scss */
+/* line 188, ../sass/_normalize.scss */
 pre,
 code,
 kbd,
@@ -293,7 +321,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-/* line 193, ../sass/_normalize.scss */
+/* line 198, ../sass/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -310,20 +338,20 @@ pre {
  * 2. Addresses quote property not supported in S4
  */
 /* 1 */
-/* line 204, ../sass/_normalize.scss */
+/* line 209, ../sass/_normalize.scss */
 q {
   quotes: none;
 }
 
 /* 2 */
-/* line 211, ../sass/_normalize.scss */
+/* line 216, ../sass/_normalize.scss */
 q:before,
 q:after {
   content: '';
   content: none;
 }
 
-/* line 216, ../sass/_normalize.scss */
+/* line 221, ../sass/_normalize.scss */
 small {
   font-size: 75%;
 }
@@ -332,7 +360,7 @@ small {
  * Prevents sub and sup affecting line-height in all browsers
  * gist.github.com/413930
  */
-/* line 226, ../sass/_normalize.scss */
+/* line 231, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -341,17 +369,17 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 233, ../sass/_normalize.scss */
+/* line 238, ../sass/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 237, ../sass/_normalize.scss */
+/* line 242, ../sass/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 241, ../sass/_normalize.scss */
+/* line 246, ../sass/_normalize.scss */
 hr {
   clear: both;
   border: none;
@@ -360,17 +388,17 @@ hr {
 /* =============================================================================
    Lists
    ========================================================================== */
-/* line 250, ../sass/_normalize.scss */
+/* line 255, ../sass/_normalize.scss */
 dl, ol, ul {
   margin: 1em 0;
 }
 
-/* line 254, ../sass/_normalize.scss */
+/* line 259, ../sass/_normalize.scss */
 ol, ul {
   padding: 0 0 0 40px;
 }
 
-/* line 263, ../sass/_normalize.scss */
+/* line 268, ../sass/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -383,7 +411,7 @@ dd {
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 280, ../sass/_normalize.scss */
+/* line 285, ../sass/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -395,7 +423,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9
  */
-/* line 290, ../sass/_normalize.scss */
+/* line 295, ../sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -406,7 +434,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-/* line 302, ../sass/_normalize.scss */
+/* line 307, ../sass/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -420,7 +448,7 @@ figure {
 /*
  * Define consistent border, margin, and padding
  */
-/* line 322, ../sass/_normalize.scss */
+/* line 327, ../sass/_normalize.scss */
 fieldset, .horizontal-layout .field, .vertical-layout .field {
   border: none;
   margin: 0 2px;
@@ -432,7 +460,7 @@ fieldset, .horizontal-layout .field, .vertical-layout .field {
  * 2. Corrects text not wrapping in FF3 
  * 3. Corrects alignment displayed oddly in IE6/7
  */
-/* line 339, ../sass/_normalize.scss */
+/* line 344, ../sass/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -442,7 +470,7 @@ legend {
   /* 3 */
 }
 
-/* line 349, ../sass/_normalize.scss */
+/* line 354, ../sass/_normalize.scss */
 label:not(:first-child) input[type="checkbox"],
 label:not(:first-child) input[type="radio"] {
   margin-left: 0.618em;
@@ -453,7 +481,7 @@ label:not(:first-child) input[type="radio"] {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-/* line 364, ../sass/_normalize.scss */
+/* line 369, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -470,14 +498,14 @@ textarea {
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-/* line 376, ../sass/_normalize.scss */
+/* line 381, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
   /* 1 */
 }
 
-/* line 384, ../sass/_normalize.scss */
+/* line 389, ../sass/_normalize.scss */
 input[type="text"],
 input[type="password"],
 input[type='email'],
@@ -498,7 +526,7 @@ textarea {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 403, ../sass/_normalize.scss */
+/* line 408, ../sass/_normalize.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -514,7 +542,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements
  */
-/* line 415, ../sass/_normalize.scss */
+/* line 420, ../sass/_normalize.scss */
 button[disabled],
 input[disabled],
 .disabled {
@@ -527,7 +555,7 @@ input[disabled],
  * 3. Removes excess padding in IE7
       Known issue: excess padding remains in IE6
  */
-/* line 427, ../sass/_normalize.scss */
+/* line 432, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 0.3em;
@@ -542,7 +570,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 439, ../sass/_normalize.scss */
+/* line 444, ../sass/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -555,7 +583,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-/* line 451, ../sass/_normalize.scss */
+/* line 456, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -565,7 +593,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 461, ../sass/_normalize.scss */
+/* line 466, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -576,7 +604,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 471, ../sass/_normalize.scss */
+/* line 476, ../sass/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -590,18 +618,18 @@ textarea {
 /*
  * Remove most spacing between table cells
  */
-/* line 485, ../sass/_normalize.scss */
+/* line 490, ../sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 495, ../sass/_normalize.scss */
+/* line 500, ../sass/_normalize.scss */
 tbody th {
   text-align: left;
 }
 
-/* line 500, ../sass/_normalize.scss */
+/* line 505, ../sass/_normalize.scss */
 td, th {
   padding: 0.618em 1.615em;
 }
@@ -609,7 +637,7 @@ td, th {
 /* =============================================================================
 clearfix
  ========================================================================== */
-/* line 507, ../sass/_normalize.scss */
+/* line 512, ../sass/_normalize.scss */
 .site-body {
   overflow: hidden;
   *zoom: 1;
@@ -627,7 +655,7 @@ menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-
 }
 
 /* line 15, ../sass/modules/_global.scss */
-.cancel.btn {
+input.cancel[type="button"], input.cancel[type="submit"], button.cancel, .cancel.btn {
   background: none;
   border: none;
   -webkit-box-shadow: none;
@@ -637,40 +665,62 @@ menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-
 }
 
 /* line 1, ../sass/modules/_typo.scss */
-.error label, .error .err-msg, .alert {
-  color: red;
+.alert-warning {
+  color: yellow;
+}
+
+/* line 6, ../sass/modules/_typo.scss */
+.error label, .error .err-msg, .alert-error {
+  color: #d15749;
 }
 
 /* line 11, ../sass/modules/_typo.scss */
+.alert-success {
+  color: #3bb082;
+}
+
+/* line 16, ../sass/modules/_typo.scss */
+.alert-info {
+  color: #3ba4b0;
+}
+
+/* line 26, ../sass/modules/_typo.scss */
 .note {
   font-size: 0.8em;
 }
 
-/* line 46, ../sass/_mixins.scss */
+/* line 29, ../sass/modules/_typo.scss */
+h1, h2, h3, h4, h5, h6, b,
+strong, dt, .alert-warning, .error label, .error .err-msg, .alert-error, .alert-success, .alert-info, .current, fieldset label, .horizontal-layout .field label, .vertical-layout .field label, .table-list li, .horizontal-layout legend, .horizontal-layout .legend, .vertical-layout legend, .vertical-layout .legend {
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 40, ../sass/_mixins.scss */
 .left, .right, .navigation {
   width: 18.66667%;
-  margin-left: 16px;
+  margin-left: 16;
 }
 
-/* line 46, ../sass/_mixins.scss */
+/* line 40, ../sass/_mixins.scss */
 .aside {
   width: 39.0%;
-  margin-left: 16px;
+  margin-left: 16;
 }
 
-/* line 46, ../sass/_mixins.scss */
+/* line 40, ../sass/_mixins.scss */
 .main, .middle {
   width: 59.33333%;
-  margin-left: 16px;
+  margin-left: 16;
 }
 
-/* line 46, ../sass/_mixins.scss */
+/* line 40, ../sass/_mixins.scss */
 .content {
   width: 79.66667%;
-  margin-left: 16px;
+  margin-left: 16;
 }
 
-/* line 46, ../sass/_mixins.scss */
+/* line 40, ../sass/_mixins.scss */
 .all {
   width: 100%;
 }
@@ -716,7 +766,7 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
 .tab ul, .tab ol, .tab menu, .horizontal {
   line-height: normal;
 }
-/* line 184, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .tab ul > li, .tab ol > li, .tab menu > li, .horizontal > li, .tab ul > a, .tab ol > a, .tab menu > a, .horizontal > a, .tab ul > button, .tab ol > button, .tab menu > button, .horizontal > button {
   float: left;
 }
@@ -790,7 +840,7 @@ i {
 
 /* example button, tab, pagenation, link has icon */
 /* line 2, ../sass/modules/_clickable_base.scss */
-.pagenation a, .tab a, .table-list a, .btn, .switch {
+.pagenation a, .tab a, .table-list a, input[type="button"], input[type="submit"], button, .btn, input[type="reset"], .switch {
   display: inline-table;
   line-height: 1;
   padding: 0.618em;
@@ -798,20 +848,20 @@ i {
   vertical-align: middle;
 }
 /* line 9, ../sass/modules/_clickable_base.scss */
-.pagenation a i, .tab a i, .table-list a i, .btn i, .switch i, .pagenation a .cmd-label, .tab a .cmd-label, .table-list a .cmd-label, .btn .cmd-label, .switch .cmd-label {
+.pagenation a i, .tab a i, .table-list a i, input[type="button"] i, input[type="submit"] i, button i, .btn i, input[type="reset"] i, .switch i, .pagenation a .cmd-label, .tab a .cmd-label, .table-list a .cmd-label, input[type="button"] .cmd-label, input[type="submit"] .cmd-label, button .cmd-label, .btn .cmd-label, input[type="reset"] .cmd-label, .switch .cmd-label {
   display: table-cell;
   vertical-align: bottom;
 }
 /* line 15, ../sass/modules/_clickable_base.scss */
-.pagenation a i + .cmd-label, .tab a i + .cmd-label, .table-list a i + .cmd-label, .btn i + .cmd-label, .switch i + .cmd-label {
+.pagenation a i + .cmd-label, .tab a i + .cmd-label, .table-list a i + .cmd-label, input[type="button"] i + .cmd-label, input[type="submit"] i + .cmd-label, button i + .cmd-label, .btn i + .cmd-label, input[type="reset"] i + .cmd-label, .switch i + .cmd-label {
   padding-left: 0.382em;
 }
 /* line 20, ../sass/modules/_clickable_base.scss */
-.pagenation a.is-ico-rside .cmd-label, .tab a.is-ico-rside .cmd-label, .table-list a.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label, .is-ico-rside.switch .cmd-label {
+.pagenation a.is-ico-rside .cmd-label, .tab a.is-ico-rside .cmd-label, .table-list a.is-ico-rside .cmd-label, input.is-ico-rside[type="button"] .cmd-label, input.is-ico-rside[type="submit"] .cmd-label, button.is-ico-rside .cmd-label, .is-ico-rside.btn .cmd-label, input.is-ico-rside[type="reset"] .cmd-label, .is-ico-rside.switch .cmd-label {
   padding-right: 0.382em;
 }
 /* line 31, ../sass/modules/_clickable_base.scss */
-.pagenation a:disabled, .tab a:disabled, .table-list a:disabled, .btn:disabled, .switch:disabled, .pagenation a.disabled, .tab a.disabled, .table-list a.disabled, .disabled.btn, .disabled.switch {
+.pagenation a:disabled, .tab a:disabled, .table-list a:disabled, input[type="button"]:disabled, input[type="submit"]:disabled, button:disabled, .btn:disabled, input[type="reset"]:disabled, .switch:disabled, .pagenation a.disabled, .tab a.disabled, .table-list a.disabled, input.disabled[type="button"], input.disabled[type="submit"], button.disabled, .disabled.btn, input.disabled[type="reset"], .disabled.switch {
   opacity: 0.5;
 }
 
@@ -896,7 +946,7 @@ i {
   padding: 8px;
   background: #e7e7e7;
   border: solid 1px #8d8d8d;
-  font-size: 16px;
+  font-size: 16;
   z-index: 10;
 }
 
@@ -921,7 +971,7 @@ i {
 .error input[type='email'],
 .error input[type='url'],
 .error textarea {
-  background: ivory;
+  background: yellow;
   border-color: #d15749;
 }
 /* line 3, ../sass/modules/_form.scss */
@@ -953,7 +1003,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
 
 /* button & switch */
 /* line 1, ../sass/modules/_button_switch.scss */
-.btn i, .switch i {
+input[type="button"] i, input[type="submit"] i, button i, .btn i, .switch i {
   width: 1em;
   height: 1em;
   -webkit-background-size: auto 1em;
@@ -963,8 +1013,8 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
 }
 
 /* line 7, ../sass/modules/_button_switch.scss */
-.btn {
-  padding: .618em 1.309em;
+input[type="button"], input[type="submit"], button, .btn {
+  padding: 0.618em 1.309em;
   color: white;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #63c0cb), color-stop(100%, #3ba4b0));
   background: -webkit-linear-gradient(#63c0cb, #3ba4b0);
@@ -974,7 +1024,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   border: 1px solid #215d64;
 }
 /* line 16, ../sass/modules/_button_switch.scss */
-.btn:hover {
+input[type="button"]:hover, input[type="submit"]:hover, button:hover, .btn:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #94d4db), color-stop(100%, #3ba4b0));
   background: -webkit-linear-gradient(#94d4db, #3ba4b0);
   background: -moz-linear-gradient(#94d4db, #3ba4b0);
@@ -982,11 +1032,14 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: linear-gradient(#94d4db, #3ba4b0);
 }
 /* line 27, ../sass/modules/_button_switch.scss */
-.btn:hover, .btn:link, .btn:visited {
+input[type="button"]:hover, input[type="submit"]:hover, button:hover, .btn:hover, input[type="button"]:link, input[type="submit"]:link, button:link, .btn:link, input[type="button"]:visited, input[type="submit"]:visited, button:visited, .btn:visited {
   color: white;
 }
 /* line 30, ../sass/modules/_button_switch.scss */
-.btn:active,
+input[type="button"]:active, input[type="submit"]:active, button:active, .btn:active,
+input[type="button"] .active,
+input[type="submit"] .active,
+button .active,
 .btn .active {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e808a), color-stop(100%, #3ba4b0));
   background: -webkit-linear-gradient(#2e808a, #3ba4b0);
@@ -995,7 +1048,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: linear-gradient(#2e808a, #3ba4b0);
 }
 /* line 40, ../sass/modules/_button_switch.scss */
-.btn:disabled:hover, .disabled.btn:hover {
+input[type="button"]:disabled:hover, input[type="submit"]:disabled:hover, button:disabled:hover, .btn:disabled:hover, input.disabled[type="button"]:hover, input.disabled[type="submit"]:hover, button.disabled:hover, .disabled.btn:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #63c0cb), color-stop(100%, #3ba4b0));
   background: -webkit-linear-gradient(#63c0cb, #3ba4b0);
   background: -moz-linear-gradient(#63c0cb, #3ba4b0);
@@ -1003,45 +1056,12 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: linear-gradient(#63c0cb, #3ba4b0);
 }
 /* line 49, ../sass/modules/_button_switch.scss */
-[type=reset].btn {
-  padding: 0.618em;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d7d7d7), color-stop(100%, #a5a5a5));
-  background: -webkit-linear-gradient(#d7d7d7, #a5a5a5);
-  background: -moz-linear-gradient(#d7d7d7, #a5a5a5);
-  background: -o-linear-gradient(#d7d7d7, #a5a5a5);
-  background: linear-gradient(#d7d7d7, #a5a5a5);
-  border: 1px solid #727272;
-  color: #5e5e5e;
-}
-/* line 54, ../sass/modules/_button_switch.scss */
-[type=reset].btn:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e7e7e7), color-stop(100%, #a5a5a5));
-  background: -webkit-linear-gradient(#e7e7e7, #a5a5a5);
-  background: -moz-linear-gradient(#e7e7e7, #a5a5a5);
-  background: -o-linear-gradient(#e7e7e7, #a5a5a5);
-  background: linear-gradient(#e7e7e7, #a5a5a5);
-}
-/* line 67, ../sass/modules/_button_switch.scss */
-[type=reset].btn:hover {
-  color: #5e5e5e;
-}
-/* line 72, ../sass/modules/_button_switch.scss */
-[type=reset].btn:active,
-[type=reset].btn .active {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8b8b8b), color-stop(100%, #a5a5a5));
-  background: -webkit-linear-gradient(#8b8b8b, #a5a5a5);
-  background: -moz-linear-gradient(#8b8b8b, #a5a5a5);
-  background: -o-linear-gradient(#8b8b8b, #a5a5a5);
-  background: linear-gradient(#8b8b8b, #a5a5a5);
-}
-/* line 81, ../sass/modules/_button_switch.scss */
-.cancel.btn {
+input.cancel[type="button"], input.cancel[type="submit"], button.cancel, .cancel.btn {
   display: inline;
-  padding: 0 0;
   color: #8d8d8d;
 }
-/* line 87, ../sass/modules/_button_switch.scss */
-.cancel.btn:hover {
+/* line 55, ../sass/modules/_button_switch.scss */
+input.cancel[type="button"]:hover, input.cancel[type="submit"]:hover, button.cancel:hover, .cancel.btn:hover {
   text-decoration: underline;
   background: none;
   border: none;
@@ -1051,7 +1071,41 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   text-shadow: none;
 }
 
-/* line 101, ../sass/modules/_button_switch.scss */
+/* line 69, ../sass/modules/_button_switch.scss */
+input[type="reset"], button[type="reset"] {
+  padding: 0.618em 1.309em;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d7d7d7), color-stop(100%, #a5a5a5));
+  background: -webkit-linear-gradient(#d7d7d7, #a5a5a5);
+  background: -moz-linear-gradient(#d7d7d7, #a5a5a5);
+  background: -o-linear-gradient(#d7d7d7, #a5a5a5);
+  background: linear-gradient(#d7d7d7, #a5a5a5);
+  border: 1px solid #727272;
+  color: #5e5e5e;
+}
+/* line 76, ../sass/modules/_button_switch.scss */
+input[type="reset"]:hover, button[type="reset"]:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e7e7e7), color-stop(100%, #a5a5a5));
+  background: -webkit-linear-gradient(#e7e7e7, #a5a5a5);
+  background: -moz-linear-gradient(#e7e7e7, #a5a5a5);
+  background: -o-linear-gradient(#e7e7e7, #a5a5a5);
+  background: linear-gradient(#e7e7e7, #a5a5a5);
+}
+/* line 89, ../sass/modules/_button_switch.scss */
+input[type="reset"]:hover, button[type="reset"]:hover {
+  color: #5e5e5e;
+}
+/* line 94, ../sass/modules/_button_switch.scss */
+input[type="reset"]:active, button[type="reset"]:active,
+input[type="reset"] .active,
+button[type="reset"] .active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8b8b8b), color-stop(100%, #a5a5a5));
+  background: -webkit-linear-gradient(#8b8b8b, #a5a5a5);
+  background: -moz-linear-gradient(#8b8b8b, #a5a5a5);
+  background: -o-linear-gradient(#8b8b8b, #a5a5a5);
+  background: linear-gradient(#8b8b8b, #a5a5a5);
+}
+
+/* line 103, ../sass/modules/_button_switch.scss */
 .switch {
   color: black;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c6c6c6), color-stop(100%, #a5a5a5));
@@ -1061,11 +1115,11 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: linear-gradient(#c6c6c6, #a5a5a5);
   border: 1px solid #727272;
 }
-/* line 108, ../sass/modules/_button_switch.scss */
+/* line 110, ../sass/modules/_button_switch.scss */
 .switch:link, .switch:visited {
   color: black;
 }
-/* line 112, ../sass/modules/_button_switch.scss */
+/* line 114, ../sass/modules/_button_switch.scss */
 .switch:hover, .on.switch {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #63c0cb), color-stop(100%, #3ba4b0));
   background: -webkit-linear-gradient(#63c0cb, #3ba4b0);
@@ -1073,11 +1127,11 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: -o-linear-gradient(#63c0cb, #3ba4b0);
   background: linear-gradient(#63c0cb, #3ba4b0);
 }
-/* line 122, ../sass/modules/_button_switch.scss */
+/* line 124, ../sass/modules/_button_switch.scss */
 .switch:hover, .on.switch {
   color: white;
 }
-/* line 127, ../sass/modules/_button_switch.scss */
+/* line 129, ../sass/modules/_button_switch.scss */
 .switch:disabled:hover, .disabled.switch:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c6c6c6), color-stop(100%, #a5a5a5));
   background: -webkit-linear-gradient(#c6c6c6, #a5a5a5);
@@ -1086,7 +1140,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: linear-gradient(#c6c6c6, #a5a5a5);
   color: black;
 }
-/* line 138, ../sass/modules/_button_switch.scss */
+/* line 140, ../sass/modules/_button_switch.scss */
 .switch:active,
 .switch .active {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2e808a), color-stop(100%, #3ba4b0));
@@ -1095,7 +1149,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: -o-linear-gradient(#2e808a, #3ba4b0);
   background: linear-gradient(#2e808a, #3ba4b0);
 }
-/* line 147, ../sass/modules/_button_switch.scss */
+/* line 149, ../sass/modules/_button_switch.scss */
 .on.switch:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #de887e), color-stop(100%, #d15749));
   background: -webkit-linear-gradient(#de887e, #d15749);
@@ -1104,7 +1158,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   background: linear-gradient(#de887e, #d15749);
   border: 1px solid #902f24;
 }
-/* line 156, ../sass/modules/_button_switch.scss */
+/* line 158, ../sass/modules/_button_switch.scss */
 .on.switch:active,
 .on.switch .active {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #b83d2f), color-stop(100%, #d15749));
@@ -1116,9 +1170,9 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
 
 /* line 1, ../sass/site_styles/_layout.scss */
 .site-body {
-  width: 960px;
+  width: 960;
   margin: 0 auto;
-  background: ivory;
+  background: yellow;
 }
 
 /* line 9, ../sass/site_styles/_layout.scss */
@@ -1215,12 +1269,7 @@ fieldset label label, .horizontal-layout .field label label, .vertical-layout .f
   /* added settings */
 }
 
-/* line 9, ../sass/site_styles/_example.scss */
-.alert {
-  /* added settings */
-}
-
-/* line 14, ../sass/site_styles/_example.scss */
+/* line 24, ../sass/site_styles/_example.scss */
 .current {
   /* added settings */
 }

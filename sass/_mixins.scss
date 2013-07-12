@@ -23,12 +23,6 @@
   }
 }
 
-@mixin gradient-top-lighten($color:#666, $lighten:10%) {
-  background-color: $color;
-  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
-}
-
-
 //if display:box == true
 @mixin is_display_box($box_pack_value: false) {
   @if $box_layout {
@@ -72,9 +66,15 @@
 //for iOS Font-Antialius
 @mixin font_weight($weight) {
   font-weight: $weight;
-  @if $weight == $bold_fontweight {
+  @if $weight == $default_fw_bold {
     -webkit-font-smoothing: antialiased;
   }
+}
+
+//heading typography
+@mixin heading-fs-lh($size, $grid_height_num) {
+  font-size: px-to-rem($size);
+  line-height: $grid_height_num * ceil($grid_height / $size * 100) / 100;
 }
 
 //anchor
@@ -172,6 +172,17 @@
   @content;
 }
 
+//btndesign
+@mixin border($width: 2px, $design: solid, $btncolor: inherit) {
+  border: $width $design darken($btncolor, $darken_amount);
+}
+
+//gradation
+@mixin gradient-top-lighten($color:#666, $lighten:10%) {
+  background-color: $color;
+  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+}
+
 
 //横並びクラス作成元関数
 @mixin horizontal_obj($childTags) {
@@ -188,9 +199,4 @@
     @extend %reset_margin;
     @content;
   }
-}
-
-//btndesign
-@mixin border($width: 2px, $design: solid, $btncolor: inherit) {
-  border: $width $design darken($btncolor, $darken_amount);
 }

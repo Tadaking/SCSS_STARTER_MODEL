@@ -8,7 +8,7 @@
   @extend %action;
   @extend %box-sizing;
   
-  padding: .618em 1.309em;
+  padding: $btn-padding;
   color: $normal_btn_text;
 
   @if $btn_gradient {
@@ -44,44 +44,12 @@
         @include background($normal);
       }
     }
-  }
-
-  &[type=reset] {
-    padding: 0.618em;
-
-    @if $btn_gradient {
-      @include background(linear-gradient($reset_grad));
-      &:hover {
-        @include background(linear-gradient($reset_grad_hover));
-      }
-    } @else {
-      @include background($reset);
-      &:hover {
-        @include background($reset_hover);
-      }
-    }
-
-    @include border($btn-bordsr-width, solid, $reset_btn_border);
-    color: $dark-gray;
-
-    &:hover {
-      color: $dark-gray;
-    }
-
-    &:active,
-    .active {
-      @if $btn_gradient {
-        @include background(linear-gradient($reset_grad_active));
-      } @else {
-        @include background($reset_active);
-      }
-    }
-  }  
+  } 
 
   &.cancel {
     display: inline;
     @extend %erase_background;
-    padding: 0 0;
+    // padding: 0 0;
     color: $cancel_btn_text;
 
     &:hover {
@@ -97,6 +65,40 @@
     @extend %button_switch_icon;
   }
 }
+
+%button_reset {
+  @extend %action;
+  @extend %box-sizing;
+  padding: $btn-padding;
+
+  @if $btn_gradient {
+    @include background(linear-gradient($reset_grad));
+    &:hover {
+      @include background(linear-gradient($reset_grad_hover));
+    }
+  } @else {
+    @include background($reset);
+    &:hover {
+      @include background($reset_hover);
+    }
+  }
+
+  @include border($btn-bordsr-width, solid, $reset_btn_border);
+  color: $dark-gray;
+
+  &:hover {
+    color: $dark-gray;
+  }
+
+  &:active,
+  .active {
+    @if $btn_gradient {
+      @include background(linear-gradient($reset_grad_active));
+    } @else {
+      @include background($reset_active);
+    }
+  }
+} 
 
 %switch {
   @extend %action;

@@ -2,6 +2,10 @@
 @function pxtoem($target, $context){
   @return ($target/$context)+0em;
 }
+// Convert px to rem
+@function px-to-rem($size) {
+    @return ($size / 10) + rem;
+}
 // Convert em to px
 @function emtopx($target, $context){
   @return ($target*$context)+0px;
@@ -11,6 +15,7 @@
 @function calc-percent($target, $container) {
   @return ($target / $container) * 100%;
 }
+
 @function cp($target, $container) {
   @return calc-percent($target, $container);
 }

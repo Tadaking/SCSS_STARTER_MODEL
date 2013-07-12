@@ -5,7 +5,7 @@
     @extend %action;
     @include default_ui_pagenation_action;
     &.current{
-      color: $default_fontcolor;
+      color: $default_fc;
     }
   }
 }

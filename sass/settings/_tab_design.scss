@@ -8,7 +8,7 @@ $each_tab_margin: 1px;
 @mixin default_tab_design {
   //write down here design CSS
   background: $lightGray;
-  color: $default_fontcolor;
+  color: $default_fc;
   border: solid 1px $gray;
   border-bottom: none;
 
@@ -36,6 +36,6 @@ $each_tab_margin: 1px;
   padding: 8px;
   background: lighten($lightGray, 2*$lighten_amount);
   border: solid 1px $gray;
-  font-size: $default_fontsize;
+  font-size: $base_fs;
   @include z-index(tab-content);
 }

@@ -70,10 +70,11 @@ audio:not([controls]) {
 
 html {
   @include body_background;
-  font-size: $default_fontsize; /* 1 */
+  font-size: 62.5%;
+  // font-size: $base_fs; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
-  font-weight: $default_fontweight;
+  font-weight: $base_fw;
 }
 
 %reset_margin { margin: 0; }
@@ -86,7 +87,7 @@ html {
 
 body {
   @extend %reset_margin;
-  font: 1rem/#{$default_lineheight} #{$default_family};
+  font: #{px-to-rem($base_fs)}/#{$default_lh} #{$default_family};
   //layout grid by 16px
   //@include column-grid-background(30, 16px, 16px, 16px, rgba(255,0,0,0.3), rgba(255,0,0,0.1), false);
 }
@@ -135,6 +136,10 @@ a {
   @extend %reset_margin;
   @extend %bold;
   letter-spacing: -1px;
+}
+
+@for $i from 1 through 6 {
+   h#{$i} { @extend %h#{$i}; }
 }
 
 abbr[title] {

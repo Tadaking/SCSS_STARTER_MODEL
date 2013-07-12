@@ -1,6 +1,21 @@
-%alert {
-  color: $alert_color ;
-  @extend %bold;
+%alert-warning {
+	@extend %bold;
+  color: $alert-warning;
+}
+
+%alert-error {
+	@extend %bold;
+  color: $alert-error;
+}
+
+%alert-success {
+	@extend %bold;
+  color: $alert-success;
+}
+
+%alert-info {
+	@extend %bold;
+  color: $alert-info;
 }
 
 //for example ui-pagenation, ui-tab
@@ -9,3 +24,21 @@
 }
 
 .note { font-size: 0.8em; }
+
+// for Antialias setting for Safari
+%bold {
+  @include font_weight(bold);
+}
+
+//to clear text color for Safari, Firefox
+%text_on_dark_background{
+  text-shadow:#000 0 0 0;
+  -moz-opacity: 0.99; /* for Firefox */
+}
+
+//for text-overflow
+%text-overflow {
+  overflow: hidden;  
+  white-space: nowrap;  
+  text-overflow: ellipsis;
+}

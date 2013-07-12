@@ -4,15 +4,9 @@
 default settings
 -- */
 $sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
-$serif: "Gergea", serif;
+$serif: Georgia, Times, "Times New Roman", serif;
 
-$default_fontweight: 300;
-$default_fontsize: 16px;
-$default_lineheight: 20px;
-$default_fontcolor: #181818;
 $default_family: $sans-serif;
-$bold_fontweight: bold;
-
 /* --
 anchor settings
 -- */
@@ -27,22 +21,32 @@ $link_decoration: true;
 
 //empasis
 $emphasis: $emphasys_key_color;
-$alert_color: #f00;
+$alert_warning: $yellow;
+$alert_error: $red;
+$alert_success: $site_accent_color;
+$alert_info: $site_key_color;
 
-// for Antialias setting for Safari
-%bold {
-  @include font_weight(bold);
+
+%h1 {
+	@include heading-fs-lh(32, 3); //@mixin heading-fs-lh($fontsize, $grid_height_num)
 }
 
-//to clear text color for Safari, Firefox
-%text_on_dark_background{
-  text-shadow:#000 0 0 0;
-  -moz-opacity: 0.99; /* for Firefox */
+%h2 {
+	@include heading-fs-lh(24, 2);
 }
 
-//for text-overflow
-%text-overflow {
-  overflow: hidden;  
-  white-space: nowrap;  
-  text-overflow: ellipsis;
+%h3 {
+	@include heading-fs-lh(20, 2);
+}
+
+%h4 {
+	@include heading-fs-lh($base_fs, 1);
+}
+
+%h5 {
+	@include heading-fs-lh(13, 1);
+}
+
+%h6 {
+	@include heading-fs-lh(11, 1);
 }

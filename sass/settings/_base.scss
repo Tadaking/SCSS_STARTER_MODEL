@@ -4,12 +4,19 @@
 layout settings
 ---------------------------------- */
 //webpage design layout settings
-$default_fontsize: 16px;
-$grid_width: 2 * $default_fontsize;
-$grid_height: 3 * $default_fontsize;
-$grid_margin: $default_fontsize;
+$base_fs: 16;
+$base_fw: 300;
+$default_lh: 1.5;
+$default_fc: #181818;
 
-$page_width: 30 * $grid_width;
+$default_fw_bold: bold;
+
+$grid_width: 1 * $base_fs;
+$grid_height: $default_lh * $base_fs;
+// @debug $grid_height;
+$grid_margin: $base_fs;
+
+$page_width: 60 * $grid_width;
 // @debug $page_width;
 
 $column_num: 5;
@@ -29,34 +36,14 @@ $disabledOpacity: 0.5;
 /*-----------------------------------
 define background
 ---------------------------------- */
-$body_background_color: #FFF;
 $body_background_image_file: null; //PATH _TO_IMAGE or null
 $body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
 $body_background_offset: null; // xOffset, yOffset or nu;;
 
 /*-----------------------------------
-define colors
+colors
 ---------------------------------- */
-$site_key_color: #3ba4b0;
-$emphasys_key_color: #3b6ab0;
-$site_accent_color: #3bb082;
-
-$black: #000;
-$white: #FFF;
-$counter_white: #f0f0f0;
-
-$dark-gray: #5e5e5e;
-$gray: #8d8d8d;
-$lightGray: #a5a5a5;
-
-/* add color to use at following */
-$yellow: #FFFFF0;
-$red: #d15749;
-
-$lighten_amount: 13%;
-$darken_amount: 10%;
-
-$lighten_strong_amount: 2 * $lighten_amount;
+@import 'color';
 
 /*-----------------------------------
 typography settings

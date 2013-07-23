@@ -27,7 +27,11 @@
 
 %variable-horizontal {
   @extend %reset_liststyle;
-  display: table;
+  @if $box_layout {
+    @include is_display_box();
+  } @else {
+    display: table;
+  }
 }
 
 %variable-horizontal-obj {
@@ -44,20 +48,29 @@
 }
 
 %justified-horizontal {
-  text-align: justify;
-  font-size: 0;
+  @if $box_layout {
+    @include is_display_box(justify);
+    @include box-lines(multiple);
+  } @else {
+    text-align: justify;
+    font-size: 0;
 
-  &:after{
-    content: '';
-    display: inline-block;
-    width: 100%;
-    border-top: 10px dashed #922d8d;
+    &:after{
+      content: '';
+      display: inline-block;
+      width: 100%;
+      border-top: 10px dashed #922d8d;
+    }
   }
 }
 
 %justified-horizontal-child {
-  display: inline-block;
-
+  @if $box_layout {
+    
+  }@else{
+    display: inline-block;
+  }
+  
   &.placeholder {
     // width: 100%;
     @extend %reset_margin_padding;

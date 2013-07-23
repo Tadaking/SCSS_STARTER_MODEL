@@ -36,6 +36,8 @@
 }
 
 @mixin define_column_grid($outer_dom_size) {
+  $base_grid: ($outer_dom_size - $grid_margin * ($column_num - 1))/ $column_num;
+
   @for $i from 1 through $column_num {
     %separatedNum-#{$i} {
       @extend %box-sizing;
@@ -43,14 +45,12 @@
       @if $box_layout == false {
         @extend %lfloating;
       }
-
-      $base_grid: ($outer_dom_size - $grid_margin * ($column_num - 1))/ $column_num;
       width: cp($base_grid * $i + $grid_margin * ($i - 1), $outer_dom_size);
       
       @if $i == $column_num {
         // margin-right: $grid_margin;
       } @else {
-        margin-left: $grid_margin;
+        margin-left: addUnit($grid_margin);
       }
     }
   }

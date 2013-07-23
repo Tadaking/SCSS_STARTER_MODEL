@@ -1,10 +1,16 @@
+//Add Unit
+@function addUnit($target, $unit: px){
+	@return $target+0#{$unit};
+}
+
 // Convert px to em
 @function pxtoem($target, $context){
   @return ($target/$context)+0em;
 }
 // Convert px to rem
 @function px-to-rem($size) {
-    @return ($size / 10) + rem;
+    // @return ($size / 10) + rem;
+    @return ($size / $base_fs) +rem;
 }
 // Convert em to px
 @function emtopx($target, $context){

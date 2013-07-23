@@ -70,8 +70,8 @@ audio:not([controls]) {
 
 html {
   @include body_background;
-  font-size: 62.5%;
-  // font-size: $base_fs; /* 1 */
+  // font-size: 62.5%;
+  font-size: addUnit($base_fs);
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */
   font-weight: $base_fw;

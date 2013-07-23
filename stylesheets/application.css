@@ -72,7 +72,7 @@ audio:not([controls]) {
 /* line 71, ../sass/_normalize.scss */
 html {
   background: white body_background_image()  ;
-  font-size: 62.5%;
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
   /* 2 */
   -ms-text-size-adjust: 100%;
@@ -106,7 +106,7 @@ menu, .tab ul, .tab ol, .horizontal, .horizontal-layout-top, .horizontal-layout-
 
 /* line 88, ../sass/_normalize.scss */
 body {
-  font: 1.6rem/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
+  font: 1rem/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
 }
 
 /* =============================================================================
@@ -555,37 +555,37 @@ input.cancel[type="button"], input.cancel[type="submit"], button.cancel, .cancel
 /* typography settings */
 /* line 3, ../sass/modules/_typo.scss */
 h1 {
-  font-size: 3.2rem;
+  font-size: 2rem;
   line-height: 2.25;
 }
 
 /* line 7, ../sass/modules/_typo.scss */
 h2 {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 2;
 }
 
 /* line 11, ../sass/modules/_typo.scss */
 h3 {
-  font-size: 2rem;
+  font-size: 1.25rem;
   line-height: 2.4;
 }
 
 /* line 15, ../sass/modules/_typo.scss */
 h4 {
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 3;
 }
 
 /* line 19, ../sass/modules/_typo.scss */
 h5 {
-  font-size: 1.3rem;
+  font-size: 0.8125rem;
   line-height: 1.85;
 }
 
 /* line 23, ../sass/modules/_typo.scss */
 h6 {
-  font-size: 1.1rem;
+  font-size: 0.6875rem;
   line-height: 2.19;
 }
 
@@ -621,31 +621,31 @@ strong, dt, .alert-warning, .error label, .error .err-msg, .alert-error, .alert-
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 40, ../sass/_mixins.scss */
+/* line 42, ../sass/_mixins.scss */
 .left, .right, .navigation {
   width: 18.66667%;
-  margin-left: 16;
+  margin-left: 16px;
 }
 
-/* line 40, ../sass/_mixins.scss */
+/* line 42, ../sass/_mixins.scss */
 .aside {
   width: 39.0%;
-  margin-left: 16;
+  margin-left: 16px;
 }
 
-/* line 40, ../sass/_mixins.scss */
+/* line 42, ../sass/_mixins.scss */
 .main, .middle {
   width: 59.33333%;
-  margin-left: 16;
+  margin-left: 16px;
 }
 
-/* line 40, ../sass/_mixins.scss */
+/* line 42, ../sass/_mixins.scss */
 .content {
   width: 79.66667%;
-  margin-left: 16;
+  margin-left: 16px;
 }
 
-/* line 40, ../sass/_mixins.scss */
+/* line 42, ../sass/_mixins.scss */
 .all {
   width: 100%;
 }
@@ -702,17 +702,17 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   display: table;
 }
 
-/* line 33, ../sass/modules/_horizontal.scss */
+/* line 37, ../sass/modules/_horizontal.scss */
 .horizontal-layout-top li, .horizontal-layout-middle div, .horizontal-layout-bottom div {
   display: table-cell;
 }
 
-/* line 46, ../sass/modules/_horizontal.scss */
+/* line 50, ../sass/modules/_horizontal.scss */
 .justified-horizontal {
   text-align: justify;
   font-size: 0;
 }
-/* line 50, ../sass/modules/_horizontal.scss */
+/* line 58, ../sass/modules/_horizontal.scss */
 .justified-horizontal:after {
   content: '';
   display: inline-block;
@@ -720,21 +720,21 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   border-top: 10px dashed #922d8d;
 }
 
-/* line 58, ../sass/modules/_horizontal.scss */
+/* line 67, ../sass/modules/_horizontal.scss */
 .justified-horizontal div {
   display: inline-block;
 }
-/* line 61, ../sass/modules/_horizontal.scss */
+/* line 74, ../sass/modules/_horizontal.scss */
 .justified-horizontal div.placeholder {
   height: 0;
   border-top: 10px solid #922d8d;
 }
 
-/* line 70, ../sass/modules/_horizontal.scss */
+/* line 83, ../sass/modules/_horizontal.scss */
 .pagenation, .centered.tab, .centered-horizontal {
   text-align: center;
 }
-/* line 74, ../sass/modules/_horizontal.scss */
+/* line 87, ../sass/modules/_horizontal.scss */
 .pagenation ul, .centered.tab ul, .centered-horizontal ul, .pagenation ol, .centered.tab ol, .centered-horizontal ol, .pagenation menu, .centered.tab menu, .centered-horizontal menu,
 .pagenation .horizontal-list,
 .centered.tab .horizontal-list,
@@ -742,7 +742,7 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   display: inline-table;
   vertical-align: bottom;
 }
-/* line 82, ../sass/modules/_horizontal.scss */
+/* line 95, ../sass/modules/_horizontal.scss */
 .pagenation ul > li, .centered.tab ul > li, .centered-horizontal ul > li, .pagenation ol > li, .centered.tab ol > li, .centered-horizontal ol > li, .pagenation menu > li, .centered.tab menu > li, .centered-horizontal menu > li,
 .pagenation .horizontal-list > li,
 .centered.tab .horizontal-list > li,
@@ -750,7 +750,7 @@ input, textarea, button, .left, .right, .navigation, .aside, .main, .middle, .co
   display: table-cell;
   vertical-align: bottom;
 }
-/* line 89, ../sass/modules/_horizontal.scss */
+/* line 102, ../sass/modules/_horizontal.scss */
 .pagenation ul a, .centered.tab ul a, .centered-horizontal ul a, .pagenation ol a, .centered.tab ol a, .centered-horizontal ol a, .pagenation menu a, .centered.tab menu a, .centered-horizontal menu a,
 .pagenation .horizontal-list a,
 .centered.tab .horizontal-list a,
@@ -1146,7 +1146,7 @@ button[type="reset"] .active {
 /* ---------- boxlayout ---------- */
 /* line 1, ../sass/site_styles/_layout.scss */
 .site-body {
-  width: 960;
+  width: 960px;
   margin: 0 auto;
   background: yellow;
 }
@@ -1198,7 +1198,7 @@ button[type="reset"] .active {
   /* added settings */
 }
 
-/* line 40, ../sass/modules/_horizontal.scss */
+/* line 44, ../sass/modules/_horizontal.scss */
 .justified-horizontal div {
   width: 18%;
   height: 80px;

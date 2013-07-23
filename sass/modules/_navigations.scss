@@ -28,7 +28,7 @@
     margin: 0 $each_tab_margin 0 0;
     @extend %action;
     @include default_tab_design;
-    font-size: 1rem;
+    font-size: px-to-rem($base_fs);
   }
 
   #{$icon-tagName} {

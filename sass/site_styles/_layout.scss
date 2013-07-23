@@ -1,7 +1,7 @@
 .site-body {
   @include is_display_box(false);
   @extend %clearfix;
-  width: $page_width;
+  width: addUnit($page_width);
   margin: 0 auto;
   background: $yellow;
 }

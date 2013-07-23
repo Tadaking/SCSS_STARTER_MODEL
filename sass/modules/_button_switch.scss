@@ -13,14 +13,14 @@
   color: $normal_btn_text;
 
   @if $btn_gradient {
-    @include background(linear-gradient($normal_grad));
+    @include background(linear-gradient(to bottom, $normal_grad));
     &:hover {
-      @include background(linear-gradient($normal_grad_hover));
+      @include background(linear-gradient(to bottom, $normal_grad_hover));
     }
   } @else {
-    @include background($normal);
+      background: $normal;
     &:hover {
-      @include background($normal_hover);
+      background: $normal_hover;
     }
   }
 
@@ -29,9 +29,9 @@
   &:active,
   .active {
     @if $btn_gradient {
-      @include background(linear-gradient($normal_grad_active));
+      @include background(linear-gradient(to bottom, $normal_grad_active));
     } @else {
-      @include background($normal_active);
+      background: $normal_active;
     }
   }
 
@@ -39,16 +39,16 @@
   &.disabled {
     &:hover {
       @if $btn_gradient {
-        @include background(linear-gradient($normal_grad));
+        @include background(linear-gradient(to bottom, $normal_grad));
       } @else {
-        @include background($normal);
+        background: $normal;
       }
     }
   } 
 
   &.cancel {
-    display: inline;
     @extend %erase_background;
+    display: inline;
     // padding: 0 0;
     color: $cancel_btn_text;
   }
@@ -66,14 +66,14 @@
   @include border($btn-border-width, solid, $reset_btn_border);
 
   @if $btn_gradient {
-    @include background(linear-gradient($reset_grad));
+    @include background(linear-gradient(to bottom, $reset_grad));
     &:hover {
-      @include background(linear-gradient($reset_grad_hover));
+      @include background(linear-gradient(to bottom, $reset_grad_hover));
     }
   } @else {
-    @include background($reset);
+    background: $reset;
     &:hover {
-      @include background($reset_hover);
+      background: $reset_hover;
     }
   }
 
@@ -84,9 +84,9 @@
   &:active,
   .active {
     @if $btn_gradient {
-      @include background(linear-gradient($reset_grad_active));
+      @include background(linear-gradient(to bottom, $reset_grad_active));
     } @else {
-      @include background($reset_active);
+      background: $reset_active;
     }
   }
 } 
@@ -101,14 +101,14 @@
   &:link, &:visited { color: $switch_btn_text; }
 
   @if $switch_gradient {
-    @include background(linear-gradient($switch_grad));
+    @include background(linear-gradient(to bottom, $switch_grad));
     &:hover, &.on {
-      @include background(linear-gradient($switch_grad_hover));
+      @include background(linear-gradient(to bottom, $switch_grad_hover));
     }
   } @else {
-    @include background($switch_normal);
+    background: $switch_normal;
     &:hover, &.on {
-      @include background($switch_normal_hover);
+      background: $switch_normal_hover;
     }
   }
 
@@ -119,9 +119,9 @@
   &:disabled, &.disabled {
     &:hover {
       @if $switch_gradient {
-        @include background(linear-gradient($switch_grad));
+        @include linear-gradient(to bottom, $switch_grad);
       } @else {
-        @include background($switch_normal);
+        background: $switch_normal;
       }
       color: $switch_btn_text;
     }
@@ -130,30 +130,30 @@
   &:active,
   .active {
     @if $btn_gradient {
-      @include background(linear-gradient($switch_grad_active));
+      @include linear-gradient(to bottom, $switch_grad_active);
     } @else {
-      @include background($switch_normal_active);
+      background: $switch_normal_active;
     }
   }
 
   &.on {
     &:hover {
       @if $switch_gradient {
-        @include background(linear-gradient($switch_on_grad_hover));
+        @include linear-gradient(to bottom, $switch_on_grad_hover);
       } @else {
-        @include background($switch_on_hover);
+        background: $switch_on_hover;
       }
       @include border($btn-border-width, solid, $switch_hover_border);
     }
     &:active,
     .active {
       @if $btn_gradient {
-        @include background(linear-gradient($switch_on_grad_active));
+        @include linear-gradient(to bottom, $switch_on_grad_active);
       } @else {
-        @include background($switch_on_active);
+        background: $switch_on_active;
       }
     }
   }
 
-  @include border($switch_border-width, solid, $switch_btn_border);
+  border: $switch_border-width solid $switch_btn_border;
 }

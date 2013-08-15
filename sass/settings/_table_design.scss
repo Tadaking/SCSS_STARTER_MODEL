@@ -20,3 +20,12 @@ $inner-bw: 1px;
 $inner-bc: $gray;
 $inner-verticalLine: false;
 
+@mixin numberStyle {
+	text-align: right;
+}
+
+@mixin defaultTable {
+  @include outer-table-borders($outer-bw, $outer-bc, $outer-verticalLine);
+  @include inner-table-borders($inner-bw, $inner-bc, $inner-verticalLine);
+  @include stripedTable;
+}

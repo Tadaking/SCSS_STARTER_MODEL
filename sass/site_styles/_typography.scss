@@ -1,22 +1,22 @@
 @charset "UTF-8";
 
 .alert-warning {
-	@extend %alert-warning;
+	@extend %text-warning;
 }
 
 .alert-error {
-	@extend %alert-error;
+	@extend %text-error;
 }
 
 .alert-success {
-	@extend %alert-success;
+	@extend %text-success;
 }
 
 .alert-info {
-	@extend %alert-info;
+	@extend %text-info;
 }
 
 .current {
-  @extend %current;
+  @extend %bold;
   /* added settings */
 }

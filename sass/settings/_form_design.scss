@@ -11,3 +11,10 @@ $placeholder_text_color: $gray;
 $input_textarea_padding: .6em;
 
 $text-inputs: 'input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"]';
+
+@mixin defaultTextInputDesign {
+  width: 20 * $grid_width + 0px;
+  background: $gray_lighter;
+  border: solid 1px $gray;
+  box-shadow: none;
+}

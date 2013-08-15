@@ -9,7 +9,7 @@
 .main {
   @include column-grid(3, true);
   height: 200px;
-  // margin-right: $grid_margin;
+  // margin-right: $grid_height;
   background: $gray_light;
 }
 

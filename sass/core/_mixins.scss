@@ -35,8 +35,13 @@
   }
 }
 
+@mixin easy-clearfix {
+  overflow: hidden;
+  zoom: 1;
+}
+
 @mixin define_column_grid($outer_dom_size) {
-  $base_grid: ($outer_dom_size - $grid_margin * ($column_num - 1))/ $column_num;
+  $base_grid: ($outer_dom_size - $grid_height * ($column_num - 1))/ $column_num;
 
   @for $i from 1 through $column_num {
     %separatedNum-#{$i} {
@@ -45,12 +50,12 @@
       @if $box_layout == false {
         @extend %lfloating;
       }
-      width: cp($base_grid * $i + $grid_margin * ($i - 1), $outer_dom_size);
+      width: cp($base_grid * $i + $grid_height * ($i - 1), $outer_dom_size);
       
       @if $i == $column_num {
-        // margin-right: $grid_margin;
+        // margin-right: $grid_height;
       } @else {
-        margin-left: addUnit($grid_margin);
+        margin-left: addUnit($grid_height);
       }
     }
   }
@@ -72,9 +77,12 @@
 }
 
 //heading typography
-@mixin heading-fs-lh($size, $grid_height_num) {
-  font-size: px-to-rem($size);
+@mixin headingDesign($weight, $size, $grid_height_num, $font_color: 'inherit', $margin: 'inherit') {
+  margin: $margin;
   line-height: $grid_height_num * ceil($grid_height / $size * 100) / 100;
+  font-size: px-to-rem($size);
+  font-weight: $weight;
+  color: $font_color;
 }
 
 //anchor
@@ -96,6 +104,57 @@
 
 @mixin body_background {
   background: #{$body_background_color} #{body_background_image($body_background_image_file)} #{$body_background_repeat} #{$body_background_offset};
+}
+
+//横並びクラス作成元関数
+@mixin horizontal_obj($childTags) {
+  @include is_display_box(null) {
+    @if $box_layout == false {
+      @extend %pie-clearfix;
+    }
+  }
+  
+  #{$childTags} {
+    @if $box_layout == false {
+      float: left;
+    }
+    @extend %reset_margin;
+    @content;
+  }
+}
+
+//input_text placeholder
+$placeholders: '-webkit-input-placeholder', '-moz-placeholder', '-ms-input-placeholder';
+
+@mixin placeholder {
+  @each $placeholder in $placeholders {
+    @if $placeholder == "-webkit-input-placeholder" {
+      &::#{$placeholder} {
+        @content;
+      }
+    }
+    @else if $placeholder == "-moz-placeholder" {
+      // FF 18-
+      &:#{$placeholder} {
+        @content;
+      }
+
+      // FF 19+
+      &::#{$placeholder} {
+        @content;
+      }
+    }
+    @else {
+      &:#{$placeholder} {
+        @content;
+      }
+    }
+  }
+}
+
+//btndesign
+@mixin border($width: 2px, $design: solid, $btncolor: inherit) {
+  border: $width $design darken($btncolor, $darken_amount);
 }
 
 //table design
@@ -172,54 +231,8 @@
   @content;
 }
 
-//form validation
-@mixin error_view {
-  label {
-    @extend %alert-error;
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type='email'],
-  input[type='url'],
-  textarea {
-    background: $yellow;
-    border-color: $red;
-  }
-  
-  @content;
-}
-
-@mixin error_text {
-  @extend %alert-error;
-  font-weight: normal;
-}
-
-//btndesign
-@mixin border($width: 2px, $design: solid, $btncolor: inherit) {
-  border: $width $design darken($btncolor, $darken_amount);
-}
-
 //gradation
-@mixin gradient-top-lighten($color:#666, $lighten:10%) {
-  background-color: $color;
-  @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
-}
-
-
-//横並びクラス作成元関数
-@mixin horizontal_obj($childTags) {
-  @include is_display_box(null) {
-    @if $box_layout == false {
-      @extend %legacy-clearfix;
-    }
-  }
-  
-  #{$childTags} {
-    @if $box_layout == false {
-      float: left;
-    }
-    @extend %reset_margin;
-    @content;
-  }
-}
+// @mixin gradient-top-lighten($color:#666, $lighten:10%) {
+//   background-color: $color;
+//   @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
+// }

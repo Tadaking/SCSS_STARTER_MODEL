@@ -112,17 +112,17 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0 - $bubble_arrow_size * 2px;
+    top: 0 - $bubble_arrow_size * 2;
     width: 0;
     height: 0;
-    margin-left: 0 - $bubble_arrow_size / 2px;
+    margin-left: 0 - ($bubble_arrow_size / 2);
     border: solid $bubble_arrow_size transparent;
     border-bottom-color: $bubble_body_color;
   }
 
   //arrow shadow
   &:before {
-    top: 0 - ($bubble_arrow_size * 2) - 1px;
+    top: 0 - ($bubble_arrow_size * 2) - 1;
     border-bottom-color: rgba(0,0,0, .1);
   }
 }

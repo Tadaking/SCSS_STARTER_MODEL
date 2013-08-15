@@ -1,8 +1,21 @@
-%default-text-input-design {
-  width: 20 * $grid_width + 0px;
-  background: $gray_lighter;
-  border: solid 1px $gray;
-  box-shadow: none;
+//form validation
+@mixin error_view {
+  label {
+    @extend %text-warning;
+  }
+
+  #{$text-inputs},
+  textarea {
+    background: $yellow;
+    border-color: $red;
+  }
+  
+  @content;
+}
+
+@mixin error_text {
+  @extend %text-warning;
+  font-weight: normal;
 }
 
 %validation_error {

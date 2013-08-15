@@ -1,1 +1,7 @@
-/* table settings */
+//table design
+
+//number
+.number {
+  text-align: right;
+  @include numberStyle;
+}

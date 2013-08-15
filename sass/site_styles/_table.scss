@@ -1,7 +1,9 @@
 table {
-  @extend %default_table;
-}
+  thead {
+  	color: $counter_white;
+  }
 
-.number {
-  @extend %number;
+  tfoot {
+  	color: $text_dark;
+  }
 }

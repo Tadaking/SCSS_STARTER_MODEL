@@ -384,6 +384,7 @@ input {
 #{$text-inputs},
 textarea {
   padding: $input_textarea_padding;
+  @include defaultTextInputDesign;
   @include placeholder {
     color: $placeholder_text_color;
   }
@@ -488,6 +489,7 @@ textarea {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    @include defaultTable;
 }
 
 // th {

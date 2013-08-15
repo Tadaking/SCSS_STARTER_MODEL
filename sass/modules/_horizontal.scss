@@ -1,20 +1,3 @@
-//横並びクラス作成元関数
-@mixin horizontal_obj($childTags) {
-  @include is_display_box(null) {
-    @if $box_layout == false {
-      @extend %pie-clearfix;
-    }
-  }
-  
-  #{$childTags} {
-    @if $box_layout == false {
-      float: left;
-    }
-    @extend %reset_margin;
-    @content;
-  }
-}
-
 /* 横並びアンカーメニュー */
 @mixin horisontal_anchor_vm {
   font-size: 0;

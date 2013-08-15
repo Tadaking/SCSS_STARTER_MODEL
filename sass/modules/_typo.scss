@@ -61,3 +61,24 @@
     text-decoration: underline;
   }
 }
+
+//emphasys text setting
+%text-success {
+  @extend %bold;
+  color: $text-success;
+}
+
+%text-warning {
+  @extend %bold;
+  color: $text-warning;
+}
+
+%text-error {
+  @extend %bold;
+  color: $text-error;
+}
+
+%text-info {
+  @extend %bold;
+  color: $text-info;
+}

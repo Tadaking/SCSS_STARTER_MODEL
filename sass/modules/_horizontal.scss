@@ -83,8 +83,8 @@
 %centered_horizontal {
   text-align: center;
 
-  ul, ol, menu,
-  .horizontal-list { //Use this class if you use tag to use except for ui,ol,menu
+  ul, ol,
+  .horizontal-list { //Use this class if you use tag to use except for ui,ol
     @include is_display_box(center) {
       display: inline-table;
       vertical-align: bottom;

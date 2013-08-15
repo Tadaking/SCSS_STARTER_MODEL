@@ -19,7 +19,7 @@
     @extend %centered_horizontal;
   }
 
-  ul, ol, menu {
+  ul, ol {
     @extend %horizontal_list;
   }
 

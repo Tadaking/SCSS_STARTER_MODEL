@@ -4,8 +4,13 @@
 
 %lfloating { float: left; }
 
-%clearfix { @include clearfix; }
+%clearfix { @include easy-clearfix; }
 
-%legacy-clearfix { @include legacy-pie-clearfix; }
+%pie-clearfix { @include clearfix; }
 
 %box-sizing { @include box-sizing(border-box); }
+
+%one_column_centerd {
+  width: $page_width - 32px;
+  margin: 0 auto;
+}

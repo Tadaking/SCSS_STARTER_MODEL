@@ -1,7 +1,33 @@
+//横並びクラス作成元関数
+@mixin horizontal_obj($childTags) {
+  @include is_display_box(null) {
+    @if $box_layout == false {
+      @extend %pie-clearfix;
+    }
+  }
+  
+  #{$childTags} {
+    @if $box_layout == false {
+      float: left;
+    }
+    @extend %reset_margin;
+    @content;
+  }
+}
+
+/* 横並びアンカーメニュー */
+@mixin horisontal_anchor_vm {
+  font-size: 0;
+
+  .nav-item {
+    display: inline-block;
+    @content;
+  }
+}
+
 /* 横並びリスト */
 %horizontal_list {
-  @include horizontal_obj(">li, >a, >button");
-  line-height: normal;
+  @include horizontal_obj(">li");
   @extend %reset_liststyle;
 }
 
@@ -54,12 +80,12 @@
   } @else {
     text-align: justify;
     font-size: 0;
-
+  
     &:after{
       content: '';
       display: inline-block;
       width: 100%;
-      border-top: 10px dashed #922d8d;
+      // border-top: 10px dashed #922d8d;
     }
   }
 }
@@ -75,7 +101,7 @@
     // width: 100%;
     @extend %reset_margin_padding;
     height: 0;
-    border-top: 10px solid #922d8d;
+    // border-top: 10px solid #922d8d;
   }
 }
 
@@ -84,7 +110,7 @@
   text-align: center;
 
   ul, ol,
-  .horizontal-list { //Use this class if you use tag to use except for ui,ol
+  .horizontal-list { //Use this class if you use tag to use except for ui,ol,menu
     @include is_display_box(center) {
       display: inline-table;
       vertical-align: bottom;

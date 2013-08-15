@@ -10,13 +10,13 @@
   @include column-grid(3, true);
   height: 200px;
   // margin-right: $grid_margin;
-  background: $lightGray;
+  background: $gray_light;
 }
 
 .aside {
   @include column-grid(2);
   height: 200px;
-  background: $lightGray;
+  background: $gray_light;
 }
 
 .left {
@@ -65,7 +65,7 @@
     width: 18%;
     height: 80px;
     margin-bottom: 2.5%;
-    background: $lightGray;
+    background: $gray_light;
     font-size: 1rem;
   };
 }
@@ -76,7 +76,7 @@
     width: 160px;
     height: 160px;
     margin-right: 1px;
-    background: $lightGray;
+    background: $gray_light;
     border-right: solid 1px $white;
   }
 }
@@ -86,7 +86,7 @@
     width: 160px;
     height: 160px;
     margin-right: 1px;
-    background: $lightGray;
+    background: $gray_light;
     border-right: solid 1px $white;
   }
 }
@@ -96,7 +96,7 @@
     width: 160px;
     height: 160px;
     margin-right: 1px;
-    background: $lightGray;
+    background: $gray_light;
     border-right: solid 1px $white;
   }
 }

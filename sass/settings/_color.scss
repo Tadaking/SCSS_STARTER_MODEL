@@ -2,21 +2,36 @@ $lighten_amount: 13%;
 $darken_amount: 10%;
 $lighten_strong_amount: 2 * $lighten_amount;
 
-$black: #000;
-$white: #FFF;
+//for Background
+$gray_dark: #a6a6ad;
+$gray: #bbbbc2;
+$gray_light: #e8e8eb;
+$gray_lighter: #FCFCFD;
 
-$body_background_color: $white;
+//for Text
+$text_dark: #3D3D40;
+$text_normal: #7a7a80;
+$text_light: #A6A6AD;
 
-$site_key_color: #3ba4b0;
-$emphasys_key_color: #3b6ab0;
-$site_accent_color: #3bb082;
-
-$counter_white: #f0f0f0;
-
-$dark-gray: #5e5e5e;
-$gray: #8d8d8d;
-$lightGray: #a5a5a5;
+//for anchor
+$link: #101818;
+$visited: $text_light;
 
 //add color to use at following
-$yellow: #FFFF00;
-$red: #d15749;
+$white: #fefefe;
+$yellow: #fb0;
+$red: #e42;
+$blue: #6ce;
+$pink: #FFA4FD;
+$green: #8da;
+$purple: #99c;
+
+$counter_white: $gray_lighter;
+
+$body_background_color: $gray_lighter;
+
+$site_key_color: $blue;
+
+$emphasys_key_color: $green;
+
+$site_accent_color: $pink;

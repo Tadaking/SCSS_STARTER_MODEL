@@ -1,59 +1,33 @@
 /* typography settings */
 
 %h1 {
-	@include heading-fs-lh($h1-fs, $h1-lh); //@mixin heading-fs-lh($fontsize, $grid_height_num)
+  @include headingDesign($h1-weight, $h1-fs, $h1-lh, $h1-fc, $h1-margin); //@mixin heading-fs-lh($fontsize, $grid_height_num)
 }
 
 %h2 {
-	@include heading-fs-lh($h2-fs, $h2-lh);
+  @include headingDesign($h2-weight, $h2-fs, $h2-lh, $h2-fc, $h2-margin);
 }
 
 %h3 {
-	@include heading-fs-lh($h3-fs, $h3-lh);
+  @include headingDesign($h3-weight, $h3-fs, $h3-lh, $h3-fc, $h3-margin);
 }
 
 %h4 {
-	@include heading-fs-lh($h4-fs, $h4-lh);
+  @include headingDesign($h4-weight, $h4-fs, $h4-lh, $h4-fc, $h4-margin);
 }
 
 %h5 {
-	@include heading-fs-lh($h5-fs, $h5-lh);
+  @include headingDesign($h5-weight, $h5-fs, $h5-lh, $h5-fc, $h5-margin);
 }
 
 %h6 {
-	@include heading-fs-lh($h6-fs, $h6-lh);
+  @extend %h5;
+  margin: $h6-margin;
 }
-
-%alert-warning {
-	@extend %bold;
-  color: $alert-warning;
-}
-
-%alert-error {
-	@extend %bold;
-  color: $alert-error;
-}
-
-%alert-success {
-	@extend %bold;
-  color: $alert-success;
-}
-
-%alert-info {
-	@extend %bold;
-  color: $alert-info;
-}
-
-//for example ui-pagenation, ui-tab
-%current {
-  @extend %bold;
-}
-
-.note { font-size: 0.8em; }
 
 // for Antialias setting for Safari
 %bold {
-  @include font_weight(bold);
+  @include font_weight($default_fw_bold);
 }
 
 //to clear text color for Safari, Firefox
@@ -67,4 +41,23 @@
   overflow: hidden;  
   white-space: nowrap;  
   text-overflow: ellipsis;
+}
+
+%selection {
+  &::selection {
+    background: $selection_bg;
+    color: $selection_fc;
+  }
+}
+
+%ui-anchor {
+  &:link,
+  &:visited {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

@@ -74,3 +74,55 @@
     }
   }
 }
+
+@mixin pulldownarea($pd-class: 'pulldown', $pd-hoverablearea-class: 'pulldown-area', $pd-menu-class: 'pulldown-menu') {
+   .#{$pd-class} {
+    position: relative;
+
+    &:hover {
+      .#{pd-hoverablearea-class} {
+        overflow: visible;
+        height: auto;
+      }
+
+      .#{$pd-menu-class} { opacity: 1; }
+    }
+  }
+
+  .#{pd-hoverablearea-class} {
+    position: absolute;
+    z-index: -2;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .#{$pd-menu-class} {
+    position: relative;
+    opacity:   0;
+    line-height: $grid_height +0px;
+    @include bubbleBody;
+    @include pulldownmenu_design;
+
+    a { display: block; }
+  }
+}
+
+%bubble-arrow-top {
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0 - $bubble_arrow_size * 2px;
+    width: 0;
+    height: 0;
+    margin-left: 0 - $bubble_arrow_size / 2px;
+    border: solid $bubble_arrow_size transparent;
+    border-bottom-color: $bubble_body_color;
+  }
+
+  //arrow shadow
+  &:before {
+    top: 0 - ($bubble_arrow_size * 2) - 1px;
+    border-bottom-color: rgba(0,0,0, .1);
+  }
+}

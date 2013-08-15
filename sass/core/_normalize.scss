@@ -381,13 +381,12 @@ input {
     line-height: normal; /* 1 */
 }
 
-input[type="text"],
-input[type="password"],
-input[type='email'],
-input[type='url'],
+#{$text-inputs},
 textarea {
   padding: $input_textarea_padding;
-  @include input_textarea_border;
+  @include placeholder {
+    color: $placeholder_text_color;
+  }
 }
 
 input, textarea, button {

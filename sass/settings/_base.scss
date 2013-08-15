@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
+@import 'color';
 //webpage design layout settings
 $base_fs: 16;
 $base_fw: 300;
 $default_lh: 1.5;
 $default_fc: #181818;
 
-$default_fw_bold: bold;
-
 $grid_width: 1 * $base_fs;
 $grid_height: $default_lh * $base_fs;
-$grid_margin: $base_fs;
+
+@import 'typography';
 
 $page_width: 60 * $grid_width;
 
@@ -23,7 +23,7 @@ $box_layout: false;
 $padding_tb: .618em;
 $padding_lr: 1.615em;
 
-$disabledOpacity: 0.5;
+$disabledOpacity: .34;
 
 // zindex management
 @import 'zindex';
@@ -32,10 +32,6 @@ $disabledOpacity: 0.5;
 $body_background_image_file: null; //PATH _TO_IMAGE or null
 $body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
 $body_background_offset: null; // xOffset, yOffset or nu;;
-
-
-@import 'color';
-@import 'typography';
 
 // icon settings
 $icon-tagName: i;
@@ -54,5 +50,10 @@ $icon_ratio_button: 1em;
 $action-label-className: cmd-label;
 $icon-positionized-className: is-ico-rside;
 
+@import '../core/normalize';
+
 @import 'tab_design';
+@import 'pulldown_design';
+@import 'bubble_design';
 @import 'pagenation_design';
+

@@ -1,16 +1,15 @@
+%default-text-input-design {
+  width: 20 * $grid_width + 0px;
+  background: $gray_lighter;
+  border: solid 1px $gray;
+  box-shadow: none;
+}
+
 %validation_error {
   @include error_view {
     %error_txt {
       @include error_text;
     }
-  }
-}
-
-//横並びフォーム
-@mixin horizontal_form {
-  legend, .legend {
-    @extend %bold;
-    @extend %inputarea;
   }
 }
 
@@ -24,10 +23,6 @@
   }
 }
 
-fieldset {
-  @extend %fieldset;
-}
-
 %inputarea {
   display: table-cell;
 
@@ -38,17 +33,29 @@ fieldset {
   }
 }
 
+//横並びフォーム
+@mixin horizontal_form {
+  //legend,
+  .legend {
+    @extend %bold;
+    @extend %inputarea;
+  }
+}
+
 //縦並びフォーム
 @mixin vertical_form($filedsetClassName, $inputareaClassName) {
-  legend, .legend {
+  //legend,
+  .legend {
     @extend %bold;
   }
 
-  legend, .legend, label, #{$filedsetClassName}, #{$inputareaClassName} {
+  //legend,
+  .legend, label, #{$filedsetClassName}, #{$inputareaClassName} {
     display: block;
   }
 
-  legend, .legend, label {
+  //legend,
+  .legend, label {
     width: auto;
   }
 

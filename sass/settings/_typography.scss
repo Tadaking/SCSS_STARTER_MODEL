@@ -1,44 +1,74 @@
 @charset "UTF-8";
 
+//webpage design layout settings
+$default_fw_bold: 600;
 // font-family
-$sans-serif: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
+$sans-serif: "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
 $serif: Georgia, Times, "Times New Roman", serif;
 
 $default_family: $sans-serif;
 
+//for iOS Font-Antialius
+$font_smoothing: true;
 
 // anchor settings
-$link_color: #258FB8;
-$link_visited: lighten($link_color, $lighten_strong_amount);
-$link_hover: lighten($link_color, $lighten_amount);
-$link_active: darken($link_color, $darken_amount);
-$link_focus: $link_hover;
-$link_current: #333;
+$link_color: $link;
+$link_visited: $visited;
+$link_hover: darken($link_color, $lighten_amount);
+$link_active: $pink;
+$link_focus: $pink;
+$link_current: $text_normal;
 
 $link_decoration: true;
+
+//::selection
+$selection_bg: $pink;
+$selection_fc: $white;
 
 //empasis
 $emphasis: $emphasys_key_color;
 $alert_warning: $yellow;
 $alert_error: $red;
-$alert_success: $site_accent_color;
-$alert_info: $site_key_color;
+$alert_success: $green;
+$alert_info: $blue;
 
-//heading fontsize & line-height:nth-grid-height
-$h1-fs: 32;
-$h1-lh: 3;
+//heading fontsize & line-height:nth-grid-height & Color
+$h1-fs: 48;
+$h1-lh: 2;
+$h1-fc: $pink;
+$h1-margin: 0 0 px-to-rem(3 * $grid_height) 0;
+$h1-weight: normal;
 
-$h2-fs: 24;
-$h2-lh: 2;
+$h2-fs: 32;
+$h2-lh: 1.5;
+$h2-fc: $text_dark;
+$h2-margin: px-to-rem(3 * $grid_height) 0 px-to-rem(1 * $grid_height) 0;
+$h2-weight: normal;
 
-$h3-fs: 20;
-$h3-lh: 2;
+$h3-fs: 24;
+$h3-lh: 1;
+$h3-fc: $text_dark;
+$h3-margin: px-to-rem(2 * $grid_height) 0 px-to-rem(1 * $grid_height) 0;
+$h3-weight: 'inherit';
 
 $h4-fs: $base_fs;
-$h4-lh: 2;
+$h4-lh: 1;
+$h4-fc: $text_dark;
+$h4-margin: px-to-rem(1.5 * $grid_height) 0 0 0;
+$h4-weight: $default_fw_bold;
 
 $h5-fs: 13;
 $h5-lh: 1;
+$h5-fc: 'inherit';
+$h5-margin: px-to-rem(1 * $grid_height) 0 0 0 0;
+$h5-weight: 'inherit';
 
-$h6-fs: 11;
+$h6-fs: 13;
 $h6-lh: 1;
+$h6-fc: 'inherit';
+$h6-margin: 0 0 0 0;
+$h6-weight: 'inherit';
+
+// @mixin strong_text {
+// 	color: $green;
+// }

@@ -7,9 +7,8 @@
  *= require_self
 */
 
-@import 'helpers';
-@import 'mixins';
+@import 'core/helpers';
+@import 'core/mixins';
 @import 'settings/base';
-@import 'normalize';
 @import 'modules/index';
 @import 'site_styles/example';

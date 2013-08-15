@@ -1,32 +1,13 @@
-$fieldset_border: null; //true or null 
-
 // form UI design
-$input_textarea_padding: 3px;
 
-@mixin input_textarea_border {
-  //input[type="text"]やtextareaの入寮系のデザインを記述
-  border-width: 1px;
-  @include border-radius(3px);
-}
+//fieldset
+$fieldset_border: null; //true or null 
+$fieldset_margin: 1rem 0;
+$fieldset_padding: 0;
 
-@mixin error_view {
-  label {
-    @extend %alert-error;
-  }
+//input type="text", textarea
+$placeholder_text_color: $gray;
 
-  input[type="text"],
-  input[type="password"],
-  input[type='email'],
-  input[type='url'],
-  textarea {
-    background: $yellow;
-    border-color: $red;
-  }
-  
-  @content;
-}
+$input_textarea_padding: .6em;
 
-@mixin error_text {
-  @extend %alert-error;
-  font-weight: normal;
-}
+$text-inputs: 'input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"]';

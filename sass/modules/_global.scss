@@ -10,11 +10,9 @@
   text-decoration: none;
 }
 
-%no-text-decoration { text-decoration: none; }
-
 %erase_background {
   background: none;
   border: none;
-  @include box-shadow(none);
-  @include text-shadow(none);
+  box-shadow: none;
+  text-shadow: none;
 }

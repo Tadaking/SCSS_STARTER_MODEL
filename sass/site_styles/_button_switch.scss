@@ -3,27 +3,29 @@ input[type="button"] {
   @extend %button;
 }
 
-input[type="submit"] {
-  @extend %button;
+[type="submit"] {
+  @extend %button_submit;
 }
 
 input[type="reset"]{
-  @extend %button_reset;
+  @extend %button;
 }
 
 button {
   @extend %button;
-  &[type="reset"]{
-    @extend %button_reset;
-  }
 }
 
 .btn {
   @extend %button;
 
-  // &.cancel {
-  //   @extend %cancel;
-  // }
+  &.cancel {
+    @extend %erase_background;
+
+    &:hover {
+      @extend %erase_background;
+      text-decoration: none;
+    }
+  }
 }
 
 //switch

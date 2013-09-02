@@ -132,7 +132,7 @@ a {
 /* =============================================================================
    Typography
    ========================================================================== */
-#{headings()} {
+h1, h2, h3, h4, h5, h6 {
   @extend %reset_margin;
   @extend %bold;
   letter-spacing: -1px;
@@ -316,7 +316,7 @@ figure {
  */
 
 form {
-  @extend %reset_margin; 
+  @extend %reset_margin;
 }
 
 /*
@@ -329,14 +329,14 @@ fieldset {
     } @else {
       border: none;
     }
-    
+
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
 }
 
 /*
  * 1. Corrects color not being inherited in IE6/7/8/9
- * 2. Corrects text not wrapping in FF3 
+ * 2. Corrects text not wrapping in FF3
  * 3. Corrects alignment displayed oddly in IE6/7
  */
 

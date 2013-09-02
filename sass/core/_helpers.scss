@@ -25,8 +25,3 @@
 @function cp($target, $container) {
   @return calc-percent($target, $container);
 }
-
-@function headings() {
-	@return 'h1, h2, h3, h4, h5, h6'
-}
-

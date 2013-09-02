@@ -36,6 +36,22 @@
   zoom: 1;
 }
 
+@mixin sticky-footer($wrapper, $push, $footer-height){
+  html, body {
+    height: 100%;
+  }
+
+  .#{$wrapper} {
+    min-height: 100%;
+    margin-bottom: 0 - $footer-height + 0px;
+  }
+
+  .#{$push} {
+    height: $footer_height +0px;
+    clear :both;
+  }
+}
+
 @mixin define_column_grid($outer_dom_size) {
   $base_grid: ($outer_dom_size - $grid_height * ($column_num - 1))/ $column_num;
 
@@ -47,7 +63,7 @@
         @extend %lfloating;
       }
       width: cp($base_grid * $i + $grid_height * ($i - 1), $outer_dom_size);
-      
+
       @if $i == $column_num {
         // margin-right: $grid_height;
       } @else {
@@ -128,7 +144,7 @@
       @extend %pie-clearfix;
     }
   }
-  
+
   #{$childTags} {
     @if $box_layout == false {
       float: left;
@@ -175,7 +191,7 @@
         right: $width solid $color;
       } @else {
         right-width: 0px;
-      }     
+      }
       bottom: $width solid $color;
       left-width: 0px;
       top-width: 0px;

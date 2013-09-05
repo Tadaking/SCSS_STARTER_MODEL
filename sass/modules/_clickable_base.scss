@@ -1,6 +1,7 @@
 //base setting
 %action {
-  display: inline-table;
+  @extend %bold;
+  display: inline-block;
   line-height: 1;
   padding: $padding_tb;
   text-decoration: none;
@@ -26,8 +27,8 @@
   // &:visited {
   //   // color: inherit;
   // }
-  
-  &:disabled, 
+
+  &:disabled,
   &.disabled {
     opacity: $disabledOpacity;
   }

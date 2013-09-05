@@ -4,28 +4,19 @@ $striped: true;
 $cellpadding_v: $padding_tb;
 $cellpadding_h: $padding_lr;
 
-$theadColor: lighten($site_key_color, 4*$lighten_amount);
-$td: $white;
+$theadColor: null;
+$tfootColor: null;
+$td: null;
 
-$tbodyTh: darken($td, 5%);
-$trEven: darken($td, 5%);
-$thEven: darken($td, 5%);
+$tbodyTh: null;
+$trEven: null;
+$thEven: null;
 
 //border-settings
-$outer-bw: 2px;
-$outer-bc: $gray;
+$outer-bw: 1px;
+$outer-bc: $gray_dark;
 $outer-verticalLine: false;
 
 $inner-bw: 1px;
-$inner-bc: $gray;
+$inner-bc: $gray_dark;
 $inner-verticalLine: false;
-
-@mixin numberStyle {
-	text-align: right;
-}
-
-@mixin defaultTable {
-  @include outer-table-borders($outer-bw, $outer-bc, $outer-verticalLine);
-  @include inner-table-borders($inner-bw, $inner-bc, $inner-verticalLine);
-  @include stripedTable;
-}

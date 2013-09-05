@@ -38,8 +38,8 @@
 
 //for text-overflow
 %text-overflow {
-  overflow: hidden;  
-  white-space: nowrap;  
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -53,7 +53,7 @@
 %ui-anchor {
   &:link,
   &:visited {
-    color: $blue;
+    color: $site_key_color;
     text-decoration: none;
   }
 
@@ -62,23 +62,6 @@
   }
 }
 
-//emphasys text setting
-%text-success {
-  @extend %bold;
-  color: $text-success;
-}
-
-%text-warning {
-  @extend %bold;
-  color: $text-warning;
-}
-
-%text-error {
-  @extend %bold;
-  color: $text-error;
-}
-
-%text-info {
-  @extend %bold;
-  color: $text-info;
+%number {
+  text-align: right;
 }

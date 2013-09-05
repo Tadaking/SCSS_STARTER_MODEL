@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
 @import 'color';
-//webpage design layout settings
+
 $base_fs: 16;
-$base_fw: 300;
 $default_lh: 1.5;
-$default_fc: #181818;
+$default_fw: 200;
 
 $grid_width: 1 * $base_fs;
 $grid_height: $default_lh * $base_fs;
@@ -13,7 +12,6 @@ $grid_height: $default_lh * $base_fs;
 @import 'typography';
 
 $page_width: 60 * $grid_width;
-
 $column_num: 5;
 
  // IF You use "display:box;" on your website, turn true
@@ -23,12 +21,13 @@ $box_layout: false;
 $padding_tb: .618em;
 $padding_lr: 1.615em;
 
-$disabledOpacity: .34;
+$disabledOpacity: 0.34;
 
 // zindex management
 @import 'zindex';
 
 // body background
+$body_background_color: $gray_lighter;
 $body_background_image_file: null; //PATH _TO_IMAGE or null
 $body_background_repeat: null; //repeat, no-repeat, repeat-x, repeat-y or null
 $body_background_offset: null; // xOffset, yOffset or nu;;
@@ -41,19 +40,16 @@ $icon_sprite_path: '../images/sprite_icon.svg';
 $icon_ratio_tab: 1em;
 $icon_ratio_button: 1em;
 
+// アクションボタンのアイコンタグと⌘ラベルのclass名設定
+$action-label-className: cmd-label;
+$icon-positionized-className: is-ico-rside;
 
 @import 'table_design';
 @import 'form_design';
 @import 'button_design';
 
-// アクションボタンのアイコンタグと⌘ラベルのclass名設定
-$action-label-className: cmd-label;
-$icon-positionized-className: is-ico-rside;
-
 @import 'tab_design';
-@import 'pulldown_design';
-@import 'bubble_design';
 @import 'pagenation_design';
+@import 'pulldown';
 
-@import 'settings/normalize';
-
+@import 'normalize';

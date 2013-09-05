@@ -26,26 +26,26 @@ $selection_bg: $pink;
 $selection_fc: $white;
 
 //empasis
-$text-emphasis: $emphasys_key_color;
-$text-warning: $yellow;
-$text-error: $red;
-$text-success: $green;
-$text-info: $blue;
+$emphasis: $emphasys_key_color;
+$alert_warning: $yellow;
+$alert_error: $red;
+$alert_success: $green;
+$alert_info: $blue;
 
 //heading fontsize & line-height:nth-grid-height & Color
 $h1-fs: 48;
 $h1-lh: 2;
-$h1-fc: $pink;
+$h1-fc: $blue;
 $h1-margin: 0 0 px-to-rem(3 * $grid_height) 0;
 $h1-weight: normal;
 
-$h2-fs: 32;
+$h2-fs: 28;
 $h2-lh: 1.5;
 $h2-fc: $text_dark;
 $h2-margin: px-to-rem(3 * $grid_height) 0 px-to-rem(1 * $grid_height) 0;
 $h2-weight: normal;
 
-$h3-fs: 24;
+$h3-fs: 20;
 $h3-lh: 1;
 $h3-fc: $text_dark;
 $h3-margin: px-to-rem(2 * $grid_height) 0 px-to-rem(1 * $grid_height) 0;
@@ -69,6 +69,6 @@ $h6-fc: 'inherit';
 $h6-margin: 0 0 0 0;
 $h6-weight: 'inherit';
 
-// @mixin strong_text {
-// 	color: $green;
-// }
+@mixin strong_text {
+  color: $green;
+}

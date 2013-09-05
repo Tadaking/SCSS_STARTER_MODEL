@@ -1,37 +1,37 @@
 $fieldset: '.field';
 $inputarea: '.inputarea';
 
-.error {
-  @extend %validation_error;
-}
-.err-msg {
-  @extend %error_txt;
-}
+// .error {
+//   @extend %validation_error;
+// }
+// .err-msg {
+//   @extend %error_txt;
+// }
 
-.horizontal-layout {
-  @include horizontal_form;
+// .horizontal-layout {
+//   @include horizontal_form($inputarea);
 
-  label, .legend {
-    width: 10em;
-  }
+//   label, .legend {
+//     width: 10em;
+//   }
 
-  #{$fieldset} {
-    @extend %fieldset;
-  }
+//   #{$fieldset} {
+//     @extend %fieldset;
+//   }
 
-  #{$inputarea} {
-    @extend %inputarea;
-  }
-}
+//   #{$inputarea} {
+//     @extend %inputarea;
+//   }
+// }
 
-.vertical-layout {
-  @include vertical_form($fieldset, $inputarea);
+// .vertical-layout {
+//   @include vertical_form($fieldset, $inputarea);
 
-  #{$fieldset} {
-    @extend %fieldset;
-  }
+//   #{$fieldset} {
+//     @extend %fieldset;
+//   }
 
-  #{$inputarea} {
-    @extend %inputarea;
-  }
-}
+//   #{$inputarea} {
+//     @extend %inputarea;
+//   }
+// }

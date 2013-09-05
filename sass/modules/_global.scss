@@ -10,9 +10,27 @@
   text-decoration: none;
 }
 
+%no-text-decoration { text-decoration: none; }
+
 %erase_background {
   background: none;
   border: none;
   box-shadow: none;
   text-shadow: none;
+}
+
+%centering {
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+%centeringX {
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+
+%centeringY {
+  top: 50%;
+  @include transform(translateY(-50%));
 }

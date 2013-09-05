@@ -1,9 +1,16 @@
-/* 横並びアンカーメニュー */
-@mixin horisontal_anchor_vm {
-  font-size: 0;
+//横並びクラス作成元関数
+@mixin horizontal_obj($childTags) {
+  @include is_display_box(null) {
+    @if $box_layout == false {
+      @extend %pie-clearfix;
+    }
+  }
 
-  .nav-item {
-    display: inline-block;
+  #{$childTags} {
+    @if $box_layout == false {
+      float: left;
+    }
+    @extend %reset_margin;
     @content;
   }
 }
@@ -63,7 +70,7 @@
   } @else {
     text-align: justify;
     font-size: 0;
-  
+
     &:after{
       content: '';
       display: inline-block;
@@ -75,11 +82,11 @@
 
 %justified-horizontal-child {
   @if $box_layout {
-    
+
   }@else{
     display: inline-block;
   }
-  
+
   &.placeholder {
     // width: 100%;
     @extend %reset_margin_padding;

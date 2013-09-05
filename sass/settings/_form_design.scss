@@ -1,20 +1,13 @@
 // form UI design
 
 //fieldset
-$fieldset_border: null; //true or null 
+$fieldset_border: null; //true or null
 $fieldset_margin: 1rem 0;
 $fieldset_padding: 0;
 
 //input type="text", textarea
 $placeholder_text_color: $gray;
 
-$input_textarea_padding: .6em;
+$input_textarea_padding: 8px;
 
-$text-inputs: 'input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"]';
-
-@mixin defaultTextInputDesign {
-  width: 20 * $grid_width + 0px;
-  background: $gray_lighter;
-  border: solid 1px $gray;
-  box-shadow: none;
-}
+$text-inputs: 'input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"], input[type="url"]';

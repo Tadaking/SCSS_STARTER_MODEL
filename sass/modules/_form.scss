@@ -1,80 +1,40 @@
-//form validation
-@mixin error_view {
-  label {
-    @extend %text-warning;
-  }
-
-  #{$text-inputs},
-  textarea {
-    background: $yellow;
-    border-color: $red;
-  }
-  
-  @content;
-}
-
-@mixin error_text {
-  @extend %text-warning;
-  font-weight: normal;
-}
-
-%validation_error {
-  @include error_view {
-    %error_txt {
-      @include error_text;
-    }
-  }
-}
-
-%fieldset {
-  @extend fieldset;
-  display: table;
-
-  label {
-    @extend %inputarea;
-    @extend %bold;
-  }
-}
-
-%inputarea {
+%inputgroup {
   display: table-cell;
 
   label {
     display: inline-block;
     width: auto;
+    margin: 0 0.8em 0 0;
     font-weight: normal;
   }
 }
 
-//横並びフォーム
-@mixin horizontal_form {
-  //legend,
-  .legend {
-    @extend %bold;
-    @extend %inputarea;
+//form validation
+%error_text {
+  color: $alert-error;
+}
+
+%validation_error {
+  label, .legend {
+    color: $alert-error;
   }
+
+  #{$all-text-inputs},
+  textarea {
+    border-color: $red;
+  }
+}
+
+//横並びフォーム
+@mixin horizontal_form($inputareaClassName) {
+  label { margin: 0; }
+  #{$inputareaClassName} { @extend %inputgroup; }
 }
 
 //縦並びフォーム
 @mixin vertical_form($filedsetClassName, $inputareaClassName) {
-  //legend,
-  .legend {
-    @extend %bold;
-  }
 
-  //legend,
-  .legend, label, #{$filedsetClassName}, #{$inputareaClassName} {
-    display: block;
-  }
+  label, .legend { display: block; }
 
-  //legend,
-  .legend, label {
-    width: auto;
-  }
-
-  #{$inputareaClassName} {
-    label {
-      display: inline-block;
-    }
-  }
+  #{$inputareaClassName} { @extend %inputgroup; }
 }

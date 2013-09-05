@@ -4,13 +4,11 @@
   background-size: auto $icon_ratio_button;
 }
 
-%button {
-  @extend %box-sizing;
-  padding: $btn-padding;
+.btn {
+  @extend %action;
   border: $btn-border-width solid $normal_btn_border;
   border-radius: $border_radius;
   box-shadow: $shadow;
-  vertical-align: middle;
   color: $normal_btn_text;
 
   @if $btn_gradient {
@@ -25,10 +23,15 @@
     }
   }
 
-  &:hover, &:link, &:visited { color: $normal_btn_text; }
+  &:hover {
+    @include hoverState();
+  }
 
-  &:active,
-  .active {
+  &:active {
+    box-shadow: inner 0 1px rgba(0,0,0,.1);
+
+    @include activeState();
+
     @if $btn_gradient {
       @include background(linear-gradient(to bottom, $bt-normal_grad_active));
     } @else {
@@ -47,64 +50,59 @@
         background: $btn_normal;
       }
     }
-  }
 
-  &.cancel {
-    display: inline;
-    // padding: 0 0;
-    color: $cancel_btn_text;
+    &:active {
+      top: 0;
+    }
   }
 
   #{$icon-tagName} {
     @extend %button_switch_icon;
   }
-}
 
-%button_submit {
-  @extend %box-sizing;
-  padding: $btn-padding;
-  border: $btn-border-width solid $submit_btn_border;
-  color: $submit_btn_text;
+  &.submit {
+    padding: $btn-padding;
+    border: $btn-border-width solid $submit_btn_border;
+    color: $submit_btn_text;
 
-  @if $btn_gradient {
-    @include background(linear-gradient(to bottom, $reset_grad));
-    &:hover {
-      @include background(linear-gradient(to bottom, $reset_grad_hover));
-    }
-  } @else {
-    background: $submit;
-    &:hover {
-      background: $submit_hover;
-    }
-  }
-
-  &:hover, &:link, &:visited { color: $submit_btn_text; }
-
-  &:hover {
     @if $btn_gradient {
-      @include background(linear-gradient(to bottom, $btn-submit_grad));
+      @include background(linear-gradient(to bottom, $reset_grad));
+      &:hover {
+        @include background(linear-gradient(to bottom, $reset_grad_hover));
+      }
     } @else {
-      background: $submit_hover;
+      background: $submit;
+      &:hover {
+        background: $submit_hover;
+      }
     }
-  }
 
-  &:active,
-  .active {
-    @if $btn_gradient {
-      @include background(linear-gradient(to bottom, $reset_grad_active));
-    } @else {
-      background: $reset_active;
-    }
-  }
+    &:hover, &:link, &:visited { color: $submit_btn_text; }
 
-  &:disabled,
-  &.disabled {
-    opacity: 0.4;
     &:hover {
       @if $btn_gradient {
-        @include background(linear-gradient(to bottom, $bt-submit_grad));
+        @include background(linear-gradient(to bottom, $btn-submit_grad));
       } @else {
-        background: $submit;
+        background: $submit_hover;
+      }
+    }
+
+    &:active {
+      @if $btn_gradient {
+        @include background(linear-gradient(to bottom, $submit_grad_active));
+      } @else {
+        background: $submit_active;
+      }
+    }
+
+    &:disabled,
+    &.disabled {
+      &:hover {
+        @if $btn_gradient {
+          @include background(linear-gradient(to bottom, $bt-submit_grad));
+        } @else {
+          background: $submit;
+        }
       }
     }
   }
@@ -146,8 +144,7 @@
     }
   }
 
-  &:active,
-  .active {
+  &:active {
     @if $btn_gradient {
       @include linear-gradient(to bottom, $switch_grad_active);
     } @else {
@@ -164,8 +161,7 @@
       }
       border: $btn-border-width solid $switch_hover_border;
     }
-    &:active,
-    .active {
+    &:active {
       @if $btn_gradient {
         @include linear-gradient(to bottom, $switch_on_grad_active);
       } @else {

@@ -19,7 +19,7 @@
     @extend %centered_horizontal;
   }
 
-  ul, ol {
+  ul, ol, menu {
     @extend %horizontal_list;
   }
 
@@ -34,7 +34,7 @@
   #{$icon-tagName} {
     width: $icon_ratio_tab;
     height: $icon_ratio_tab;
-    @include background-size(auto $icon_ratio_tab);
+    background-size: auto $icon_ratio_tab;
   }
 }
 
@@ -62,7 +62,7 @@
 
 %table_list {
   @extend %reset_liststyle;
-  
+
   a {
     @extend %action;
     display: block;
@@ -70,59 +70,70 @@
     #{$icon-tagName} {
       width: $icon_ratio_tab;
       height: $icon_ratio_tab;
-      @include background-size(auto $icon_ratio_tab);
+      background-size: auto $icon_ratio_tab;
     }
   }
 }
 
-@mixin pulldownarea($pd-class: 'pulldown', $pd-hoverablearea-class: 'pulldown-area', $pd-menu-class: 'pulldown-menu') {
-   .#{$pd-class} {
-    position: relative;
+.pulldown {
+  position: relative;
 
-    &:hover {
-      .#{pd-hoverablearea-class} {
-        overflow: visible;
-        height: auto;
-      }
+  &:hover {
+    .trigger { text-decoration: none; }
 
-      .#{$pd-menu-class} { opacity: 1; }
+    .pulldown-area {
+      overflow: visible;
+      height: auto;
+      z-index: 14;
+    }
+
+    .pulldown-menu { opacity: 1; }
+  }
+}
+
+.pulldown-area {
+  @extend %centeringX;
+  position: absolute;
+  z-index: -2;
+  height: 0;
+  overflow: hidden;
+  @include transform(translateX(-50%));
+}
+
+@mixin pulldown-menu {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  line-height: $grid_height +0px;
+  background: rgba($default_bg_color, .96);
+  // @include transition(all, 0.08s $ease-in-out-quad);
+
+  &:before, &:after {
+    @extend %bubble-arrow-top;
+    right: 50%;
+    margin-right: -12px;
+  }
+
+  @if $has_shadow {
+    &:before {
+      @extend %bubble-arrow-top-shadow;
+      border-bottom-color: rgba(0,0,0, .1);
     }
   }
 
-  .#{pd-hoverablearea-class} {
-    position: absolute;
-    z-index: -2;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .#{$pd-menu-class} {
-    position: relative;
-    opacity:   0;
-    line-height: $grid_height +0px;
-    @include bubbleBody;
-    @include pulldownmenu_design;
-
-    a { display: block; }
-  }
+  a { display: block; }
 }
 
 %bubble-arrow-top {
-  &:before, &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0 - $bubble_arrow_size * 2;
-    width: 0;
-    height: 0;
-    margin-left: 0 - ($bubble_arrow_size / 2);
-    border: solid $bubble_arrow_size transparent;
-    border-bottom-color: $bubble_body_color;
-  }
-
-  //arrow shadow
-  &:before {
-    top: 0 - ($bubble_arrow_size * 2) - 1;
-    border-bottom-color: rgba(0,0,0, .1);
-  }
+  content: "";
+  display: block;
+  position: absolute;
+  top: -24px;
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+  border: solid 12px transparent;
+  border-bottom-color: $default_bg_color;
 }
+//arrow shadow
+%bubble-arrow-top-shadow { top: -25px; }

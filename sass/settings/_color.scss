@@ -2,10 +2,11 @@ $lighten_amount: 13%;
 $darken_amount: 10%;
 $lighten_strong_amount: 2 * $lighten_amount;
 
+
 //for Background
-$gray_dark: #a6a6ad;
-$gray: #bbbbc2;
-$gray_light: #e8e8eb;
+$gray: #DFDFE3;
+$gray_dark: #D0D0D5;
+$gray_light: #EFEFF1;
 $gray_lighter: #FCFCFD;
 
 //for Text
@@ -18,20 +19,18 @@ $link: #101818;
 $visited: $text_light;
 
 //add color to use at following
-$white: #fefefe;
-$yellow: #fb0;
-$red: #e42;
-$blue: #6ce;
-$pink: #FFA4FD;
-$green: #8da;
-$purple: #99c;
+$white: #fff;
+$yellow: #FDC12D;
+$red: #E74A31;
+$blue: #43D0F5;
+$pink: #FDACFD;
+$green: #60E0D1;
+$purple: #9363F0;
 
 $counter_white: $gray_lighter;
 
-$body_background_color: $gray_lighter;
-
 $site_key_color: $blue;
-
 $emphasys_key_color: $green;
-
 $site_accent_color: $pink;
+
+$default_fc: $text-normal;

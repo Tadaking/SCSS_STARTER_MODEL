@@ -4,8 +4,18 @@ $btn_gradient: false;
 $btn-padding: .618em 1.309em;
 $btn-border-width: 1px;
 $btn-border-kind: solid;
-$border_radius: null;
-$shadow: 0 0 3px rgba(0,0,0,.2);
+$border_radius: 2px;
+$shadow: 0 0 2px rgba(0,0,0,.11);
+
+@mixin hoverState() {
+  position: relative;
+}
+
+@mixin activeState() {
+  position: relative;
+  top: 1px;
+  box-shadow: none;
+}
 
 /* normal */
 $btn_normal: $gray_light;
@@ -17,12 +27,12 @@ $btn_normal_grad_hover: lighten($btn_normal_hover, $lighten_amount), $btn_normal
 $btn_normal_grad_active: $btn_normal_active, $btn_normal;
 
 $normal_btn_text: #585858;
-$normal_btn_border: #B2B2B5;
+$normal_btn_border: darken($gray_dark, 0.5 * $darken_amount);
 
 /* submit */
 $submit: $blue;
-$submit_hover: lighten($submit, 0.34 * $lighten_amount);
-$submit_active: darken($submit, $darken_amount);
+$submit_hover: lighten($submit, 0.8 * $lighten_amount);
+$submit_active: darken($submit, 1.3 * $darken_amount);
 
 $submit_grad: lighten($submit, $lighten_amount), $submit;
 $submit_grad_hover: lighten($submit_hover, $lighten_amount), $submit;
@@ -66,7 +76,7 @@ $switch_btn_hover_text: $normal_btn_text;
 $switch_btn_border: darken($switch_normal, $darken_amount);
 
 /* on */
-$switch_on_hover: $blue;
+$switch_on_hover: $red;
 $switch_on_grad_hover: lighten($red, $lighten_amount), $red;
 $switch_hover_border: darken($red, $darken_amount);
 

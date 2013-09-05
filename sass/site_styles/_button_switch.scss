@@ -1,23 +1,5 @@
 //button
-input[type="button"] {
-  @extend %button;
-}
-
-[type="submit"] {
-  @extend %button_submit;
-}
-
-input[type="reset"]{
-  @extend %button;
-}
-
-button {
-  @extend %button;
-}
-
 .btn {
-  @extend %button;
-
   &.cancel {
     @extend %erase_background;
 

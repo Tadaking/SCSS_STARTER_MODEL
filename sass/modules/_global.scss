@@ -1,3 +1,8 @@
+%reset_margin_padding {
+  margin: 0;
+  padding: 0;
+}
+
 /* reset list style */
 %reset_liststyle {
   @extend %reset_margin_padding;
@@ -33,4 +38,17 @@
 %centeringY {
   top: 50%;
   @include transform(translateY(-50%));
+}
+
+@include define_column_grid($page_width);
+
+%clearfix { @include easy-clearfix; }
+
+%pie-clearfix { @include clearfix; }
+
+%box-sizing { @include box-sizing(border-box); }
+
+%one-column-centered {
+  width: $page_width - 32px;
+  margin: 0 auto;
 }

@@ -1,8 +1,9 @@
 // form UI design
+$disabledOpacity: 0.4;
 
 //fieldset
 $fieldset_border: null; //true or null
-$fieldset_margin: 1rem 0;
+$fieldset_margin: $grid_height 0;
 $fieldset_padding: 0;
 
 //input type="text", textarea

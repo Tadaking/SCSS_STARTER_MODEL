@@ -1,7 +1,10 @@
-//button design
 $btn_gradient: false;
 
-$btn-padding: .618em 1.309em;
+// アクションボタンのアイコンタグと⌘ラベルのclass名設定
+$action-label-className: cmd-label;
+$icon-positionized-className: is-ico-rside;
+
+//button design
 $btn-border-width: 1px;
 $btn-border-kind: solid;
 $border_radius: 2px;
@@ -19,7 +22,7 @@ $shadow: 0 0 2px rgba(0,0,0,.11);
 
 /* normal */
 $btn_normal: $gray_light;
-$btn_normal_hover: lighten($btn_normal, 0.2 * $lighten_amount);
+$btn_normal_hover: lighten($btn_normal, 0.3 * $lighten_amount);
 $btn_normal_active: darken($btn_normal, $darken_amount);
 
 $btn_normal_grad: lighten($btn_normal, $lighten_amount), $btn_normal;
@@ -50,35 +53,8 @@ $reset_grad: lighten($reset, 1.5*$lighten_amount), $reset;
 $reset_grad_hover: lighten($reset, 2*$lighten_amount), $reset;
 $reset_grad_active: $reset_active, $reset;
 
-$reset_btn_text: $counter_white;
+$reset_btn_text: $white;
 $reset_btn_border: darken($reset, $darken_amount);
 
 /* cancel btn */
 $cancel_btn_text: $text_normal;
-
-//switch btn design
-$switch_gradient: true;
-$switch_border-width: 1px;
-$switch_border-kind: solid;
-
-/*normal */
-$switch_normal: $gray;
-$switch_normal_hover: $btn_normal;
-$switch_normal_active: $btn_normal_active;
-
-$switch_grad: lighten($switch_normal, $lighten_amount), $switch_normal;
-$switch_grad_hover: $btn_normal_grad;
-$switch_grad_active: $btn_normal_grad_active;
-
-$switch_btn_text: $text_normal;
-$switch_btn_hover_text: $normal_btn_text;
-
-$switch_btn_border: darken($switch_normal, $darken_amount);
-
-/* on */
-$switch_on_hover: $red;
-$switch_on_grad_hover: lighten($red, $lighten_amount), $red;
-$switch_hover_border: darken($red, $darken_amount);
-
-$switch_on_active: darken($red, $darken_amount);
-$switch_on_grad_active: $switch_on_active, $red;

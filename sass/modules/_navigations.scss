@@ -1,34 +1,68 @@
 /* pagenation */
 %ui-pagenation {
   @extend %centered_horizontal;
-  a {
-    @extend %action;
-    @include default_ui_pagenation_action;
-    &.current{
-      color: $default_fc;
+}
+
+//Segmented nav
+@mixin segmented-nav($command_class) {
+  @if $btn_gradient {
+    @include background(linear-gradient(to bottom, $btn_normal_grad));
+    #{$command_class} {
+      &:hover,
+      &.current {
+        @include background(linear-gradient(to bottom, $btn_normal_grad_hover));
+      }
     }
+  } @else {
+      background: $btn_normal;
+
+      #{$command_class}{
+        &:hover, &.current {
+          background: $btn_normal_hover;
+        }
+    }
+  }
+
+  display: inline-block;
+  border: $btn-border-width solid $normal_btn_border;
+  border-radius: $border_radius;
+  box-shadow: $shadow;
+  font-size: 0;
+
+  #{$command_class} {
+    @extend %action;
+    @extend %box-sizing;
+    background: none;
+    border: none;
+    border-right: $btn-border-width solid $normal_btn_border;
+
+    @if $border_radius {
+      &:first-child {
+        border-radius: $border_radius 0 0 $border_radius;
+      }
+
+      &:last-child {
+        border-radius: 0 $border_radius $border_radius 0;
+        border: none;
+      }
+    }
+
+    @content;
   }
 }
 
 /* tab */
 %ui-tab {
   font-size: 0;
-  @include tab_layout;
 
-  &.centered {
-    @extend %centered_horizontal;
-  }
+  &.centered { @extend %centered_horizontal; }
 
-  ul, ol, menu {
-    @extend %horizontal_list;
-  }
+  ul { @extend %horizontal_list; }
 
   a {
-    position: relative;
-    margin: 0 $each_tab_margin 0 0;
     @extend %action;
-    @include default_tab_design;
-    font-size: px-to-rem($base_fs);
+    position: relative;
+    @include z-index(tab);
   }
 
   #{$icon-tagName} {
@@ -40,7 +74,8 @@
 
 %ui-tab-content {
   position: relative;
-  @include default_tab_content_design;
+  top: -1px;
+  @include z-index(tab-content);
 }
 
 /* table_list */
@@ -106,7 +141,6 @@
   opacity: 0;
   line-height: $grid_height +0px;
   background: rgba($default_bg_color, .96);
-  // @include transition(all, 0.08s $ease-in-out-quad);
 
   &:before, &:after {
     @extend %bubble-arrow-top;

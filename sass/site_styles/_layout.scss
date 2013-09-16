@@ -1,3 +1,7 @@
+.container {
+  @extend %one-column-centered;
+}
+
 .site-body {
   @include is_display_box(false);
   @extend %clearfix;
@@ -59,6 +63,11 @@
   /* added settings */
 }
 
+.horizontal-dl {
+  @extend %horizontal_definition;
+  /* added settings */
+}
+
 // justified-horizontal
 .justified-horizontal {
   @include justified-horizontal(div){
@@ -73,8 +82,8 @@
 //variable-horizontal
 .horizontal-layout-top {
   @include variable-horizontal(li, top, left){
-    width: 160px;
-    height: 160px;
+    width: 72px;
+    height: 72px;
     margin-right: 1px;
     background: $gray_light;
     border-right: solid 1px $white;
@@ -83,8 +92,8 @@
 
 .horizontal-layout-middle {
   @include variable-horizontal(div, middle, center){
-    width: 160px;
-    height: 160px;
+    width: 72px;
+    height: 72px;
     margin-right: 1px;
     background: $gray_light;
     border-right: solid 1px $white;
@@ -93,8 +102,8 @@
 
 .horizontal-layout-bottom {
   @include variable-horizontal(div, bottom, right){
-    width: 160px;
-    height: 160px;
+    width: 72px;
+    height: 72px;
     margin-right: 1px;
     background: $gray_light;
     border-right: solid 1px $white;

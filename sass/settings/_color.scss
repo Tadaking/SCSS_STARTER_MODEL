@@ -14,12 +14,9 @@ $text_dark: #3D3D40;
 $text_normal: #7a7a80;
 $text_light: #A6A6AD;
 
-//for anchor
-$link: #101818;
-$visited: $text_light;
-
 //add color to use at following
-$white: #fff;
+$white: $gray_lighter;
+$black: #181818;
 $yellow: #FDC12D;
 $red: #E74A31;
 $blue: #43D0F5;
@@ -27,10 +24,16 @@ $pink: #FDACFD;
 $green: #60E0D1;
 $purple: #9363F0;
 
-$counter_white: $gray_lighter;
-
 $site_key_color: $blue;
 $emphasys_key_color: $green;
 $site_accent_color: $pink;
 
 $default_fc: $text-normal;
+
+//for anchor
+$link_color: #101818;
+$link_visited: $text_light;
+$link_hover: darken($link_color, $lighten_amount);
+$link_active: $pink;
+$link_focus: $pink;
+$link_current: $text_normal;

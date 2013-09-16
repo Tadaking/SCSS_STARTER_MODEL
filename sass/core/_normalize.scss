@@ -4,10 +4,7 @@
    HTML5 display definitions
    ========================================================================== */
 
-/*
- * Corrects block display not defined in IE6/7/8/9 & FF3
- */
-
+// Corrects block display not defined in IE6/7/8/9 & FF3
 article,
 aside,
 details,
@@ -22,10 +19,7 @@ summary {
     display: block;
 }
 
-/*
- * Corrects inline-block display not defined in IE6/7/8/9 & FF3
- */
-
+// Corrects inline-block display not defined in IE6/7/8/9 & FF3
 audio,
 canvas,
 video {
@@ -34,19 +28,13 @@ video {
     *zoom: 1;
 }
 
-/*
- * Prevents modern browsers from displaying 'audio' without controls
- */
-
+// Prevents modern browsers from displaying 'audio' without controls
 audio:not([controls]) {
     display: none;
 }
 
-/*
- * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
- * Known issue: no IE6 support
- */
-
+// Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+// Known issue: no IE6 support
 [hidden] {
     display: none;
 }
@@ -76,16 +64,8 @@ html {
   font-weight: $default_fw;
 }
 
-%reset_margin { margin: 0; }
-%reset_padding { padding: 0; }
-
-%reset_margin_padding {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  @extend %reset_margin;
+  margin: 0;
   font: $default_fw #{px-to-rem($base_fs)}/#{$default_lh} #{$default_family};
   color: $default_fc;
   @include body_background;
@@ -153,7 +133,7 @@ abbr[title] {
 
 strong {
     @extend %bold;
-    @include strong_text;
+    @include strong_text_design;
 }
 
 b {
@@ -274,13 +254,9 @@ ol, ul {
 dl, dt, dd {
 }
 
-dt { @extend %bold; }
+dt { @extend %h4; }
 
 dd { margin: 0 0 0 40px; }
-
-nav ul, nav ol {
-  @extend %reset_liststyle;
-}
 
 /* =============================================================================
    Embedded content
@@ -315,7 +291,7 @@ svg:not(:root) {
  */
 
 figure {
-  @extend %reset_margin;
+  margin: 0;
 }
 
 /* =============================================================================
@@ -327,7 +303,7 @@ figure {
  */
 
 form {
-  @extend %reset_margin;
+  margin: 0;
 }
 
 /*
@@ -335,14 +311,14 @@ form {
  */
 
 fieldset {
-    @if $fieldset_border {
-      border: 1px solid #c0c0c0;
-    } @else {
-      border: none;
-    }
+  @if $fieldset_border {
+    border: 1px solid #c0c0c0;
+  } @else {
+    border: none;
+  }
 
-    margin: $fieldset_margin;
-    padding: $fieldset_padding;
+  margin: $fieldset_margin;
+  padding: $fieldset_padding;
 }
 
 /*
@@ -353,19 +329,10 @@ fieldset {
 
 legend {
     border: 0; /* 1 */
-    @extend %reset_padding;
+    padding: 0;
     white-space: normal; /* 2 */
     *margin-left: -7px; /* 3 */
 }
-
-// label {
-//   &:not(:first-child) {
-//     input[type="checkbox"],
-//     input[type="radio"] {
-//       margin-left: 0.618em;
-//     }
-//   }
-// }
 
 /*
  * 1. Corrects font size not being inherited in all browsers
@@ -378,7 +345,7 @@ input,
 select,
 textarea {
     font-size: 100%; /* 1 */
-    @extend %reset_margin; /* 2 */
+    margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
 }
@@ -424,10 +391,9 @@ input[type="submit"] {
  * Re-set default cursor for disabled elements
  */
 
-button[disabled],
-input[disabled],
-.disabled {
-    cursor: default;
+button[disabled], input[disabled], .disabled {
+  cursor: default;
+  @include disabled();
 }
 
 /*
@@ -440,7 +406,7 @@ input[disabled],
 input[type="checkbox"],
 input[type="radio"] {
     margin-right: 0.3em;
-    @extend %reset_padding; /* 2 */
+    padding: 0; /* 2 */
     *height: 13px; /* 3 */
     *width: 13px; /* 3 */
 }
@@ -473,8 +439,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 /*
@@ -483,8 +449,8 @@ input::-moz-focus-inner {
  */
 
 textarea {
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
+  overflow: auto; /* 1 */
+  vertical-align: top; /* 2 */
 }
 
 

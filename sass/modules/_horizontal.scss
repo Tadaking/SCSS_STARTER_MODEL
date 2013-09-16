@@ -10,7 +10,7 @@
     @if $box_layout == false {
       float: left;
     }
-    @extend %reset_margin;
+    margin: 0;
     @content;
   }
 }
@@ -24,7 +24,7 @@
 //横並び定義
 %horizontal_definition {
   @include horizontal_obj("dt, dd");
-  @extend %reset_margin;
+  margin: 0;
 }
 
 //可変横並び
@@ -33,7 +33,7 @@
   @extend %variable-horizontal;
 
   #{$childObj} {
-    @extend %variable-horizontal-obj;
+    display: table-cell;
     vertical-align: $v-position;
     text-align: $h-position;
 
@@ -48,10 +48,6 @@
   } @else {
     display: table;
   }
-}
-
-%variable-horizontal-obj {
-  display: table-cell;
 }
 
 @mixin justified-horizontal($childObj) {

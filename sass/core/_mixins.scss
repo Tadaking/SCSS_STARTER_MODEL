@@ -39,7 +39,7 @@
       @extend %box-sizing;
 
       @if $box_layout == false {
-        @extend %lfloating;
+        float: left;
       }
       width: cp($base_grid * $i + $grid_height * ($i - 1), $outer_dom_size);
 
@@ -55,7 +55,7 @@
 @mixin column-grid($num, $first: false) {
   @extend %separatedNum-#{$num};
   @if $first {
-    @extend %first-grid;
+    margin-left: 0;
   }
 }
 
@@ -240,6 +240,10 @@
   @include outer-table-borders($outer-bw, $outer-bc, $outer-verticalLine);
   @include inner-table-borders($inner-bw, $inner-bc, $inner-verticalLine);
   @include stripedTable;
+}
+
+@mixin disabled {
+  opacity: $disabledOpacity;
 }
 
 //btndesign

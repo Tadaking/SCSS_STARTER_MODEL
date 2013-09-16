@@ -1,16 +1,4 @@
 //button
 .btn {
-  &.cancel {
-    @extend %erase_background;
-
-    &:hover {
-      @extend %erase_background;
-      text-decoration: none;
-    }
-  }
-}
-
-//switch
-.switch {
-  @extend %switch;
+  @include transition (background 0.18s $ease-out-cubic);
 }

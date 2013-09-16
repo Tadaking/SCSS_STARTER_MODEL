@@ -41,8 +41,6 @@
 
   &:disabled,
   &.disabled {
-    opacity: 0.4;
-
     &:hover {
       @if $btn_gradient {
         @include background(linear-gradient(to bottom, $bt-normal_grad));
@@ -61,7 +59,6 @@
   }
 
   &.submit {
-    padding: $btn-padding;
     border: $btn-border-width solid $submit_btn_border;
     color: $submit_btn_text;
 
@@ -106,69 +103,18 @@
       }
     }
   }
+
+  &.cancel {
+    @extend %erase_background;
+
+    &:hover {
+      @extend %erase_background;
+      text-decoration: none;
+    }
+  }
 }
 
-%switch {
-  @extend %action;
-  @extend %box-sizing;
-  #{$icon-tagName} {
-    @extend %button_switch_icon;
-  }
-  color: $switch_btn_text;
-  &:link, &:visited { color: $switch_btn_text; }
-
-  @if $switch_gradient {
-    @include background(linear-gradient(to bottom, $switch_grad));
-    &:hover, &.on {
-      @include background(linear-gradient(to bottom, $switch_grad_hover));
-    }
-  } @else {
-    background: $switch_normal;
-    &:hover, &.on {
-      background: $switch_normal_hover;
-    }
-  }
-
-  &:hover, &.on {
-    color: $switch_btn_hover_text;
-  }
-
-  &:disabled, &.disabled {
-    &:hover {
-      @if $switch_gradient {
-        @include linear-gradient(to bottom, $switch_grad);
-      } @else {
-        background: $switch_normal;
-      }
-      color: $switch_btn_text;
-    }
-  }
-
-  &:active {
-    @if $btn_gradient {
-      @include linear-gradient(to bottom, $switch_grad_active);
-    } @else {
-      background: $switch_normal_active;
-    }
-  }
-
-  &.on {
-    &:hover {
-      @if $switch_gradient {
-        @include linear-gradient(to bottom, $switch_on_grad_hover);
-      } @else {
-        background: $switch_on_hover;
-      }
-      border: $btn-border-width solid $switch_hover_border;
-    }
-    &:active {
-      @if $btn_gradient {
-        @include linear-gradient(to bottom, $switch_on_grad_active);
-      } @else {
-        background: $switch_on_active;
-      }
-    }
-  }
-
-  border: $switch_border-width solid $switch_btn_border;
+a.btn {
+  @extend %bold;
+  color: $normal_btn_text;
 }

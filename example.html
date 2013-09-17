@@ -37,10 +37,84 @@
         <h6>&lt;h6&gt;Maecenas faucibus mollis interdum.</h6>
       </figure>
 
-      <h3>link text </h3>
-      <a href="http://soundscarab.com">Link Site</a>
-      <a href="http://apple.com">Link Site</a>
-      <a href="http://pixiv.com">Link Site</a>
+      <h3>Text Elements</h3>
+      <p>
+        The <a href="http://google.com">element</a> example
+      </p>
+      <p>
+        The <abbr title="">abbr element</abbr>
+        and an
+        <abbr title="Abbreviation">abbr element</abbr> with title examples
+      </p>
+      <p>
+        The <b>b element</b> example
+      </p>
+      <p>
+        The <cite>cite element</cite> example
+      </p>
+      <p>
+        The <code>code element</code> example
+      </p>
+      <p>
+        The <em>em element</em> example
+      </p>
+      <p>
+        The <del>del element</del> example
+      </p>
+      <p>
+        The <dfn>dfn element</dfn> and
+        <dfn title="Title text">dfn element</dfn> with title examples
+      </p>
+      <p>
+        The
+        <i>i element</i> example
+      </p>
+      <p>
+        The
+        <ins>ins element</ins> example
+      </p>
+      <p>
+        The <kbd>kbd element</kbd> example
+      </p>
+      <p>
+        The <mark>mark element</mark> example
+      </p>
+      <p>
+        The element</q>
+        | example
+      </p>
+      <p>
+        The <q>q element</q>
+        <br>
+        <a href=""><q>q inside ement</q></a> example
+      </p>
+      <p>
+        The <s>s element</s> example
+      </p>
+      <p>
+        The <samp>samp element</samp> example
+      </p>
+      <p>
+        The <small>small element</small> example
+      </p>
+      <p>
+        The <span>span element</span> example
+      </p>
+      <p>
+        The <strong>strong element</strong> example
+      </p>
+      <p>
+        The <sub>sub element</sub> example
+      </p>
+      <p>
+        The <sup>sup element</sup> example
+      </p>
+      <p>
+        The <u>u element</u> example
+      </p>
+      <p>
+        The <var>var element</var> example
+      </p>
 
       <h3>list</h3>
       <h4>Unordered list</h4>
@@ -157,6 +231,10 @@
           </select>
         </fieldset>
       </form>
+      <ul>
+        <li><a href="example-form-vertical.html">Example vertical layout</a></li>
+        <li><a href="example-form-horizontal.html">Example horizontal layout</a></li>
+      </ul>
     </section>
 
     <section>
@@ -265,19 +343,48 @@
 
     <section>
       <h2>UI-Navigations</h2>
+
+      <h3>Table List Menu</h3>
+      <ul class="table-list">
+        <li><a href="" class="command"><i class="home"></i><span class="cmd-label">menu1</span></a></li>
+        <li><a href="" class="command">menu1</a></li>
+        <li><a href="" class="command">menu1</a></li>
+        <li><a href="" class="command">menu1</a></li>
+      </ul>
+
+      <h3>Pulldown Menu</h3>
+      <div class="pulldown">
+        <a href="" class="trigger is-ico-rside">
+          <span class="cmd-label">Trigger</span>
+          <i class="home"></i>
+        </a>
+
+        <div class="pulldown-area">
+          <div class="pulldown-menu">
+            <a href="" class="command">menu label</a>
+            <a href="" class="command">menu label</a>
+            <a href="" class="command">menu label</a>
+            <a href="" class="command">menu label</a>
+          </div>
+        </div>
+      </div>
+
       <h3>Centerd horizontal list (example ui-pagenation</h3>
       <div class="pagenation">
         <ul>
-          <li><a href="" class="current">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">4</a></li>
+          <li><a href="" class="command current">1</a></li>
+          <li><a href="" class="command">2</a></li>
+          <li><a href="" class="command">3</a></li>
+          <li><a href="" class="command">4</a></li>
         </ul>
       </div>
 
       <h3>@include segmented-nav('.command')</h3>
       <div class="segmented-nav">
-        <button type="button" class="command current">.command.current</button>
+        <button type="button" class="command current">
+          <i class="home"></i>
+          <span class="cmd-label">.command.current</span>
+        </button>
         <button type="button" class="command">.command</button>
         <button type="button" class="command">.command</button>
         <button type="button" class="command">.command</button>
@@ -288,24 +395,24 @@
       <div class="tab">
         <ul>
           <li>
-            <a href="" class="current">
+            <a href="" class="command current">
               <i class="home"></i>
               <span class="cmd-label">TAB_MENU</span>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="" class="command">
               <i class="home"></i>
             </a>
           </li>
           <li>
-            <a href="" class="is-ico-rside">
+            <a href="" class="command is-ico-rside">
               <span class="cmd-label">TAB_MENU</span>
               <i class="home"></i>
             </a>
           </li>
-          <li><a href="">TAB_MENU</a></li>
-          <li><a href="">TAB_MENU</a></li>
+          <li><a href="" class="command">TAB_MENU</a></li>
+          <li><a href="" class="command">TAB_MENU</a></li>
         </ul>
 
         <div class="tab-content">
@@ -315,19 +422,19 @@
 
       <h4>div.ui-tab > a</h4>
       <div class="tab">
-        <a href="">
+        <a href="" class="command">
           <i class="home"></i>
           <span class="cmd-label">TAB_MENU</span>
         </a>
-        <a href="">
+        <a href="" class="command">
           <i class="home"></i>
         </a>
-        <a href="" class="is-ico-rside current">
+        <a href="" class="command is-ico-rside current">
           <span class="cmd-label">TAB_MENU</span>
           <i class="home"></i>
         </a>
-        <a href="">TAB_MENU</a>
-        <a href="">TAB_MENU</a>
+        <a href="" class="command">TAB_MENU</a>
+        <a href="" class="command">TAB_MENU</a>
 
         <div class="tab-content">
           タブコンテントです。
@@ -338,24 +445,24 @@
       <div class="tab centered">
         <ul>
           <li>
-            <a href="">
+            <a href="" class="command">
               <i class="home"></i>
               <span class="cmd-label">TAB_MENU</span>
             </a>
           </li>
           <li>
-            <a href="" class="current">
+            <a href="" class="command current">
               <i class="home"></i>
             </a>
           </li>
           <li>
-            <a href="" class="is-ico-rside">
+            <a href="" class="command is-ico-rside">
               <span class="cmd-label">TAB_MENU</span>
               <i class="home"></i>
             </a>
           </li>
-          <li><a href="">TAB_MENU</a></li>
-          <li><a href="">TAB_MENU</a></li>
+          <li><a href="" class="command">TAB_MENU</a></li>
+          <li><a href="" class="command">TAB_MENU</a></li>
         </ul><div class="tab-content">
           タブコンテントです。
         </div>
@@ -363,58 +470,23 @@
 
       <h4>div.ui-tab.centered > a</h4>
       <div class="tab centered">
-        <a href="">
+        <a href="" class="command">
           <i class="home"></i>
           <span class="cmd-label">TAB_MENU</span>
         </a>
-        <a href="">
+        <a href="" class="command">
           <i class="home"></i>
         </a>
-        <a href="" class="is-ico-rside">
+        <a href="" class="command is-ico-rside">
           <span class="cmd-label">TAB_MENU</span>
           <i class="home"></i>
         </a>
-        <a href="">TAB_MENU</a>
-        <a href="" class="current">TAB_MENU</a>
+        <a href="" class="command">TAB_MENU</a>
+        <a href="" class="current command">TAB_MENU</a>
         <div class="tab-content">
           タブコンテントです。
         </div>
       </div>
-
-      <h3>Table List Menu</h3>
-      <ul class="table-list">
-        <li><a href=""><i class="home"></i><span class="cmd-label">menu1</span></a></li>
-        <li><a href="">menu1</a></li>
-        <li><a href="">menu1</a></li>
-        <li><a href="">menu1</a></li>
-      </ul>
-
-      <h3>Pulldown Menu</h3>
-      <div class="pulldown">
-        <a href="" class="trigger">
-          <span class="cmd-label">Trigger</span>
-          <i>▼</i>
-        </a>
-
-        <div class="pulldown-area">
-          <div class="pulldown-menu">
-            <a href="">menu label</a>
-            <a href="">menu label</a>
-            <a href="">menu label</a>
-            <a href="">menu label</a>
-          </div>
-        </div>
-      </div>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
     </section>
   </div>
 </body>

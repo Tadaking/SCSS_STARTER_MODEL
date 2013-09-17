@@ -181,6 +181,10 @@ samp {
     font-size: 1em;
 }
 
+kbd {
+  @include kbd_design;
+}
+
 /*
  * Improves readability of pre-formatted text in all browsers
  */
@@ -361,7 +365,11 @@ input {
 
 #{$all-text-inputs},
 textarea {
+  width: $input_width * $grid_width + 0px;
   padding: $input_textarea_padding;
+  background: $input_background;
+  border: $input_border;
+  box-shadow: $input_box_shadow;
   @include placeholder {
     color: $placeholder_text_color;
   }

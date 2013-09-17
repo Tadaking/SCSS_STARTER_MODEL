@@ -66,3 +66,12 @@ $h6-weight: $default_fw_bold;
 @mixin strong_text_design {
   color: $green;
 }
+
+@mixin kbd_design {
+  display: inline-block;
+  padding: 0 $padding_lr / 3.4;
+  background: $gray-lighter;
+  border: solid 1px $gray_dark;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 white;
+}

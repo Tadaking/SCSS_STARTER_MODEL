@@ -1,0 +1,344 @@
+<!doctype html>
+<!--[if IE 8]><html class="lt-ie10 ie8" lang="ja"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10 ie9" lang="ja"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ja">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>SCSS STARTUP FORM LIBRARY</title>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script>window.html5 || document.write('<script src="javascripts/html5shiv.js?pre3.5"></scr' + 'ipt>');</script>
+  <![endif]-->
+  <link charset='utf-8' href='stylesheets/application.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<section class="container">
+  <h1>label+入力パーツ横並び</h1>
+
+  <form action="" class="horizontal">
+    <table>
+      <tr>
+        <th><label for="">Text field</label></th>
+        <td>
+          <small>何文字までとかの細目</small>
+          <br>
+          <input type="text" placeholder="placeholder">
+        </td>
+      </tr>
+      <tr>
+        <th class="adjust-valign">
+          <div class="field_with_errors">
+            <label for="">Text field errors</label>
+          </div>
+        </th>
+        <td>
+          <div class="field_with_errors">
+            <input type="text" placeholder="placeholder">
+          </div>
+          <span class="err-msg">hogehoge</span>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="">Textarea</label></th>
+        <td><textarea name="" id="" cols="30" rows="10"></textarea></td>
+      </tr>
+      <tr>
+        <th>
+          <div class="field_with_errors">
+            <label for="">Textarea</label>
+          </div>
+        </th>
+        <td>
+          <div class="field_with_errors">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <span class="err-msg">hoge</span>
+        </td>
+
+      </tr>
+      <tr>
+        <th>
+          <label for="" class="adjust-valign">Password</label>
+        </th>
+        <td>
+          <input type="password">
+          <br>
+          <label for="">確認用</label>
+          <br>
+         <input type="password">
+        </td>
+      </tr>
+      <tr>
+        <th>Field group</th>
+        <td>
+          <label for="">label</label>
+          <br>
+          <input type="text" placeholder="placeholder">
+          <br>
+          <label for="">label</label>
+          <br>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class="adjust-valign"><label for="">URL field</label></th>
+        <td><input type="url" placeholder="http://www.pixiv.net"></td>
+      </tr>
+      <tr>
+        <th class="adjust-valign">
+          <label for="">Number field</label>
+        </th>
+        <td>
+          <input type="number">
+        </td>
+      </tr>
+      <tr>
+        <th>Field group</th>
+        <td>
+          <label for="">label</label>
+          <br>
+          <input type="text">
+          <br>
+          <label for="">label</label>
+          <br>
+          <input type="text">
+          <br>
+          <label for="">label</label>
+          <br>
+          <input type="text">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <div class="field_with_errors">Field group with errors</div>
+        </th>
+        <td>
+          <div class="field_with_errors">
+            <label for="">label</label>
+            <br>
+          </div>
+          <div class="field_with_errors">
+            <input type="text">
+          </div>
+          <span>
+            <span class="err-msg">hogehoge</span>
+          </span>
+          <br>
+          <div class="field_with_errors">
+            <label for="">label</label>
+            <br>
+          </div>
+          <div class="field_with_errors">
+            <input type="text">
+          </div>
+          <span>
+            <span class="err-msg">hogehoge</span>
+          </span>
+          <br>
+          <div class="field_with_errors">
+            <label for="">label</label>
+            <br>
+          </div>
+          <div class="field_with_errors">
+            <input type="text">
+          </div>
+          <span>
+            <span class="err-msg">hogehoge</span>
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <th class="adjust-valign">Field group</th>
+        <td>
+          <label for="">Label</label>
+          <input type="text" class="input-tiny ">
+          <label for="">Label</label>
+          <input type="text" class="input-tiny ">
+        </td>
+      </tr>
+      <tr>
+        <th class="adjust-valign">
+          <div class="field_with_errors">Field group with errors</div>
+        </th>
+
+        <td>
+          <div class="field_with_errors">
+            <label for="">label</label>
+          </div>
+          <div class="field_with_errors">
+            <input type="text" class="input-tiny ">
+          </div>
+          <div class="field_with_errors"></div>
+            <label for="">label</label>
+          <div class="field_with_errors">
+            <input type="text" class="input-tiny ">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>Radio group</th>
+        <td>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <div class="field_with_errors">Radio group with errors</div>
+        </th>
+        <td>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+          <label for="">
+            <input type="radio"> Label
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th>Checkbox group</th>
+        <td>
+          <div>
+            <small>small phrase hogehoge</small>
+          </div>
+
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <div class="field_with_errors">Checkbox Group eith errors</div>
+        </th>
+
+        <td>
+          <div>
+            <small>small phrase hogehoge</small>
+          </div>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+          <label for="">
+            <input type="checkbox">Label
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <th>Selectlabel</th>
+        <td>
+          <select name="" id="">
+            <option value="">選択してください</option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Selectlabel with errors</th>
+        <td>
+          <select name="" id="">
+            <option value="">選択してください</option>
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>
+</body>
+</html>

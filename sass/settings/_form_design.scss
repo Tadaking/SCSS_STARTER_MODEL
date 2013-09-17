@@ -1,10 +1,18 @@
 // form UI design
+$fieldset: '.field';
+$inputarea: '.inputarea';
 $disabledOpacity: 0.4;
 
 //fieldset
 $fieldset_border: null; //true or null
-$fieldset_margin: $grid_height 0;
+$fieldset_margin: 1.5 * $grid_height + 0px 0;
 $fieldset_padding: 0;
+
+//default-text-input-design
+$input_width: 9; //column num
+$input_background: $gray_lighter;
+$input_border: solid 1px $gray;
+$input_box_shadow: none;
 
 //input type="text", textarea
 $placeholder_text_color: $gray;

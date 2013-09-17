@@ -106,6 +106,7 @@
 
   &.cancel {
     @extend %erase_background;
+    text-decoration: underline;
 
     &:hover {
       @extend %erase_background;

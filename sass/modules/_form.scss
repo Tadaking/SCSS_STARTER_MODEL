@@ -1,3 +1,5 @@
+#{$fieldset} { @extend fieldset; }
+
 %inputgroup {
   display: table-cell;
 
@@ -5,17 +7,12 @@
     display: inline-block;
     width: auto;
     margin: 0 0.8em 0 0;
-    font-weight: normal;
   }
 }
 
 //form validation
-%error_text {
-  color: $alert-error;
-}
-
 %validation_error {
-  label, .legend {
+  .field-label, legend {
     color: $alert-error;
   }
 
@@ -27,14 +24,17 @@
 
 //横並びフォーム
 @mixin horizontal_form($inputareaClassName) {
-  label { margin: 0; }
+  label {
+    margin: 0;
+    vertical-align: middle;
+  }
   #{$inputareaClassName} { @extend %inputgroup; }
 }
 
 //縦並びフォーム
 @mixin vertical_form($filedsetClassName, $inputareaClassName) {
 
-  label, .legend { display: block; }
+  .field-label { display: block; }
 
   #{$inputareaClassName} { @extend %inputgroup; }
 }

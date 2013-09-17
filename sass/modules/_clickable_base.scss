@@ -12,6 +12,10 @@
   }
 
   #{$icon-tagName} {
+    width: $icon_ratio_tab;
+    height: $icon_ratio_tab;
+    background-size: auto $icon_ratio_tab;
+
     &+.#{$action-label-className} {
       padding-left: 0.382em;
     }

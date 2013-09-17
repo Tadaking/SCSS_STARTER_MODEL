@@ -1,0 +1,259 @@
+<!doctype html>
+<!--[if IE 8]><html class="lt-ie10 ie8" lang="ja"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10 ie9" lang="ja"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="ja">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>SCSS STARTUP FORM LIBRARY</title>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script>window.html5 || document.write('<script src="javascripts/html5shiv.js?pre3.5"></scr' + 'ipt>');</script>
+  <![endif]-->
+  <link charset='utf-8' href='stylesheets/application.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<section class="container">
+  <h1>label+入力パーツ縦並び</h1>
+
+  <form action="" class="vertical-layout">
+    <div class="field">
+      <label class="field-label">Label</label>
+      <div class="inputarea">
+        <small>何文字までとかの細目</small><br>
+        <input type="text">
+        <span>
+          <i class="icon-ok-sign"></i>
+        </span>
+      </div>
+    </div>
+
+    <div class="field error">
+        <label class="field-label">Label</label>
+        <div class="inputarea">
+          <input type="text">
+          <span>
+            <i class="icon-minus-sign"></i>
+            <span class="err-msg">hogehoge</span>
+          </span>
+        </div>
+    </div>
+
+    <div class="field">
+      <label class="field-label">Label</label>
+      <div class="inputarea">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+    </div>
+
+    <div class="field error">
+      <label class="field-label">Label</label>
+      <div class="inputarea">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <span>
+          <i class="icon-minus-sign"></i>
+          <span class="err-msg">hogehoge</span>
+        </span>
+      </div>
+    </div>
+
+    <fieldset>
+      <legend>パスワード</legend>
+        <div class="inputarea">
+        <span class="inputgroup">
+          <input type="password"><br>
+          <small>small-phrase-hogehoge</small><br>
+          <input type="password">
+        </span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Group label</legend>
+      <span class="inputarea">
+        <label for="">Label</label><br>
+        <input type="text"><br>
+        <label for="">Label</label><br>
+        <input type="text"><br>
+
+        <label for="">Label</label><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Group label</legend>
+      <span class="inputarea">
+          <label for="">Label</label><br>
+          <input type="text" class="s-length">
+      </span>
+      <span class="inputarea">
+          <label for="">Label</label><br>
+          <input type="text" class="s-length">
+      </span>
+      <span class="inputarea">
+          <label for="">Label</label><br>
+          <input type="text" class="s-length">
+      </span>
+    </fieldset>
+
+    <fieldset class="error">
+      <legend>Group label</legend>
+      <span class="inputarea">
+          <label for="">Label</label><br>
+          <input type="text" class="s-length"><br>
+
+          <label for="">Label</label><br>
+          <input type="text" class="s-length"><br>
+
+          <label for="">Label</label><br>
+          <input type="text" class="s-length">
+          <i class="icon-minus-sign"></i>
+          <span class="err-msg">hogehoge</span>
+      </span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Group label</legend>
+      <span class="inputarea">
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+      </span>
+    </fieldset>
+
+    <fieldset class="error">
+      <legend>Group label</legend>
+      <span class="inputarea">
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <label for=""><input type="radio">Label</label>
+          <br>
+          <span>
+            <i class="icon-minus-sign"></i>
+            <span class="err-msg">hogehoge</span>
+          </span>
+      </span>
+    </fieldset>
+
+    <fieldset>
+      <legend>Group label</legend>
+      <span class="inputarea">
+          <div>
+            <small>※small-phrase-hogehoge</small>
+          </div>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+      </span>
+    </fieldset>
+
+    <fieldset class="error">
+      <legend>Group label</legend>
+      <span class="inputarea">
+          <div><small>※small-phrase-hogehoge</small></div>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <label for=""><input type="checkbox">Label</label>
+          <br>
+          <span>
+            <i class="icon-minus-sign"></i>
+            <span class="err-msg">hogehoge</span>
+          </span>
+      </span>
+    </fieldset>
+
+    <div class="field">
+      <label for="" class="field-label">selectlabel</label>
+      <div class="inputarea">
+        <select name="" id="">
+          <option value="">選択してください。</option>
+          <option value=""></option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field error">
+      <label for="" class="field-label">selectlabel</label>
+      <div class="inputarea">
+        <select name="" id="">
+          <option value="">選択してください。</option>
+          <option value=""></option>
+        </select>
+        <span>
+          <i class="icon-minus-sign"></i>
+          <span class="err-msg">hogehoge</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="field submitarea">
+      <input type="submit" value="Submit" class="btn submit">
+      <input type="reset" value="Reset" class="btn">
+    </div>
+  </form>
+</section>
+</body>
+</html>

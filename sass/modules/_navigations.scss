@@ -1,3 +1,95 @@
+/* table_list */
+@mixin table_list($childObj, $grad:false) {
+  @extend %table_list;
+
+  #{$childObj} {
+    @content;
+
+    &:hover {
+      @if $grad {
+        @include background(linear-gradient(lighten($site_key_color, $lighten_amount), $site_key_color));
+      }@else {
+        background: $site_key_color;
+      }
+    }
+  }
+}
+
+%table_list {
+  @extend %reset_liststyle;
+
+  #{$clickable_object_class} {
+    display: block;
+  }
+}
+
+//pulldown
+.pulldown {
+  position: relative;
+
+  &:hover {
+    .trigger {text-decoration: none; }
+
+    .pulldown-area {
+      overflow: visible;
+      height: auto;
+      z-index: 14;
+    }
+
+    .pulldown-menu { opacity: 1; }
+  }
+}
+
+.trigger {
+  @extend %action;
+}
+
+.pulldown-area {
+  @extend %centeringX;
+  position: absolute;
+  z-index: -2;
+  height: 0;
+  overflow: hidden;
+  @include transform(translateX(-50%));
+}
+
+@mixin pulldown-menu {
+  position: relative;
+  top: 0;
+  opacity: 0;
+  line-height: $grid_height +0px;
+  background: rgba($default_bg_color, .96);
+
+  &:before, &:after {
+    @extend %bubble-arrow-top;
+    right: 50%;
+    margin-right: -12px;
+  }
+
+  @if $has_shadow {
+    &:before {
+      @extend %bubble-arrow-top-shadow;
+      border-bottom-color: rgba(0,0,0, .1);
+    }
+  }
+
+  #{$clickable_object_class} { display: block; }
+}
+
+%bubble-arrow-top {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -24px;
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+  border: solid 12px transparent;
+  border-bottom-color: $default_bg_color;
+}
+//arrow shadow
+%bubble-arrow-top-shadow { top: -25px; }
+
 /* pagenation */
 %ui-pagenation {
   @extend %centered_horizontal;
@@ -30,7 +122,6 @@
   font-size: 0;
 
   #{$command_class} {
-    @extend %action;
     @extend %box-sizing;
     background: none;
     border: none;
@@ -59,16 +150,9 @@
 
   ul { @extend %horizontal_list; }
 
-  a {
-    @extend %action;
+  #{$clickable_object_class} {
     position: relative;
     @include z-index(tab);
-  }
-
-  #{$icon-tagName} {
-    width: $icon_ratio_tab;
-    height: $icon_ratio_tab;
-    background-size: auto $icon_ratio_tab;
   }
 }
 
@@ -77,97 +161,3 @@
   top: -1px;
   @include z-index(tab-content);
 }
-
-/* table_list */
-@mixin table_list($childObj, $grad:false) {
-  @extend %table_list;
-
-  #{$childObj} {
-    @content;
-
-    &:hover {
-      @if $grad {
-        @include background(linear-gradient(lighten($site_key_color, $lighten_amount), $site_key_color));
-      }@else {
-        background: $site_key_color;
-      }
-    }
-  }
-}
-
-%table_list {
-  @extend %reset_liststyle;
-
-  a {
-    @extend %action;
-    display: block;
-
-    #{$icon-tagName} {
-      width: $icon_ratio_tab;
-      height: $icon_ratio_tab;
-      background-size: auto $icon_ratio_tab;
-    }
-  }
-}
-
-.pulldown {
-  position: relative;
-
-  &:hover {
-    .trigger { text-decoration: none; }
-
-    .pulldown-area {
-      overflow: visible;
-      height: auto;
-      z-index: 14;
-    }
-
-    .pulldown-menu { opacity: 1; }
-  }
-}
-
-.pulldown-area {
-  @extend %centeringX;
-  position: absolute;
-  z-index: -2;
-  height: 0;
-  overflow: hidden;
-  @include transform(translateX(-50%));
-}
-
-@mixin pulldown-menu {
-  position: relative;
-  top: 0;
-  opacity: 0;
-  line-height: $grid_height +0px;
-  background: rgba($default_bg_color, .96);
-
-  &:before, &:after {
-    @extend %bubble-arrow-top;
-    right: 50%;
-    margin-right: -12px;
-  }
-
-  @if $has_shadow {
-    &:before {
-      @extend %bubble-arrow-top-shadow;
-      border-bottom-color: rgba(0,0,0, .1);
-    }
-  }
-
-  a { display: block; }
-}
-
-%bubble-arrow-top {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -24px;
-  width: 0;
-  height: 0;
-  margin-left: -6px;
-  border: solid 12px transparent;
-  border-bottom-color: $default_bg_color;
-}
-//arrow shadow
-%bubble-arrow-top-shadow { top: -25px; }

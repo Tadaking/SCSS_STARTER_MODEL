@@ -1,37 +1,49 @@
-$fieldset: '.field';
-$inputarea: '.inputarea';
+.vertical-layout {
+  @include vertical_form($fieldset, $inputarea);
+}
 
-// .error {
-//   @extend %validation_error;
-// }
-// .err-msg {
-//   @extend %error_txt;
-// }
+legend {
+  @extend %bold;
+  color: $text_dark;
+  vertical-align: middle;
+}
 
-// .horizontal-layout {
-//   @include horizontal_form($inputarea);
+.field-label {
+  @extend legend;
+}
 
-//   label, .legend {
-//     width: 10em;
-//   }
+.input-tiny {
+  width: 100px !important;
+}
 
-//   #{$fieldset} {
-//     @extend %fieldset;
-//   }
+.error {
+  @extend %validation_error;
+}
 
-//   #{$inputarea} {
-//     @extend %inputarea;
-//   }
-// }
+.field_with_errors { display: inline; }
 
-// .vertical-layout {
-//   @include vertical_form($fieldset, $inputarea);
+.err-msg {
+  color: $alert-error;
+}
 
-//   #{$fieldset} {
-//     @extend %fieldset;
-//   }
+#{$inputarea} { padding-right: 8px; }
 
-//   #{$inputarea} {
-//     @extend %inputarea;
-//   }
-// }
+.horizontal {
+  th, td {
+    padding: 1.125em;
+    border-width: 0 !important;
+    vertical-align: top;
+  }
+
+  th {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .adjust-valign {
+    vertical-align: middle;
+    line-height: (1.5 * $grid_height / 16);
+  }
+
+  @include horizontal_form(td);
+}

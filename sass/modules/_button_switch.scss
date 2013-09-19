@@ -1,5 +1,6 @@
 .btn {
   @extend %action;
+  @extend %bolder;
   padding: $padding_tb;
   border: $btn-border-width solid $normal_btn_border;
   border-radius: $border_radius;
@@ -107,6 +108,5 @@
 }
 
 a.btn {
-  @extend %bold;
   color: inherit;
 }

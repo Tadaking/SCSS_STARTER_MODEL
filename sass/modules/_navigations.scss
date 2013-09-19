@@ -26,28 +26,34 @@
 //pulldown
 .pulldown {
   position: relative;
+  display: inline-block;
+  vertical-align: middle;
 
   &:hover {
-    .trigger {text-decoration: none; }
+    .trigger {
+      color: $text_dark;
+    }
 
     .pulldown-area {
       overflow: visible;
       height: auto;
-      z-index: 14;
     }
 
-    .pulldown-menu { opacity: 1; }
+    .pulldown-menu {
+      top: 0;
+      opacity: 1;
+    }
   }
 }
 
 .trigger {
   @extend %action;
+  @extend %ui-anchor;
 }
 
 .pulldown-area {
   @extend %centeringX;
   position: absolute;
-  z-index: -2;
   height: 0;
   overflow: hidden;
   @include transform(translateX(-50%));
@@ -55,10 +61,9 @@
 
 @mixin pulldown-menu {
   position: relative;
-  top: 0;
-  opacity: 0;
   line-height: $grid_height +0px;
   background: rgba($default_bg_color, .96);
+  @include z-index(pulldown);
 
   &:before, &:after {
     @extend %bubble-arrow-top;
@@ -72,8 +77,6 @@
       border-bottom-color: rgba(0,0,0, .1);
     }
   }
-
-  #{$clickable_object_class} { display: block; }
 }
 
 %bubble-arrow-top {

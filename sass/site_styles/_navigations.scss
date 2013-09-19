@@ -10,7 +10,6 @@
 
   @include table_list('li', false) {
     @extend %btn-ani;
-    @extend %bold;
 
     &:first-child {
       border-radius: 3px 3px 0 0;
@@ -29,7 +28,6 @@
 }
 
 .pulldown {
-  @extend %bold;
   display: inline-block;
 }
 
@@ -43,9 +41,6 @@
   box-shadow: 0 1px 9px 0 rgba(black, .13);
   @include pulldown-menu;
   @include table_list($clickable_object_class, false) {
-    display: block;
-    color: $text_dark;
-
     &:hover {
       color: $white;
     }
@@ -56,7 +51,6 @@
   @extend %ui-pagenation;
   /* added settings */
   #{$clickable_object_class} {
-    @extend %bold;
     margin-right: 0.5 * $padding_tb;
     padding: $padding_tb 0.927em;
     border: solid 1px #CCC;

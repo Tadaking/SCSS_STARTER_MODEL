@@ -1,9 +1,3 @@
-%button_switch_icon {
-  width: $icon_ratio_button;
-  height: $icon_ratio_button;
-  background-size: auto $icon_ratio_button;
-}
-
 .btn {
   @extend %action;
   border: $btn-border-width solid $normal_btn_border;
@@ -52,10 +46,6 @@
     &:active {
       top: 0;
     }
-  }
-
-  #{$icon-tagName} {
-    @extend %button_switch_icon;
   }
 
   &.submit {

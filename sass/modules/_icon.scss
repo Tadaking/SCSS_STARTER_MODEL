@@ -1,4 +1,7 @@
 #{$icon-tagName} {
+  display: table-cell;
+  width: $icon_ratio;
+  height: $icon_ratio;
+  background-size: auto $icon_ratio;
   background: url(#{$icon_sprite_path}) no-repeat;
-  vertical-align: middle;
 }

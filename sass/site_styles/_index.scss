@@ -1,0 +1,9 @@
+// ui-modulesで設定されたplaceholderを@extendすることで、
+// 必要なUIに自由にClass名を付加することができます。
+
+@import 'typography';
+@import 'table';
+@import 'form';
+@import 'navigations';
+@import 'button_switch';
+@import 'layout';

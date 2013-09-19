@@ -1,27 +1,24 @@
 //base setting
 %action {
+  @extend %bold;
   display: inline-block;
   line-height: 1;
   padding: $padding_tb;
   text-decoration: none;
   vertical-align: middle;
 
-  #{$icon-tagName}, .#{$action-label-className} {
+  #{$action-label-className} {
     display: table-cell;
     vertical-align: bottom;
   }
 
   #{$icon-tagName} {
-    width: $icon_ratio_tab;
-    height: $icon_ratio_tab;
-    background-size: auto $icon_ratio_tab;
-
-    &+.#{$action-label-className} {
+    + #{$action-label-className} {
       padding-left: 0.382em;
     }
   }
 
-  &.#{$icon-positionized-className} .#{$action-label-className} {
+  &#{$icon-positionized-className} #{$action-label-className} {
     padding-right: 0.382em;
   }
 

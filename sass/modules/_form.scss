@@ -12,7 +12,7 @@
 
 //form validation
 %validation_error {
-  .field-label, legend {
+  label, legend {
     color: $alert-error;
   }
 

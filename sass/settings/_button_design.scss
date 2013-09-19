@@ -1,8 +1,8 @@
 $btn_gradient: false;
 
 // アクションボタンのアイコンタグと⌘ラベルのclass名設定
-$action-label-className: cmd-label;
-$icon-positionized-className: is-ico-rside;
+$action-label-className: ".cmd-label";
+$icon-positionized-className: ".is-ico-rside";
 
 //button design
 $btn-border-width: 1px;
@@ -29,7 +29,7 @@ $btn_normal_grad: lighten($btn_normal, $lighten_amount), $btn_normal;
 $btn_normal_grad_hover: lighten($btn_normal_hover, $lighten_amount), $btn_normal;
 $btn_normal_grad_active: $btn_normal_active, $btn_normal;
 
-$normal_btn_text: #585858;
+$normal_btn_text: $text_normal;
 $normal_btn_border: darken($gray_dark, 0.5 * $darken_amount);
 
 /* submit */

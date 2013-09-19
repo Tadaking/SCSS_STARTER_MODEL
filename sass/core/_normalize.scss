@@ -132,12 +132,12 @@ abbr[title] {
 }
 
 strong {
-    @extend %bold;
+    @extend %bolder;
     @include strong_text_design;
 }
 
 b {
-  @extend %bold;
+  @extend %bolder;
 }
 
 blockquote {
@@ -477,7 +477,7 @@ table {
 }
 
 th {
-  @extend %bold;
+  @extend %bolder;
 }
 
 tbody {

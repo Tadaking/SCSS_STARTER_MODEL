@@ -50,6 +50,7 @@
 .trigger {
   @extend %action;
   @extend %ui-anchor;
+  @extend %bolder;
 }
 
 .pulldown-area {

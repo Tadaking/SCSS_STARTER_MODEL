@@ -30,6 +30,10 @@
   @include font_weight($default_fw_bold);
 }
 
+%bolder {
+  @include font_weight(600);
+}
+
 //to clear text color for Safari, Firefox
 %text_on_dark_background{
   text-shadow:#000 0 0 0;

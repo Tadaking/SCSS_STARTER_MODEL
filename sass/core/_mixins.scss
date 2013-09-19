@@ -81,11 +81,13 @@
 }
 
 //for iOS Font-Antialius
-@mixin font_weight($weight) {
-  @if $font_smoothing {
-    @if $weight == $default_fw_bold {
+@mixin font_weight($weight, $antialiased: true) {
+  @if $font_smoothing == true {
+    @if $antialiased == true {
       font-weight: $weight;
       -webkit-font-smoothing: antialiased;
+    } @else {
+      font-weight: $weight;
     }
   } @else {
     font-weight: $weight;

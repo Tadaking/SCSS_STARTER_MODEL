@@ -5,7 +5,7 @@ $font_smoothing: true;
 $base_fs: 16;
 $default_lh: 1.5;
 $default_fw: 200;
-$default_fw_bold: 600;
+$default_fw_bold: 500;
 
 // font-family
 $sans-serif: "Helvetica Neue", Helvetica, tahoma, arial, sans-serif;
@@ -31,13 +31,13 @@ $h1-fs: 48;
 $h1-lh: 2;
 $h1-fc: $blue;
 $h1-margin: 0 0 px-to-rem(3 * $default_lh * $base_fs) 0;
-$h1-weight: normal;
+$h1-weight: 200;
 
 $h2-fs: 34;
 $h2-lh: 1.5;
 $h2-fc: $text_dark;
 $h2-margin: px-to-rem(3 * $default_lh * $base_fs) 0 px-to-rem(1 * $default_lh * $base_fs) 0;
-$h2-weight: normal;
+$h2-weight: 200;
 
 $h3-fs: 21;
 $h3-lh: 1;

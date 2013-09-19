@@ -1,7 +1,8 @@
 #{$clickable_object_class} {
   @extend %action;
-  padding: $padding_tb;
   @extend %btn-ani;
+  @extend %bolder;
+  padding: $padding_tb;
 }
 
 .table-list {
@@ -71,7 +72,6 @@
 
 .segmented-nav {
   @include segmented-nav('.command'){
-    @extend %bold;
     color: $text_normal;
     font-size: px-to-rem(16);
     text-shadow: 0 1px 0 rgba(255,255,255,.96);
@@ -94,7 +94,6 @@
   margin: 0 auto;
 
   #{$clickable_object_class} {
-    @extend %bold;
     margin: 0 1px 0 0;
     background: $gray;
     border: solid 1px $gray;

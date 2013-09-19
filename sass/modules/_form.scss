@@ -23,18 +23,25 @@
 }
 
 //横並びフォーム
-@mixin horizontal_form($inputareaClassName) {
+@mixin horizontal_form($filedsetClassName, $inputareaClassName) {
+  @extend %simple-table;
+
+  #{$inputareaClassName} { @extend %inputgroup; }
+
   label {
     margin: 0;
     vertical-align: middle;
   }
-  #{$inputareaClassName} { @extend %inputgroup; }
+
+  td {
+    text-align: left;
+  }
 }
 
 //縦並びフォーム
 @mixin vertical_form($filedsetClassName, $inputareaClassName) {
 
-  .field-label { display: block; }
+  #{$filedsetClassName} { display: block; }
 
   #{$inputareaClassName} { @extend %inputgroup; }
 }

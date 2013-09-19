@@ -2,11 +2,15 @@
 //左からz-indexの値が大きい順に記述
 //z-index settings
 @mixin z-index($targets) {
-  @if $targets == pulldown {
-    z-index: 20
+  @if $targets == msg {
+    z-index: 30;
+  } @elseif $targets == pulldown {
+    z-index: 20;
   }@else if $targets == tab {
     z-index: 20;
   } @else if $targets == tab-content {
+    z-index: 10;
+  } @else if $targets == banner {
     z-index: 10;
   }
 }

@@ -50,15 +50,30 @@
   }
 }
 
+%nav-anchor {
+  // @extend %bold;
+
+  &:link,
+  &:visited {
+   color: $site_key_color;
+   text-decoration: none;
+  }
+
+  &:hover {
+   text-decoration: underline;
+  }
+}
+
 %ui-anchor {
   &:link,
   &:visited {
-    color: $site_key_color;
+    color: $text-normal;
     text-decoration: none;
   }
 
   &:hover {
-    text-decoration: underline;
+    color: $text-dark;
+    // text-decoration: underline;
   }
 }
 

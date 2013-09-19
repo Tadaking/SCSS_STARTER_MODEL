@@ -1,1 +1,8 @@
 @charset "UTF-8";
+// anchor
+.nav { @extend %nav-anchor; }
+
+.text-ui {
+  @extend %ui-anchor;
+  @extend %bold;
+}

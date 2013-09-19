@@ -2,8 +2,32 @@
   @include vertical_form($fieldset, $inputarea);
 }
 
+.horizontal {
+  tbody {
+    td { width: 80%; }
+  }
+
+  th, td {
+    vertical-align: top;
+  }
+
+  tbody th {
+    max-width: 20%;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .adjust-valign {
+    vertical-align: middle;
+    line-height: (1.5 * $grid_height / 16);
+  }
+
+  @include horizontal_form(td, $inputarea);
+}
+
 legend {
   @extend %bold;
+  margin-right: 1.6rem;
   color: $text_dark;
   vertical-align: middle;
 }
@@ -24,26 +48,4 @@ legend {
 
 .err-msg {
   color: $alert-error;
-}
-
-#{$inputarea} { padding-right: 8px; }
-
-.horizontal {
-  th, td {
-    padding: 1.125em;
-    border-width: 0 !important;
-    vertical-align: top;
-  }
-
-  th {
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  .adjust-valign {
-    vertical-align: middle;
-    line-height: (1.5 * $grid_height / 16);
-  }
-
-  @include horizontal_form(td);
 }

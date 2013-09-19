@@ -1,7 +1,7 @@
 $striped: true;
 
 //table design settings
-$cellpadding_v: $padding_tb;
+$cellpadding_v: 2 * $padding_tb;
 $cellpadding_h: $padding_lr;
 
 $theadColor: null;

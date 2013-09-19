@@ -1,5 +1,6 @@
 #{$clickable_object_class} {
   @extend %action;
+  padding: $padding_tb;
   @extend %btn-ani;
 }
 

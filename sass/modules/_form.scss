@@ -24,11 +24,10 @@
 
 //横並びフォーム
 @mixin horizontal_form($filedsetClassName, $inputareaClassName) {
-  @extend %simple-table;
-
   #{$inputareaClassName} { @extend %inputgroup; }
 
   label {
+    display: block;
     margin: 0;
     vertical-align: middle;
   }

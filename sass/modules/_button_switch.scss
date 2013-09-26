@@ -1,6 +1,8 @@
 .btn {
   @extend %action;
   @extend %bolder;
+  @extend %default-ani;
+  display: inline-block;
   padding: $padding_tb;
   border: $btn-border-width solid $normal_btn_border;
   border-radius: $border_radius;

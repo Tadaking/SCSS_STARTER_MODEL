@@ -1,8 +1,4 @@
 //button
-%btn-ani {
+%default-ani {
   @include transition (all 0.18s $ease-out-cubic);
-}
-
-.btn {
-  @extend %btn-ani;
 }

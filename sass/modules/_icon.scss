@@ -1,7 +1,9 @@
 #{$icon-tagName} {
   display: inline-block;
-  width: $icon_ratio;
-  height: $icon_ratio;
-  background-size: auto $icon_ratio;
-  background: url(#{$icon_sprite_path}) no-repeat;
+  vertical-align: baseline;
+
+  @if $icon_sprite_path {
+    background: url(#{$icon_sprite_path}) no-repeat;
+    background-size: auto $icon_ratio;
+  }
 }

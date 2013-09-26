@@ -1,3 +1,10 @@
+#{$clickable_object_class} {
+  @extend %action;
+  @extend %default-ani;
+  @extend %bolder;
+  padding: $padding_tb;
+}
+
 /* table_list */
 @mixin table_list($childObj, $grad:false) {
   @extend %table_list;

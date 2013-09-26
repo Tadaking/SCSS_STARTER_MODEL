@@ -1,17 +1,20 @@
 //base setting
 %action {
-  display: inline-block;
+  display: inline-table;
   line-height: 1;
   text-decoration: none;
   vertical-align: middle;
 
   #{$action-label-className} {
     display: table-cell;
-    vertical-align: bottom;
+    vertical-align: middle;
   }
 
   #{$icon-tagName} {
     display: table-cell;
+    width: $icon_ratio;
+    height: $icon_ratio;
+
     + #{$action-label-className} {
       padding-left: 0.382em;
     }

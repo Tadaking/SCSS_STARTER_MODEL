@@ -1,17 +1,10 @@
-#{$clickable_object_class} {
-  @extend %action;
-  @extend %btn-ani;
-  @extend %bolder;
-  padding: $padding_tb;
-}
-
 .table-list {
   width: 300px;
   background: $gray_light;
   border-radius: 3px;
 
   @include table_list('li', false) {
-    @extend %btn-ani;
+    @extend %default-ani;
 
     &:first-child {
       border-radius: 3px 3px 0 0;

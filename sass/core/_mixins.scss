@@ -197,10 +197,13 @@
       } @else {
         right-width: 0;
       }
-      bottom: $width solid $color;
+      bottom: $width dashed $color;
       left-width: 0;
       top-width: 0;
     };
+
+    text-align: center;
+
     &:last-child,
     &.last {
       @if $verticalLine {

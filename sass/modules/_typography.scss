@@ -55,8 +55,6 @@
 }
 
 %nav-anchor {
-  // @extend %bold;
-
   &:link,
   &:visited {
    color: $site_key_color;
@@ -77,7 +75,6 @@
 
   &:hover {
     color: $text-dark;
-    // text-decoration: underline;
   }
 }
 

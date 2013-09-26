@@ -1,17 +1,12 @@
 // table settings
-%simple-table {
+.has-outline {
+  border: solid 1px $gray;
+
   tbody, tfoot {
     th {
       padding-left: $padding_lr / 2;
-    }
-
-    td, th {
-      border-style: solid;
-      border-color: $gray_light;
-    }
-
-    th {
       border-right-width: 0 !important;
+      text-align: right;
     }
   }
 

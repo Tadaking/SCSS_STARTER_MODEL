@@ -12,7 +12,7 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
+main,
 nav,
 section,
 summary {
@@ -137,7 +137,7 @@ strong {
 }
 
 b {
-  @extend %bolder;
+  @extend %bold;
 }
 
 blockquote {
@@ -255,7 +255,10 @@ ol, ul {
   padding: 0 0 0 40px;
 }
 
-dl, dt, dd {
+nav {
+  ul, ol {
+    @extend %reset_margin_padding;
+  }
 }
 
 dt { @extend %h4; }
@@ -480,14 +483,20 @@ th {
   @extend %bolder;
 }
 
-tbody {
-  th {
-    text-align: left;
+thead, tfoot {
+  td, th {
+    padding: $cellpadding_v / 2.1 $cellpadding_h;
   }
 }
 
-td, th {
-  padding: $cellpadding_v $cellpadding_h;
+tbody {
+  td, th {
+    padding: 1.125em 1.5em;
+  }
+
+  th {
+    text-align: left;
+  }
 }
 
 /* =============================================================================

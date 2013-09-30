@@ -80,7 +80,7 @@
   }
 }
 
-//for iOS Font-Antialius
+//for iOS Font-Antialias
 @mixin font_weight($weight, $antialiased: true) {
   @if $font_smoothing == true {
     @if $antialiased == true {

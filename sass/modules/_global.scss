@@ -46,7 +46,7 @@
 
 %pie-clearfix { @include clearfix; }
 
-%box-sizing { @include box-sizing(border-box); }
+%border-box { @include box-sizing(border-box); }
 
 %one-column-centered {
   width: $page_width - 32px;

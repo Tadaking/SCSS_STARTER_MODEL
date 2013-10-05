@@ -261,3 +261,26 @@
   background-color: $color;
   @include background-image(linear-gradient(lighten($color, $lighten) 0%, $color 100%));
 }
+
+//compass filter mixin
+$experimental-support-for-webkit: true;
+$experimental-support-for-mozilla: true;
+
+@mixin experimental($property, $value, $moz: $experimental-support-for-mozilla, $webkit: $experimental-support-for-webkit, $o: $experimental-support-for-opera, $ms: $experimental-support-for-microsoft, $khtml: $experimental-support-for-khtml, $official: true) {
+  @if $webkit and $experimental-support-for-webkit {
+    -webkit-#{$property}: $value; }
+  @if $khtml and $experimental-support-for-khtml {
+    -khtml-#{$property}: $value; }
+  @if $moz and $experimental-support-for-mozilla {
+    -moz-#{$property}: $value; }
+  @if $ms and $experimental-support-for-microsoft {
+    -ms-#{$property}: $value; }
+  @if $o and $experimental-support-for-opera {
+    -o-#{$property}: $value; }
+  @if $official {
+    #{$property}: $value; }
+}
+
+@mixin filter($filter-1, $filter-2: false, $filter-3: false, $filter-4: false, $filter-5: false, $filter-6: false, $filter-7: false, $filter-8: false, $filter-9: false, $filter-10: false) {
+  $filter: compact($filter-1, $filter-2, $filter-3, $filter-4, $filter-5, $filter-6, $filter-7, $filter-8, $filter-9, $filter-10);
+  @include experimental(filter, $filter, -moz, -webkit, not -o, not -ms, not -khtml, official); }

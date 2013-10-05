@@ -1,8 +1,27 @@
 @charset "UTF-8";
 // anchor
-.nav { @extend %nav-anchor; }
+.nav {
+  &:link,
+  &:visited {
+   color: $site_key_color;
+   text-decoration: none;
+  }
+
+  &:hover {
+   text-decoration: underline;
+  }
+}
 
 .text-ui {
-  @extend %ui-anchor;
   @extend %bolder;
+
+  &:link,
+  &:visited {
+    color: $text-normal;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $text-dark;
+  }
 }

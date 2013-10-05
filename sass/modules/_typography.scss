@@ -54,30 +54,6 @@
   }
 }
 
-%nav-anchor {
-  &:link,
-  &:visited {
-   color: $site_key_color;
-   text-decoration: none;
-  }
-
-  &:hover {
-   text-decoration: underline;
-  }
-}
-
-%ui-anchor {
-  &:link,
-  &:visited {
-    color: $text-normal;
-    text-decoration: none;
-  }
-
-  &:hover {
-    color: $text-dark;
-  }
-}
-
 %number {
   text-align: right;
 }

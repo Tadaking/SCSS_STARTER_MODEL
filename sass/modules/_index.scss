@@ -9,9 +9,14 @@
 // icon
 @import 'icon';
 
+//animations
+@import 'animations';
+
 // clickable parts
 // example button, tab, pagenation, link has icon
 @import 'clickable_base';
+
+// navigations
 @import 'navigations';
 
 // form
@@ -22,3 +27,5 @@
 
 // button & switch
 @import 'button_switch';
+
+@import 'progressbar'

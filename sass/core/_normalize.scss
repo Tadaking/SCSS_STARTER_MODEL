@@ -247,7 +247,6 @@ hr {
    Lists
    ========================================================================== */
 dl, ol, ul {
-  @extend %selection;
   margin: 1em 0;
 }
 
@@ -260,6 +259,8 @@ nav {
     @extend %reset_margin_padding;
   }
 }
+
+li, dt, dd { @extend %selection; }
 
 dt { @extend %h4; }
 
@@ -478,6 +479,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+td, th { @extend %selection; }
 
 th {
   @extend %bolder;

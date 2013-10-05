@@ -1,0 +1,5 @@
+@if $base-ani {
+  %base-ani {
+    @include transition ($base-ani);
+  }
+}

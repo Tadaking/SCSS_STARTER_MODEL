@@ -1,0 +1,29 @@
+@mixin progress($width:100%, $height:20px, $area_color:$purple, $bar_color:$site_key_color, $radius:4px, $bar_margin:2px){
+  @extend %box-sizing;
+  width: $width;
+  height: $height;
+  padding: $bar_margin;
+  background: $area_color;
+  border-radius: $radius;
+
+  #{$loading}, #{$loading_effect} {
+    height: $height - (2 * $bar_margin);
+    border-radius: $radius - $bar_margin;
+  }
+
+  #{$loading} {
+    position: relative;
+    width: 10%;
+    background: $bar_color;
+
+    #{$loading_effect} {
+      position: absolute;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.1), 0 0 8px rgba(255,255,255,.3);
+      @include background(linear-gradient(to right, rgba(255,255,255,.3), rgba(255,255,255,.1)));
+      @include animation(progressbar 1s infinite);
+    }
+  }
+
+  @content;
+  //ex) Add after complete state style
+}
